@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>帐号模块 · GitBook</title>
+        <title>SDK 初始化 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="32_sdk_account.html" />
     
-    <link rel="prev" href="31_sdk_init.html" />
+    
+    <link rel="prev" href="30_sdk_index.md" />
     
 
     </head>
@@ -159,7 +161,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="31_sdk_init.html">
+        <li class="chapter active" data-level="1.4.1" data-path="31_sdk_init.html">
             
                 <a href="31_sdk_init.html">
             
@@ -172,7 +174,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="32_sdk_account.html">
+        <li class="chapter " data-level="1.4.2" data-path="32_sdk_account.html">
             
                 <a href="32_sdk_account.html">
             
@@ -220,7 +222,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >帐号模块</a>
+        <a href=".." >SDK 初始化</a>
     </h1>
 </div>
 
@@ -235,72 +237,71 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5E10;&#x53F7;&#x6A21;&#x5757;-account">&#x5E10;&#x53F7;&#x6A21;&#x5757; Account</h1>
-<h2 id="1&#x3001;&#x767B;&#x5F55;&#x63A5;&#x53E3;">1&#x3001;&#x767B;&#x5F55;&#x63A5;&#x53E3;</h2>
+                                <h1 id="sdk-&#x521D;&#x59CB;&#x5316;">SDK &#x521D;&#x59CB;&#x5316;</h1>
+<h2 id="1&#x3001;rokidmobilesdk-&#x521D;&#x59CB;&#x5316;">1&#x3001;RokidMobileSDK &#x521D;&#x59CB;&#x5316;</h2>
 <ul>
-<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x5165;token&#x548C;&#x7528;&#x6237;id&#xFF0C;ILoginResultCallback&#x4E3A;&#x83B7;&#x53D6;&#x767B;&#x9646;&#x7ED3;&#x679C;&#x56DE;&#x8C03;&#x76D1;&#x542C;</li>
+<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;RokidMobileSDK&#x521D;&#x59CB;&#x5316;&#x3002;</li>
+<li><font color="red" size="3">**&#x5728;&#x5DE5;&#x7A0B;&#x7684;Application&#x7C7B;&#x7684;onCreate()&#x65B9;&#x6CD5;&#x4E2D;&#x521D;&#x59CB;&#x5316;RokidMobileSDK.**</font></li>
+<li>appKey &#x548C; appSecret &#x9700;&#x8981;&#x5728;&#x82E5;&#x742A;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x83B7;&#x53D6;</li>
 </ul>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
 <th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th style="text-align:center">&#x5FC5;&#x987B;&#xFF1F;</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>userId</td>
+<td style="text-align:left">ApplicationContext</td>
+<td>Context</td>
+<td style="text-align:center">&#x662F;</td>
+<td>Context</td>
+</tr>
+<tr>
+<td style="text-align:left">appKey</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x7528;&#x6237;id</td>
+<td style="text-align:center">&#x662F;</td>
+<td>Rokid &#x53D1;&#x653E;&#x7684; appKey</td>
+</tr>
+<tr>
+<td style="text-align:left">appSecret</td>
+<td>String</td>
+<td style="text-align:center">&#x662F;</td>
+<td>Rokid &#x53D1;&#x653E;&#x7684; appSecret</td>
+</tr>
+<tr>
+<td style="text-align:left">accessKey</td>
+<td>String</td>
+<td style="text-align:center">&#x662F;</td>
+<td>Rokid &#x53D1;&#x653E;&#x7684; accessSecret</td>
 </tr>
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-java">RokidMobileSDK.account.tokenLogin(userId, <span class="hljs-keyword">new</span> ILoginResultCallback() {
+<pre><code class="lang-Java">RokidMobileSDK.init(context, appKey, appSecret, accessKey, <span class="hljs-keyword">new</span> InitCompletedCallback) {
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLoginSucceed</span><span class="hljs-params">()</span> </span>{
-        Logger.d(<span class="hljs-string">&quot;onLoginSuccess is called.&quot;</span>);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onInitSuccess</span><span class="hljs-params">()</span> </span>{
+        Logger.d(<span class="hljs-string">&quot;onInitSuccess is called.&quot;</span>);
         ... <span class="hljs-comment">// do something</span>
     }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLoginFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
-        Logger.e(<span class="hljs-string">&quot;onLoginFailed errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot; errorMsg=&quot;</span> + errorMsg);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onInitFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
+        Logger.e(<span class="hljs-string">&quot;onInitFailed errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot; errorMsg=&quot;</span> + errorMsg);
         ... <span class="hljs-comment">// do something</span>
     }
 });
-</code></pre>
-<h2 id="2&#x3001;&#x767B;&#x51FA;&#x63A5;&#x53E3;">2&#x3001;&#x767B;&#x51FA;&#x63A5;&#x53E3;</h2>
-<ul>
-<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;&#x767B;&#x51FA;&#x63A5;&#x53E3;&#xFF0C;&#x6E05;&#x9664; SDK &#x4E2D;&#x7684; token&#x3001;userId &#x7B49;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x3002;</li>
-</ul>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-java">RokidMobileSDK.account.logout(<span class="hljs-keyword">new</span> ILogoutResultCallback() {
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLogoutSucceed</span><span class="hljs-params">()</span> </span>{
-        Logger.d(<span class="hljs-string">&quot;onLogoutSucceed is called.&quot;</span>);
-        ... <span class="hljs-comment">// do something</span>
-    }
-
-     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLogoutFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span></span>{
-        Logger.e(<span class="hljs-string">&quot;onLogoutFailed errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot; errorMsg=&quot;</span> + errorMsg);
-        ... <span class="hljs-comment">// do something</span>
-    }
-});
-</code></pre>
-<h2 id="3&#x3001;&#x7528;&#x6237;&#x767B;&#x5F55;-token">3&#x3001;&#x7528;&#x6237;&#x767B;&#x5F55; Token</h2>
-<ul>
-<li>&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#xFF1A;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x767B;&#x5F55;&#x7684; Token</li>
-</ul>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-java">String token = RokidMobileSDK.account.getToken();
 </code></pre>
 <hr>
+<h2 id="2&#x3001;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;">2&#x3001;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</h2>
+<p>&#x8C03;&#x7528;&#x6B64;api &#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230; &#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-Java">RokidMobileSDK.debug();
+</code></pre>
 
                                 
                                 </section>
@@ -328,10 +329,14 @@
 
             
                 
-                <a href="31_sdk_init.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: SDK 初始化">
+                <a href="30_sdk_index.md" class="navigation navigation-prev " aria-label="Previous page: SDK API 介绍">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="32_sdk_account.html" class="navigation navigation-next " aria-label="Next page: 帐号模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -340,7 +345,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"帐号模块","level":"1.4.2","depth":2,"previous":{"title":"SDK 初始化","level":"1.4.1","depth":2,"path":"docs/31_sdk_init.md","ref":"docs/31_sdk_init.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/32_sdk_account.md","mtime":"2018-03-04T15:18:48.477Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T15:58:28.767Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SDK 初始化","level":"1.4.1","depth":2,"next":{"title":"帐号模块","level":"1.4.2","depth":2,"path":"resource/32_sdk_account.md","ref":"resource/32_sdk_account.md","articles":[]},"previous":{"title":"SDK API 介绍","level":"1.4","depth":1,"path":"resource/30_sdk_index.md","ref":"resource/30_sdk_index.md","articles":[{"title":"SDK 初始化","level":"1.4.1","depth":2,"path":"resource/31_sdk_init.md","ref":"resource/31_sdk_init.md","articles":[]},{"title":"帐号模块","level":"1.4.2","depth":2,"path":"resource/32_sdk_account.md","ref":"resource/32_sdk_account.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/31_sdk_init.md","mtime":"2018-03-04T15:17:51.045Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-04T16:02:07.735Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
