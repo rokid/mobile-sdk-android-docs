@@ -1,6 +1,6 @@
 # 技能模块 Skill
-## 1、闹钟 Alarm
-### 1.1 获取闹钟列表
+## 闹钟 Alarm
+### 1、获取闹钟列表
 请求获取设备上的闹钟列表：
 
 ```Java
@@ -52,14 +52,34 @@ AlarmContentBean 字段说明：
 
 ---
 
-### 1.2 添加闹钟
+### 2、添加闹钟
 添加一个闹钟。
 
 示例代码：
 
 ```Java
-RokidMobileSDK.skill.alarm().add(deviceId, hour, minute, repeatType);
+AlarmContentBean alarmContentBean = new AlarmContentBean()
+alarmContentBean.year = 2018
+alarmContentBean.month = 3
+alarmContentBean.day = 3
+alarmContentBean.hour = 14
+alarmContentBean.minute = 30
+
+RokidMobileSDK.skill.alarm().add(deviceId, alarmContentBean , repeatType);
 ```
+
+AlarmContentBean 字段说明：
+
+| 参数 | 类型 | 必要？ | 说明 |
+| --- | --- | --- | --- |
+| id |  int| 是 | 闹钟Id |
+| year | int | 是 | 年 |
+| month | int | 是 |  月|
+| day | int | 是 | 日 |
+| hour | int | 是 | 小时 |
+| minute | int | 是 | 分钟 |
+| date | String | 是 | 重复模式的文案 |
+| ext | Map<String, String> | 是 | 扩展字段，根据自己业务进行扩展 |
 
 repeatType 解释：
 
@@ -79,7 +99,7 @@ D7 : 每周日
 
 ---
 
-### 1.3 删除一个闹钟
+### 3、删除一个闹钟
 删除一个闹钟：
  
 ```Java
@@ -90,14 +110,14 @@ RokidMobileSDK.skill.alarm().delete(deviceId, alarmContentBean);
  
 ---
 
-### 1.4 更新闹钟
+### 4、更新闹钟
 更新一个闹钟：
 
 ```Java
 RokidMobileSDK.skill.alarm().update(deviceId, alarmContentBean, updateHour, updateMinute, repeatType);
 ```
  
-注：字段说明 请参考上面 6.1.1 和 6.1.2
+注：字段说明 请参考上面 1 和 2
  
 ---
 

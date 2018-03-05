@@ -1,6 +1,6 @@
 # 技能模块 Skill
-## 1、提醒 Remind
-### 1.1 提醒列表
+## 提醒 Remind
+### 1、提醒列表
 请求获取设备上的提醒列表：
 
 ```Java
@@ -37,14 +37,14 @@ AlarmContentBean 字段说明：
 
 ---
 
-### 1.2 删除一个提醒
+### 2、删除一个提醒
 删除一个提醒：
  
 ```Java
 RokidMobileSDK.skill.remind().delete(deviceId, alarmContentBean);
 ```
  
-注：字段说明 请参考上面 6.1.1
+注：字段说明 请参考上面 1
 
 ---
 
