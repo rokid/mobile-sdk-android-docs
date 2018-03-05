@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>修订记录 · GitBook</title>
+        <title>连接蓝牙 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="10_use_sdk.html" />
+    <link rel="next" href="54_bt_send_data.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="52_bt_scan.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="00_version.html">
+        <li class="chapter " data-level="1.2" data-path="00_version.html">
             
                 <a href="00_version.html">
             
@@ -252,7 +252,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="53_bt_connect.html">
+        <li class="chapter active" data-level="1.7.3" data-path="53_bt_connect.html">
             
                 <a href="53_bt_connect.html">
             
@@ -649,7 +649,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >修订记录</a>
+        <a href=".." >连接蓝牙</a>
     </h1>
 </div>
 
@@ -664,67 +664,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;">&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;</h1>
+                                <h1 id="&#x914D;&#x7F51;&#x6A21;&#x5757;-binder">&#x914D;&#x7F51;&#x6A21;&#x5757; Binder</h1>
+<h2 id="&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x8BBE;&#x5907;">&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x8BBE;&#x5907;</h2>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+&#x63A5;&#x53E3;&#x9700;&#x4F20;&#x5165;&#x84DD;&#x7259;&#x540D;&#x79F0;&#xFF08;&#x84DD;&#x7259;address&#x91CD;&#x542F;&#x540E;&#x4F1A;&#x53D8;&#xFF09;</p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>NO.</th>
-<th>&#x4FEE;&#x6539;</th>
-<th>&#x7248;&#x672C;</th>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>01</td>
-<td>&#x521D;&#x7A3F;</td>
-<td>v1.0.0</td>
-<td>SDK &#x6587;&#x6863;&#x521D;&#x7248;</td>
-</tr>
-<tr>
-<td>02</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.1</td>
-<td>&#x589E;&#x52A0; Card &#x534F;&#x8BAE;&#x89E3;&#x91CA;</td>
-</tr>
-<tr>
-<td>03</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.2</td>
-<td>&#x589E;&#x52A0; Token&#x767B;&#x5F55;&#x3001;&#x5237;&#x65B0;Token &#x63A5;&#x53E3;</td>
-</tr>
-<tr>
-<td>04</td>
-<td>&#x4FEE;&#x6539;</td>
-<td>v1.0.3</td>
-<td>&#x5220;&#x9664; &#x5237;&#x65B0;Token &#x63A5;&#x53E3;&lt;/br&gt;&#x589E;&#x52A0; Device &#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#x7684;&#x8FD4;&#x56DE;&#x503C;</td>
-</tr>
-<tr>
-<td>05</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.4</td>
-<td>&#x65B0;&#x589E; &#x7528;&#x6237;&#x5355;&#x72EC;&#x767B;&#x5F55;&#x3001;&#x7CFB;&#x7EDF;&#x66F4;&#x65B0; Event</td>
-</tr>
-<tr>
-<td>06</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.5</td>
-<td>&#x65B0;&#x589E; DeviceTypeId\Token\Debug</td>
-</tr>
-<tr>
-<td>07</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.6</td>
-<td>&#x65B0;&#x589E; &#x95F9;&#x949F;&#x3001;&#x63D0;&#x9192; skill &#x63A5;&#x53E3;</td>
-</tr>
-<tr>
-<td>08</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.7</td>
-<td>&#x65B0;&#x589E; Web Bridge &#x63A5;&#x5165;&#x8BF4;&#x660E;</td>
+<td>name</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;&#x540D;&#x79F0;</td>
 </tr>
 </tbody>
 </table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<pre><code class="lang-java">RokidMobileSDK.binder.connectBT(name, <span class="hljs-keyword">new</span> IBTConnectCallBack() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnectSucceed</span><span class="hljs-params">(BTDeviceBean btDeviceBean)</span> </span>{
+        Log.i(<span class="hljs-string">&quot;BTConnectCallBack&quot;</span>,<span class="hljs-string">&quot;connectBT Success name=&quot;</span> + btDeviceBean.getName());
+        Log.i(<span class="hljs-string">&quot;BTConnectCallBack&quot;</span>,<span class="hljs-string">&quot;connectBT Success address=&quot;</span> + btDeviceBean.getAddress());
+        ... <span class="hljs-comment">// doSomeing</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnectFailed</span><span class="hljs-params">(BTDeviceBean btDeviceBean, BleException bleException)</span> </span>{
+        Log.e(<span class="hljs-string">&quot;BTConnectCallBack&quot;</span>,<span class="hljs-string">&quot;connectBT Failed name=&quot;</span> + btDeviceBean.getName());
+        Log.e(<span class="hljs-string">&quot;BTConnectCallBack&quot;</span>,<span class="hljs-string">&quot;connectBT Failed address=&quot;</span> + btDeviceBean.getAddress());
+        Log.e(<span class="hljs-string">&quot;BTConnectCallBack&quot;</span>,<span class="hljs-string">&quot;connectBT Failed Exception=&quot;</span> + bleException.toString() );
+        ... <span class="hljs-comment">// doSomeing</span>
+    }
+});
+</code></pre>
+<hr>
 
                                 
                                 </section>
@@ -752,12 +733,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 介绍">
+                <a href="52_bt_scan.html" class="navigation navigation-prev " aria-label="Previous page: 蓝牙扫描">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="10_use_sdk.html" class="navigation navigation-next " aria-label="Next page: SDK 使用方式">
+                <a href="54_bt_send_data.html" class="navigation navigation-next " aria-label="Next page: 发送配网数据">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -768,7 +749,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"修订记录","level":"1.2","depth":1,"next":{"title":"SDK 使用方式","level":"1.3","depth":1,"path":"resource/10_use_sdk.md","ref":"resource/10_use_sdk.md","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/00_version.md","mtime":"2018-03-05T07:16:41.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T07:24:28.100Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"连接蓝牙","level":"1.7.3","depth":2,"next":{"title":"发送配网数据","level":"1.7.4","depth":2,"path":"resource/54_bt_send_data.md","ref":"resource/54_bt_send_data.md","articles":[]},"previous":{"title":"蓝牙扫描","level":"1.7.2","depth":2,"path":"resource/52_bt_scan.md","ref":"resource/52_bt_scan.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/53_bt_connect.md","mtime":"2018-03-05T06:08:57.295Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T07:24:28.100Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

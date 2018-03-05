@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>修订记录 · GitBook</title>
+        <title>释放蓝牙 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="10_use_sdk.html" />
+    <link rel="next" href="60_device.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="54_bt_send_data.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="00_version.html">
+        <li class="chapter " data-level="1.2" data-path="00_version.html">
             
                 <a href="00_version.html">
             
@@ -278,7 +278,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="55_bt_release.html">
+        <li class="chapter active" data-level="1.7.5" data-path="55_bt_release.html">
             
                 <a href="55_bt_release.html">
             
@@ -649,7 +649,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >修订记录</a>
+        <a href=".." >释放蓝牙</a>
     </h1>
 </div>
 
@@ -664,67 +664,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;">&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;</h1>
-<table>
-<thead>
-<tr>
-<th>NO.</th>
-<th>&#x4FEE;&#x6539;</th>
-<th>&#x7248;&#x672C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>01</td>
-<td>&#x521D;&#x7A3F;</td>
-<td>v1.0.0</td>
-<td>SDK &#x6587;&#x6863;&#x521D;&#x7248;</td>
-</tr>
-<tr>
-<td>02</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.1</td>
-<td>&#x589E;&#x52A0; Card &#x534F;&#x8BAE;&#x89E3;&#x91CA;</td>
-</tr>
-<tr>
-<td>03</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.2</td>
-<td>&#x589E;&#x52A0; Token&#x767B;&#x5F55;&#x3001;&#x5237;&#x65B0;Token &#x63A5;&#x53E3;</td>
-</tr>
-<tr>
-<td>04</td>
-<td>&#x4FEE;&#x6539;</td>
-<td>v1.0.3</td>
-<td>&#x5220;&#x9664; &#x5237;&#x65B0;Token &#x63A5;&#x53E3;&lt;/br&gt;&#x589E;&#x52A0; Device &#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#x7684;&#x8FD4;&#x56DE;&#x503C;</td>
-</tr>
-<tr>
-<td>05</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.4</td>
-<td>&#x65B0;&#x589E; &#x7528;&#x6237;&#x5355;&#x72EC;&#x767B;&#x5F55;&#x3001;&#x7CFB;&#x7EDF;&#x66F4;&#x65B0; Event</td>
-</tr>
-<tr>
-<td>06</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.5</td>
-<td>&#x65B0;&#x589E; DeviceTypeId\Token\Debug</td>
-</tr>
-<tr>
-<td>07</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.6</td>
-<td>&#x65B0;&#x589E; &#x95F9;&#x949F;&#x3001;&#x63D0;&#x9192; skill &#x63A5;&#x53E3;</td>
-</tr>
-<tr>
-<td>08</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.7</td>
-<td>&#x65B0;&#x589E; Web Bridge &#x63A5;&#x5165;&#x8BF4;&#x660E;</td>
-</tr>
-</tbody>
-</table>
+                                <h1 id="&#x914D;&#x7F51;&#x6A21;&#x5757;-binder">&#x914D;&#x7F51;&#x6A21;&#x5757; Binder</h1>
+<h2 id="&#x91CA;&#x653E;&#x84DD;&#x7259;&#x8D44;&#x6E90;">&#x91CA;&#x653E;&#x84DD;&#x7259;&#x8D44;&#x6E90;</h2>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x5EFA;&#x8BAE;&#x5728;&#x914D;&#x7F51;&#x7ED3;&#x675F;&#x540E;&#x8C03;&#x7528;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre><code class="lang-java"> RokidMobileSDK.binder.releaseBT()
+</code></pre>
+<hr>
 
                                 
                                 </section>
@@ -752,12 +699,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 介绍">
+                <a href="54_bt_send_data.html" class="navigation navigation-prev " aria-label="Previous page: 发送配网数据">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="10_use_sdk.html" class="navigation navigation-next " aria-label="Next page: SDK 使用方式">
+                <a href="60_device.html" class="navigation navigation-next " aria-label="Next page: 设备模块 Device">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -768,7 +715,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"修订记录","level":"1.2","depth":1,"next":{"title":"SDK 使用方式","level":"1.3","depth":1,"path":"resource/10_use_sdk.md","ref":"resource/10_use_sdk.md","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/00_version.md","mtime":"2018-03-05T07:16:41.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T07:24:28.100Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"释放蓝牙","level":"1.7.5","depth":2,"next":{"title":"设备模块 Device","level":"1.8","depth":1,"path":"resource/60_device.md","ref":"resource/60_device.md","articles":[{"title":"设备列表","level":"1.8.1","depth":2,"path":"resource/61_device_list.md","ref":"resource/61_device_list.md","articles":[]},{"title":"设备基本信息","level":"1.8.2","depth":2,"path":"resource/62_device_base_info.md","ref":"resource/62_device_base_info.md","articles":[]},{"title":"设备地理位置","level":"1.8.3","depth":2,"path":"resource/63_device_location.md","ref":"resource/63_device_location.md","articles":[]},{"title":"设备昵称","level":"1.8.4","depth":2,"path":"resource/64_device_nick.md","ref":"resource/64_device_nick.md","articles":[]},{"title":"设备系统版本","level":"1.8.5","depth":2,"path":"resource/65_device_version.md","ref":"resource/65_device_version.md","articles":[]},{"title":"默认设备","level":"1.8.6","depth":2,"path":"resource/66_device_default.md","ref":"resource/66_device_default.md","articles":[]},{"title":"恢复出厂设置","level":"1.8.7","depth":2,"path":"resource/67_device_reset.md","ref":"resource/67_device_reset.md","articles":[]},{"title":"设备解绑","level":"1.8.8","depth":2,"path":"resource/68_device_unbind.md","ref":"resource/68_device_unbind.md","articles":[]}]},"previous":{"title":"发送配网数据","level":"1.7.4","depth":2,"path":"resource/54_bt_send_data.md","ref":"resource/54_bt_send_data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/55_bt_release.md","mtime":"2018-03-05T06:11:19.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T07:24:28.100Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

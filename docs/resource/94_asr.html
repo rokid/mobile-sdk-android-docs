@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>修订记录 · GitBook</title>
+        <title>发送 ASR · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="10_use_sdk.html" />
+    <link rel="next" href="95_tts.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="93_card_style.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="00_version.html">
+        <li class="chapter " data-level="1.2" data-path="00_version.html">
             
                 <a href="00_version.html">
             
@@ -562,7 +562,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.4" data-path="94_asr.html">
+        <li class="chapter active" data-level="1.11.4" data-path="94_asr.html">
             
                 <a href="94_asr.html">
             
@@ -649,7 +649,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >修订记录</a>
+        <a href=".." >发送 ASR</a>
     </h1>
 </div>
 
@@ -664,67 +664,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;">&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;</h1>
+                                <h1 id="vui-&#x6A21;&#x5757;">Vui &#x6A21;&#x5757;</h1>
+<h2 id="&#x53D1;&#x9001;asr">&#x53D1;&#x9001;ASR</h2>
+<p>&#x53D1;&#x9001; ASR&#xFF0C;&#x5C31;&#x662F;&#x53D1;&#x9001; &#x6307;&#x5B9A;&#xFF0C;&#x8BA9;&#x8BBE;&#x5907;&#x6839;&#x636E;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<p> <strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>NO.</th>
-<th>&#x4FEE;&#x6539;</th>
-<th>&#x7248;&#x672C;</th>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>01</td>
-<td>&#x521D;&#x7A3F;</td>
-<td>v1.0.0</td>
-<td>SDK &#x6587;&#x6863;&#x521D;&#x7248;</td>
+<td>deviceId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;Id</td>
 </tr>
 <tr>
-<td>02</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.1</td>
-<td>&#x589E;&#x52A0; Card &#x534F;&#x8BAE;&#x89E3;&#x91CA;</td>
-</tr>
-<tr>
-<td>03</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.2</td>
-<td>&#x589E;&#x52A0; Token&#x767B;&#x5F55;&#x3001;&#x5237;&#x65B0;Token &#x63A5;&#x53E3;</td>
-</tr>
-<tr>
-<td>04</td>
-<td>&#x4FEE;&#x6539;</td>
-<td>v1.0.3</td>
-<td>&#x5220;&#x9664; &#x5237;&#x65B0;Token &#x63A5;&#x53E3;&lt;/br&gt;&#x589E;&#x52A0; Device &#x4E00;&#x4E9B;&#x63A5;&#x53E3;&#x7684;&#x8FD4;&#x56DE;&#x503C;</td>
-</tr>
-<tr>
-<td>05</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.4</td>
-<td>&#x65B0;&#x589E; &#x7528;&#x6237;&#x5355;&#x72EC;&#x767B;&#x5F55;&#x3001;&#x7CFB;&#x7EDF;&#x66F4;&#x65B0; Event</td>
-</tr>
-<tr>
-<td>06</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.5</td>
-<td>&#x65B0;&#x589E; DeviceTypeId\Token\Debug</td>
-</tr>
-<tr>
-<td>07</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.6</td>
-<td>&#x65B0;&#x589E; &#x95F9;&#x949F;&#x3001;&#x63D0;&#x9192; skill &#x63A5;&#x53E3;</td>
-</tr>
-<tr>
-<td>08</td>
-<td>&#x589E;&#x52A0;</td>
-<td>v1.0.7</td>
-<td>&#x65B0;&#x589E; Web Bridge &#x63A5;&#x5165;&#x8BF4;&#x660E;</td>
+<td>asr</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x4F60;&#x5BF9;&#x8BBE;&#x5907;&#x8BF4;&#x7684;&#x8BDD;</td>
 </tr>
 </tbody>
 </table>
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<pre><code class="lang-java"> <span class="hljs-keyword">boolean</span> sendSuccess=RKHomeManager.getInstance().sendAsr(deviceId, asr)
+</code></pre>
+<p> <strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sendSuccess</td>
+<td>boolean</td>
+<td>&#x662F;&#x5426;&#x53D1;&#x9001;&#x6210;&#x529F;</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
                                 
                                 </section>
@@ -752,12 +740,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 介绍">
+                <a href="93_card_style.html" class="navigation navigation-prev " aria-label="Previous page: Card 样式说明">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="10_use_sdk.html" class="navigation navigation-next " aria-label="Next page: SDK 使用方式">
+                <a href="95_tts.html" class="navigation navigation-next " aria-label="Next page: 发送 TTS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -768,7 +756,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"修订记录","level":"1.2","depth":1,"next":{"title":"SDK 使用方式","level":"1.3","depth":1,"path":"resource/10_use_sdk.md","ref":"resource/10_use_sdk.md","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/00_version.md","mtime":"2018-03-05T07:16:41.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T07:24:28.100Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"发送 ASR","level":"1.11.4","depth":2,"next":{"title":"发送 TTS","level":"1.11.5","depth":2,"path":"resource/95_tts.md","ref":"resource/95_tts.md","articles":[]},"previous":{"title":"Card 样式说明","level":"1.11.3","depth":2,"path":"resource/93_card_style.md","ref":"resource/93_card_style.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/94_asr.md","mtime":"2018-03-05T07:08:07.714Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-05T07:24:28.100Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
