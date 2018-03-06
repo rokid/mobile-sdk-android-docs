@@ -25,6 +25,21 @@ public class DemoWebView extends SDKWebview {
         // ...
     }
     
+    // 用户手指按下
+    @Override
+    public void touchDown() {
+    }
+    
+    // 用户手指移动
+    @Override
+    public void touchMove() {
+    }
+    
+    // 用户手指抬起
+    @Override
+    public void touchUp() {
+    }
+    
     // 关闭当前页面
     @Override
     public void close() {

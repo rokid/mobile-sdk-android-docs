@@ -29,7 +29,7 @@
  - [提醒](resource/72_skill_remind.md)
  - [智能家居](resource/73_skill_homebase.md)
 * [WebBridge](resource/80_webbridge.md)
- - [快速接入](resource/81_webbridge_use.md)
+ - [快速接入](resource/81_use_bridge.md)
 * [Vui 反馈 模块](resource/90_vui.md)
  - [Card 列表](resource/91_card_list.md)
  - [Card 消息](resource/92_card_event.md)
