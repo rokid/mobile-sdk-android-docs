@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="72_skill_remind.html" />
+    <link rel="next" href="72_remind.html" />
     
     
     <link rel="prev" href="70_skill.html" />
@@ -433,9 +433,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.9.1" data-path="71_skill_alarm.html">
+        <li class="chapter active" data-level="1.9.1" data-path="71_alarm.html">
             
-                <a href="71_skill_alarm.html">
+                <a href="71_alarm.html">
             
                     
                     闹钟
@@ -446,9 +446,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="72_skill_remind.html">
+        <li class="chapter " data-level="1.9.2" data-path="72_remind.html">
             
-                <a href="72_skill_remind.html">
+                <a href="72_remind.html">
             
                     
                     提醒
@@ -459,9 +459,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="73_skill_homebase.html">
+        <li class="chapter " data-level="1.9.3" data-path="73_homebase.html">
             
-                <a href="73_skill_homebase.html">
+                <a href="73_homebase.html">
             
                     
                     智能家居
@@ -668,46 +668,32 @@
 <h2 id="&#x95F9;&#x949F;-alarm">&#x95F9;&#x949F; Alarm</h2>
 <h3 id="1&#x3001;&#x83B7;&#x53D6;&#x95F9;&#x949F;&#x5217;&#x8868;">1&#x3001;&#x83B7;&#x53D6;&#x95F9;&#x949F;&#x5217;&#x8868;</h3>
 <p>&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x95F9;&#x949F;&#x5217;&#x8868;&#xFF1A;</p>
-<pre><code class="lang-Java">RokidMobileSDK.skill.alarm().getList(deviceId)
+<p>Java:</p>
+<pre><code class="lang-Java">RokidMobileSDK.skill.alarm().getList(deviceId, <span class="hljs-keyword">new</span> GetAlarmListCallback {
+    <span class="hljs-meta">@override</span> 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSucceed</span><span class="hljs-params">(List&lt;SDKAlarm&gt; alarmList)</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+
+    <span class="hljs-meta">@override</span> 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFailed</span><span class="hljs-params">(String errorCode, String errorMessage)</span> </span>{
+        <span class="hljs-comment">//...</span>
+    }
+})
 </code></pre>
-<p>&#x63A5;&#x6536;&#x5230;Event&#xFF1A;</p>
-<pre><code class="lang-Java"><span class="hljs-meta">@Subscribe</span>(threadMode = ThreadMode.MAIN)
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onAlarmEvent</span><span class="hljs-params">(EventAlarmBean eventAlarm)</span> </span>{
-    <span class="hljs-comment">// ...</span>
-}
+<p>Kotlin:</p>
+<pre><code class="lang-kotlin">RokidMobileSDK.skill.alarm().getList(skill_alarm_device_id.selectedItem.toString(), 
+    <span class="hljs-keyword">object</span> : GetAlarmListCallback {
+         <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSucceed</span><span class="hljs-params">(alarmList: <span class="hljs-type">MutableList&lt;SDKAlarm&gt;?</span>)</span> {</span>
+            <span class="hljs-comment">// ...</span>
+         }
+
+         <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onFailed</span><span class="hljs-params">(errorCode: <span class="hljs-type">String?, errorMessage: String?</span>)</span> {</span>
+            <span class="hljs-comment">// ...</span>
+         }
+     })
 </code></pre>
-<p>EventAlarmBean &#x5B57;&#x6BB5;&#x8BF4;&#x660E;&#xFF1A;</p>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x8981;&#xFF1F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>topic</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x95F9;&#x949F;&#x4E3B;&#x9898;&#x6807;&#x5FD7;&#x7B26;</td>
-</tr>
-<tr>
-<td>topicName</td>
-<td>String</td>
-<td>&#x662F;</td>
-<td>&#x95F9;&#x949F;&#x4E3B;&#x9898;&#x540D;&#x79F0;</td>
-</tr>
-<tr>
-<td>alarmList</td>
-<td>List<alarmcontentbean></alarmcontentbean></td>
-<td>&#x5426;</td>
-<td>&#x95F9;&#x949F;&#x5217;&#x8868;</td>
-</tr>
-</tbody>
-</table>
-<p>AlarmContentBean &#x5B57;&#x6BB5;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>SDKAlarm &#x5B57;&#x6BB5;&#x8BF4;&#x660E;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
@@ -755,7 +741,13 @@
 <td>&#x5206;&#x949F;</td>
 </tr>
 <tr>
-<td>date</td>
+<td>repeatType</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x91CD;&#x590D;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td>repeatText</td>
 <td>String</td>
 <td>&#x662F;</td>
 <td>&#x91CD;&#x590D;&#x6A21;&#x5F0F;&#x7684;&#x6587;&#x6848;</td>
@@ -773,110 +765,85 @@
     ext&#x5B57;&#x6BB5;&#x662F;&#x624B;&#x673A;App&#x4E0E;&#x7CFB;&#x7EDF;&#x901A;&#x4FE1;&#x7279;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x6DFB;&#x52A0;&#x6216;&#x4FEE;&#x6539;&#x65F6;&#x4F20;&#x5165;&#xFF0C;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x65F6;&#x539F;&#x6837;&#x8FD4;&#x56DE;&#xFF0C;&#x4EE5;&#x4E0B;&#x5212;&#x7EBF;_&#x5F00;&#x59CB;&#x7684;key&#x662F;&#x9884;&#x5B9A;&#x4E49;key&#x3002;
     ext&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF1B;&#x56E0;&#x4E3A;&#x6682;&#x65F6;&#x6CA1;&#x6709;&#x5220;&#x9664;&#x5B57;&#x6BB5;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x6539;&#x65F6;(SpecificTime)&#x9700;&#x8981;&#x4F20;&#x5165;&#x6240;&#x6709;&#x7684;key&#x548C;value&#x3002;
   &#x7CFB;&#x7EDF;&#x4E0D;&#x652F;&#x6301;&#x65F6;&#x95F4;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x95F9;&#x949F;&#xFF0C;&#x6240;&#x4EE5;&#x66F4;&#x65B0;&#x548C;&#x5220;&#x9664;&#x65F6;&#x4E0D;&#x4F1A;&#x6821;&#x9A8C;ext&#x662F;&#x5426;&#x5339;&#x914D;&#x3002;
+</font>
 
-| &#x540D;&#x79F0; | &#x7C7B;&#x578B; | &#x63CF;&#x8FF0; |
-| --- | --- | --- |
-| _ringtone | string | &#x95F9;&#x949F;&#x94C3;&#x58F0;&#x5730;&#x5740;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x5168;&#x5C40;&#x7684;&#x95F9;&#x949F;&#x4E3B;&#x9898; |
-
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_ringtone</td>
+<td>string</td>
+<td>&#x95F9;&#x949F;&#x94C3;&#x58F0;&#x5730;&#x5740;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x5168;&#x5C40;&#x7684;&#x95F9;&#x949F;&#x4E3B;&#x9898;</td>
+</tr>
+</tbody>
+</table>
+<font color="red">
 &#x7B2C;&#x4E09;&#x65B9;&#x9700;&#x6C42;&#x53EF;&#x4EE5;&#x7531;&#x4ED6;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#xFF0C;&#x6BD4;&#x5982;&#x5C0F;&#x96C5;&#x5C0F;&#x96C5;&#x7684;&#x6807;&#x7B7E;&#x9700;&#x6C42;
 </font>
 
 <hr>
 <h3 id="2&#x3001;&#x6DFB;&#x52A0;&#x95F9;&#x949F;">2&#x3001;&#x6DFB;&#x52A0;&#x95F9;&#x949F;</h3>
 <p>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x95F9;&#x949F;&#x3002;</p>
-<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code class="lang-Java">AlarmContentBean alarmContentBean = <span class="hljs-keyword">new</span> AlarmContentBean()
-alarmContentBean.year = <span class="hljs-number">2018</span>
-alarmContentBean.month = <span class="hljs-number">3</span>
-alarmContentBean.day = <span class="hljs-number">3</span>
-alarmContentBean.hour = <span class="hljs-number">14</span>
-alarmContentBean.minute = <span class="hljs-number">30</span>
+<p>Java:</p>
+<pre><code class="lang-Java">SDKAlarm alarm = SDKAlarm.builder()
+        .year(<span class="hljs-number">2018</span>)
+        .month(<span class="hljs-number">3</span>)
+        .day(<span class="hljs-number">3</span>)
+        .hour(<span class="hljs-number">14</span>)
+        .minute(<span class="hljs-number">30</span>)
+        .repeatType(SDKRepeatType.EVERY_MONDAY)
+        .build();
 
-RokidMobileSDK.skill.alarm().add(deviceId, alarmContentBean , repeatType);
+RokidMobileSDK.skill.alarm().add(deviceId, alarm);
 </code></pre>
-<p>AlarmContentBean &#x5B57;&#x6BB5;&#x8BF4;&#x660E;&#xFF1A;</p>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x8981;&#xFF1F;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x95F9;&#x949F;Id</td>
-</tr>
-<tr>
-<td>year</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x5E74;</td>
-</tr>
-<tr>
-<td>month</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x6708;</td>
-</tr>
-<tr>
-<td>day</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x65E5;</td>
-</tr>
-<tr>
-<td>hour</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x5C0F;&#x65F6;</td>
-</tr>
-<tr>
-<td>minute</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x5206;&#x949F;</td>
-</tr>
-<tr>
-<td>date</td>
-<td>String</td>
-<td>&#x662F;</td>
-<td>&#x91CD;&#x590D;&#x6A21;&#x5F0F;&#x7684;&#x6587;&#x6848;</td>
-</tr>
-<tr>
-<td>ext</td>
-<td>Map<string, string=""></string,></td>
-<td>&#x662F;</td>
-<td>&#x6269;&#x5C55;&#x5B57;&#x6BB5;&#xFF0C;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x4E1A;&#x52A1;&#x8FDB;&#x884C;&#x6269;&#x5C55;</td>
-</tr>
-</tbody>
-</table>
-<p>repeatType &#x89E3;&#x91CA;&#xFF1A;</p>
-<pre><code>&quot;&quot; : &#x4EC5;&#x6B64;&#x4E00;&#x6B21; (&#x6CE8;&#xFF1A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;)
-DAY : &#x6BCF;&#x5929;
-WEEKDAY : &#x5DE5;&#x4F5C;&#x65E5;
-WEEKEND : &#x6BCF;&#x5468;&#x672B;
-D1 : &#x6BCF;&#x5468;&#x4E00;
-D2 : &#x6BCF;&#x5468;&#x4E8C;
-D3 : &#x6BCF;&#x5468;&#x4E09;
-D4 : &#x6BCF;&#x5468;&#x56DB;
-D5 : &#x6BCF;&#x5468;&#x4E94;
-D6 : &#x6BCF;&#x5468;&#x516D;
-D7 : &#x6BCF;&#x5468;&#x65E5;
+<p>Kotlin:</p>
+<pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> sdkAlarm</span> = SDKAlarm().apply {
+      year = <span class="hljs-number">2018</span>
+      month = <span class="hljs-number">3</span>
+      day = <span class="hljs-number">3</span>
+      hour = <span class="hljs-number">14</span>
+      minute = <span class="hljs-number">30</span>
+      repeatType = SDKRepeatType.EVERY_MONDAY
+  }
+
+  RokidMobileSDK.skill.alarm().add(deviceId!!, sdkAlarm)
+</code></pre>
+<p>SDKRepeatType &#x89E3;&#x91CA;&#xFF1A;</p>
+<pre><code>SDKRepeatType.ONCE // &#x4EC5;&#x6B64;&#x4E00;&#x6B21;
+SDKRepeatType.EVERYDAY // &#x6BCF;&#x5929;
+SDKRepeatType.WEEKDAY // &#x5DE5;&#x4F5C;&#x65E5;
+SDKRepeatType.WEEKEND // &#x6BCF;&#x5468;&#x672B;
+SDKRepeatType.EVERY_MONDAY // &#x6BCF;&#x5468;&#x4E00;
+SDKRepeatType.EVERY_TUESDAY // &#x6BCF;&#x5468;&#x4E8C;
+SDKRepeatType.EVERY_WEDNESDAY // &#x6BCF;&#x5468;&#x4E09;
+SDKRepeatType.EVERY_THURSDAY // &#x6BCF;&#x5468;&#x56DB;
+SDKRepeatType.EVERY_FRIDAY // &#x6BCF;&#x5468;&#x4E94;
+SDKRepeatType.EVERY_SATURDAY // &#x6BCF;&#x5468;&#x516D;
+SDKRepeatType.EVERY_SUNDAY // &#x6BCF;&#x5468;&#x65E5;
 </code></pre><hr>
 <h3 id="3&#x3001;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x95F9;&#x949F;">3&#x3001;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x95F9;&#x949F;</h3>
 <p>&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x95F9;&#x949F;&#xFF1A;</p>
-<pre><code class="lang-Java">RokidMobileSDK.skill.alarm().delete(deviceId, alarmContentBean);
+<p>Java:</p>
+<pre><code class="lang-Java">RokidMobileSDK.skill.alarm().delete(deviceId, alarm);
+</code></pre>
+<p>Kotlin:</p>
+<pre><code class="lang-kotlin">RokidMobileSDK.skill.alarm().delete(deviceId, alarm)
 </code></pre>
 <p>&#x6CE8;&#xFF1A;&#x5B57;&#x6BB5;&#x8BF4;&#x660E; &#x8BF7;&#x53C2;&#x8003;&#x4E0A;&#x9762; 6.1.1</p>
 <hr>
 <h3 id="4&#x3001;&#x66F4;&#x65B0;&#x95F9;&#x949F;">4&#x3001;&#x66F4;&#x65B0;&#x95F9;&#x949F;</h3>
 <p>&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x95F9;&#x949F;&#xFF1A;</p>
-<pre><code class="lang-Java">RokidMobileSDK.skill.alarm().update(deviceId, alarmContentBean, updateHour, updateMinute, repeatType);
+<p>Java:</p>
+<pre><code class="lang-Java">RokidMobileSDK.skill.alarm().update(deviceId, oldAlarm, newAlarm);
+</code></pre>
+<p>Kotlin:</p>
+<pre><code class="lang-kotlin">RokidMobileSDK.skill.alarm().update(deviceId, oldAlarm, newAlarm)
 </code></pre>
 <p>&#x6CE8;&#xFF1A;&#x5B57;&#x6BB5;&#x8BF4;&#x660E; &#x8BF7;&#x53C2;&#x8003;&#x4E0A;&#x9762; 1 &#x548C; 2</p>
 <hr>
@@ -912,7 +879,7 @@ D7 : &#x6BCF;&#x5468;&#x65E5;
                 </a>
                 
                 
-                <a href="72_skill_remind.html" class="navigation navigation-next " aria-label="Next page: 提醒">
+                <a href="72_remind.html" class="navigation navigation-next " aria-label="Next page: 提醒">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -923,7 +890,7 @@ D7 : &#x6BCF;&#x5468;&#x65E5;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"闹钟","level":"1.9.1","depth":2,"next":{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_skill_remind.md","ref":"resource/72_skill_remind.md","articles":[]},"previous":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_skill_alarm.md","ref":"resource/71_skill_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_skill_remind.md","ref":"resource/72_skill_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_skill_homebase.md","ref":"resource/73_skill_homebase.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/71_skill_alarm.md","mtime":"2018-03-05T07:39:58.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-06T08:41:35.325Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"闹钟","level":"1.9.1","depth":2,"next":{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},"previous":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_alarm.md","ref":"resource/71_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_homebase.md","ref":"resource/73_homebase.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/71_alarm.md","mtime":"2018-03-06T14:09:49.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-06T14:12:34.498Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
