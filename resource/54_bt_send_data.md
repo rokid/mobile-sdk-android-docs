@@ -15,7 +15,6 @@
 ```java
  // 构建绑定数据
  DeviceBinderData binderData = DeviceBinderData.newBuilder()
-                .userId("your ueserId")         //绑定的masterId（不能为空）
                 .wifiPwd("your wifiPwd")        //wifi密码（可以为空）
                 .wifiSsid("your wifiSsid")      //wifi名字（可以为空）
                 .wifiBssid("your wifiBssid")    //wifi地址（可以为空）

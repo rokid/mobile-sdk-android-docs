@@ -14,13 +14,13 @@
 Java:
  
 ```java
-boolean sendSuccess = RokidMobileSDK.home.sendAsr(deviceId, asr);
+boolean sendSuccess = RokidMobileSDK.vui.sendAsr(deviceId, asr);
 ```
  
 Kotlin:
  
 ```kotlin
-val sendSuccess = RokidMobileSDK.home.sendAsr(deviceId, asr)
+val sendSuccess = RokidMobileSDK.vui.sendAsr(deviceId, asr)
 ```
  
 **返回参数说明**

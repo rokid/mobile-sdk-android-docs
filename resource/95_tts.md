@@ -14,13 +14,13 @@
  Java:
  
 ```java
-boolean sendSuccess = RokidMobileSDK.home.sendTts(deviceId, tts);
+boolean sendSuccess = RokidMobileSDK.vui.sendTts(deviceId, tts);
 ```
 
 Kotlin:
 
 ```kotlin
-val sendSuccess = RokidMobileSDK.home.sendTts(deviceId, tts)
+val sendSuccess = RokidMobileSDK.vui.sendTts(deviceId, tts)
 ```
  
 **返回参数说明**

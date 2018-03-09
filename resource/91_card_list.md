@@ -11,7 +11,7 @@
  **示例代码**：
  
  ```java
- RokidMobileSDK.home.getCardList(maxDbId,new IGetCardsCallback() {
+ RokidMobileSDK.vui.getCardList(maxDbId,new IGetCardsCallback() {
             @Override
             public void onGetCardsSucceed(final List<CardMsgBean> cardInfoList, boolean hasMore) {
                 Logger.d("getCardListFromService success ");
