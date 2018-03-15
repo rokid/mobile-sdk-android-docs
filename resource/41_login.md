@@ -7,11 +7,14 @@
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | userId  | String | 是 | SDK接入方用户Id |
+| token   | String | 否 | SDK接入方用户token |
 
 **示例代码：**
 
+Java:
+
 ```java
-RokidMobileSDK.account.tokenLogin(userId, new ILoginResultCallback() {
+RokidMobileSDK.account.tokenLogin(userId, token, new ILoginResultCallback() {
     @Override
     public void onLoginSucceed() {
         Logger.d("onLoginSuccess is called.");
