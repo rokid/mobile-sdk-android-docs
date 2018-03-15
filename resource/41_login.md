@@ -1,12 +1,12 @@
 # 帐号 Account 模块
-## 登录接口
-* 接口说明：需要传入token和用户id，ILoginResultCallback为获取登陆结果回调监听
+## Token登录接口
+* 接口说明：SDK接入方用户Id，ILoginResultCallback为获取登陆结果回调监听
 
 **参数说明:**
 
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
-| userId  | String | 是 | 用户id |
+| userId  | String | 是 | SDK接入方用户Id |
 
 **示例代码：**
 

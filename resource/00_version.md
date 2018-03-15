@@ -1,5 +1,11 @@
 #  版本更新信息
 
+* v1.0.8-1.0.8-180315004
+
+    [新增] Bridge goBack 接口 <br>
+    [优化] Bridge 加载速度，SDKWebClient 改为 SDKWebChromeClient <br>
+    [修复] Skill 闹钟 ext 字段丢失
+
 * v1.0.8
 
     [新增] Skill-闹钟\提醒 获取列表 回调 <br>

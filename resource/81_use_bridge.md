@@ -1,13 +1,13 @@
 # RKWebBridge
 ## 快速接入
-我们 提供了 封装好的 SDKWebviewClient、SDKWebview，方便开发者集成，请安装下面 Demo 代码使用即可，具体 Native UI 组件可根据APP业务需求进行实现。
+我们 提供了 封装好的 SDKWebChromeClient、SDKWebview，方便开发者集成，请安装下面 Demo 代码使用即可，具体 Native UI 组件可根据APP业务需求进行实现。
 
-DemoWebViewClient:
+DemoWebChromeClient:
 
 ```Java
-public class DemoWebViewClient extends SDKWebviewClient {
+public class DemoWebChromeClient extends SDKWebChromeClient {
 
-    public DemoWebViewClient(RKWebBridge webBridge) {
+    public DemoWebChromeClient(RKWebBridge webBridge) {
         super(webBridge);
     }
     
