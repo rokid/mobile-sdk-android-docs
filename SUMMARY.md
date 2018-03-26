@@ -28,6 +28,7 @@
  - [闹钟](resource/71_alarm.md)
  - [提醒](resource/72_remind.md)
  - [智能家居](resource/73_homebase.md)
+ - [技能商店](resource/74_skill_store.md)
 * [WebBridge](resource/80_webbridge.md)
  - [快速接入](resource/81_use_bridge.md)
 * [Vui 反馈 模块](resource/90_vui.md)
