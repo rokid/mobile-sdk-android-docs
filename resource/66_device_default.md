@@ -8,7 +8,7 @@
  
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
-| device | RKDevice | 是 | 若琪设备实体 |
+| device | SDKDevice | 是 | 若琪设备实体 |
 
 **示例代码**：
  
@@ -25,7 +25,7 @@ RokidMobileSDK.device.setCurrentDevice(device);
 **示例代码**：
  
 ```java
-RKDevice device = RokidMobileSDK.device.getCurrentDevice();
+SDKDevice device = RokidMobileSDK.device.getCurrentDevice();
 ```
  
 ---

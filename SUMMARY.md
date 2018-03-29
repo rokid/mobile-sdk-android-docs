@@ -24,6 +24,7 @@
  - [默认设备](resource/66_device_default.md)
  - [恢复出厂设置](resource/67_device_reset.md)
  - [设备解绑](resource/68_device_unbind.md)
+ - [设备昵称前缀](resource/69_device_nick_prefix.md)
 * [技能模块 Skill](resource/70_skill.md)
  - [闹钟](resource/71_alarm.md)
  - [提醒](resource/72_remind.md)

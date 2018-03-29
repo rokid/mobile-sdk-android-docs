@@ -5,7 +5,7 @@
 
 ```
 目前获取服务端masterId对应的设备列表，
-注意 RKDevice此时里面只有 rokiId,rokidNick,basic_info信息，
+注意 SDKDevice此时里面只有 rokiId,rokidNick,basic_info信息，
 底层会默认给用户选择一个当前设备，逻辑图如下：
 ```
  
@@ -16,7 +16,7 @@
  ```java
  RokidMobileSDK.device.getDeviceList(new IGetDeviceCallback() {
         @Override
-        public void onGetDeviceListSucceed(List<RKDevice> deviceList) {
+        public void onGetDeviceListSucceed(List<SDKDevice> deviceList) {
             if(CollectionUtils.isEmpty(devices)){
                 // 设备为空
                 ... // doSomeing 
