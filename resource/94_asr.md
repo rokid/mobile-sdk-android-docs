@@ -43,18 +43,19 @@ val sendSuccess = RokidMobileSDK.vui.sendAsr(deviceId, asr)
 **示例代码**：
  
 ```java
-SDKVuiManager.getInstance().asrCorrectCreate(originText, 
-                targetText, 
+RokidMobileSDK.vui.asrCorrectCreate(originText,
+                targetText,
                 new IGetAsrErrorCallback() {
-            @Override
-            public void onGetAsrErrorSucceed(AsrErrorCorrectBean asrErrorCorrectBean) {
-                //do something
-            }
-            @Override
-            public void onGetAsrErrorFailed(String errorCode, String errorMsg) {
-               //do something
-            }
-        });
+                    @Override
+                    public void onGetAsrErrorSucceed(AsrErrorCorrectBean asrErrorCorrectBean) {
+                        //do something
+                    }
+
+                    @Override
+                    public void onGetAsrErrorFailed(String errorCode, String errorMsg) {
+                        //do something
+                    }
+                });
 ```
  
  **asrErrorCorrectBean数据格式**：
@@ -62,17 +63,17 @@ SDKVuiManager.getInstance().asrCorrectCreate(originText,
  ```json
 [
     {
-        //ASR纠错ID
+        // ASR纠错ID
         "id": "xxx",   
-        //用户ID          
+        // 用户ID          
         "accountId": "xxx", 
-        //原始的ASR内容
+        // 原始的ASR内容
         "originText": "xxx" ,
-        //纠正后的ASR内容
+        // 纠正后的ASR内容
         "targetText": "xxx" ,
-        //ASR纠错的创建时间
+        // ASR纠错的创建时间
         "createTime": "xxx" ,
-        //ASR纠错的更新时间
+        // ASR纠错的更新时间
         "updateTime": "xxx" ,
     }
 ]
@@ -90,18 +91,17 @@ SDKVuiManager.getInstance().asrCorrectCreate(originText,
 **示例代码**：
  
 ```java
-SDKVuiManager.getInstance().asrCorrectFind(originText, new IGetAsrErrorCallback() {
+RokidMobileSDK.vui.asrCorrectFind(originText, new IGetAsrErrorCallback() {
             @Override
             public void onGetAsrErrorSucceed(AsrErrorCorrectBean asrErrorCorrectBean) {
-               //do something
+                //do something
             }
 
             @Override
             public void onGetAsrErrorFailed(String errorCode, String errorMsg) {
-               //do something
+                //do something
             }
         });
-    }
 ```
 ---
 ## 更新 ASR 纠错 
@@ -118,7 +118,7 @@ SDKVuiManager.getInstance().asrCorrectFind(originText, new IGetAsrErrorCallback(
 **示例代码**：
  
 ```java
-SDKVuiManager.getInstance.asrCorrectUpdate(asrId,
+RokidMobileSDK.vui.asrCorrectUpdate(asrId,
                 originText,
                 targetText,
                 new IGetAsrErrorManageCallback() {
@@ -126,13 +126,12 @@ SDKVuiManager.getInstance.asrCorrectUpdate(asrId,
                     public void onGetAsrErrorManageListSucceed() {
                         //do something
                     }
-                    
+
                     @Override
                     public void onGetAsrErrorManageFailed(String errorCode, String errorMsg) {
-                       //do something
+                        //do something
                     }
                 });
-    }
 ```
 ---
 ## 删除 ASR 纠错 
@@ -147,7 +146,7 @@ SDKVuiManager.getInstance.asrCorrectUpdate(asrId,
 **示例代码**：
  
 ```java
-SDKVuiManager.getInstance.asrCorrectDelete(asrId, new IGetAsrErrorManageCallback() {
+RokidMobileSDK.vui.asrCorrectDelete(asrId, new IGetAsrErrorManageCallback() {
             @Override
             public void onGetAsrErrorManageListSucceed() {
                 //do something
@@ -155,7 +154,7 @@ SDKVuiManager.getInstance.asrCorrectDelete(asrId, new IGetAsrErrorManageCallback
 
             @Override
             public void onGetAsrErrorManageFailed(String errorCode, String errorMsg) {
-               //do something
+                //do something
             }
         });
         
@@ -174,11 +173,11 @@ SDKVuiManager.getInstance.asrCorrectDelete(asrId, new IGetAsrErrorManageCallback
 **示例代码**：
  
 ```java
-SDKVuiManager.getInstance.asrCorrectHistory(pageNumber, 
+RokidMobileSDK.vui.asrCorrectHistory(pageNumber, 
                 pageSize, 
                 new IGetAsrErrorListCallback() {
             @Override
-            public void onGetAsrErrorListSucceed(final List<AsrErrorCorrectBean> asrErrorCorrectList) {
+            public void onGetAsrErrorListSucceed(List<AsrErrorCorrectBean> list) {
                 //do something
             }
 
