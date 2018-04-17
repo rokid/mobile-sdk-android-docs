@@ -41,9 +41,9 @@
 [
     {
         //设备昵称
-        "rokidNick": "xxx",   
+        "deviceNick": "xxx",   
         //设备Id          
-        "rokiId": "0011111111111111",   
+        "deviceId": "0011111111111111",   
         "basic_info": {
             //设备地区             
             "region": "CN",             

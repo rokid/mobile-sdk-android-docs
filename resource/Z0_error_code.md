@@ -14,5 +14,9 @@
 | binder_BT_CHARACTER_NOT_FOUND | ble remote service not found sdk BTEngine character uuid error | 蓝牙服务特征值获取失败 |
 | binder_BT_DISCONNECT | ble has been disConnect | 蓝牙断开连接 |
 | binder_BT_SEND_DATA_ERROR | ble writeCharacteristi error during sendbinderData | 蓝牙写入数据过程中失败 |
+| ping_device_RC_DISCONNECT | ble writeCharacteristi error during sendbinderData | SDK与系统长连接断开 |
+| ping_device_ID_EMPTY | get device status fail,deviceId is null | 设备ID为空 |
+| ping_device_USER_ID_EMPTY | ble writeCharacteristi error during sendbinderData | 用户ID为空 |
+| ping_device_SAME_TASK_RUNNING | ble writeCharacteristi error during sendbinderData | 相同的ping个线程在运行 |
 
 
