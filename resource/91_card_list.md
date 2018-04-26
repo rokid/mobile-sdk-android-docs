@@ -7,11 +7,12 @@
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | maxDbId | int | 是 | card的id  |
+| pageSize | int | 是 | 分页大小  |
 
  **示例代码**：
  
  ```java
- RokidMobileSDK.vui.getCardList(maxDbId,new IGetCardsCallback() {
+ RokidMobileSDK.vui.getCardList(maxDbId,pageSize,new IGetCardsCallback() {
             @Override
             public void onGetCardsSucceed(final List<CardMsgBean> cardInfoList, boolean hasMore) {
                 Logger.d("getCardListFromService success ");
