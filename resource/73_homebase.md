@@ -6,13 +6,13 @@
 
 ### URL和环境
 
-* release环境：https://s.rokidcdn.com/homebase/himalaya/index.html#/homes/index
+* release环境：https://s.rokidcdn.com/homebase/tob/index.html#/homes/index?theme=default
     Rokid Mobile SDK 环境 为 release
 
-* pre环境：https://s.rokidcdn.com/homebase/himalaya/pre/index.html#/homes/index
+* pre环境：https://s.rokidcdn.com/homebase/tob/pre/index.html#/homes/index?theme=default
     Rokid Mobile SDK 环境 为 release
 
-* dev环境：https://s.rokidcdn.com/homebase/himalaya/dev/index.html#/homes/index
+* dev环境：https://s.rokidcdn.com/homebase/tob/dev/index.html#/homes/index?theme=default
     Rokid Mobile SDK 环境 为 Debug
 
 ### 接入说明
