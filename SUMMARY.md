@@ -39,6 +39,7 @@
  - [Card 样式说明](resource/93_card_style.md)
  - [发送 ASR](resource/94_asr.md)
  - [发送 TTS](resource/95_tts.md)
+ - [发送 Topic消息](resource/96_topic_msg.md)
 * [消息 Event](resource/Y0_event.md)
 * [错误码 Error Code](resource/Z0_error_code.md)
 
