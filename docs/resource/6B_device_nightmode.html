@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ping设备状态 · GitBook</title>
+        <title>设备夜间模式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,7 +60,7 @@
     <link rel="next" href="70_skill.html" />
     
     
-    <link rel="prev" href="69_device_nick_prefix.html" />
+    <link rel="prev" href="6A_device_ping.html" />
     
 
     </head>
@@ -427,12 +427,25 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.10" data-path="601_device_ping.html">
+        <li class="chapter " data-level="1.8.10" data-path="6A_device_ping.html">
             
-                <a href="601_device_ping.html">
+                <a href="6A_device_ping.html">
             
                     
                     ping设备状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.11" data-path="6B_device_nightmode.html">
+            
+                <a href="6B_device_nightmode.html">
+            
+                    
+                    设备夜间模式
             
                 </a>
             
@@ -701,7 +714,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ping设备状态</a>
+        <a href=".." >设备夜间模式</a>
     </h1>
 </div>
 
@@ -717,9 +730,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x8BBE;&#x5907;&#x6A21;&#x5757;-device">&#x8BBE;&#x5907;&#x6A21;&#x5757; Device</h1>
-<h2 id="ping&#x8BBE;&#x5907;">ping&#x8BBE;&#x5907;</h2>
+<h2 id="1&#x3001;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;">1&#x3001;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</h2>
 <p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
- &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x7684;&#x5728;&#x7EBF;&#x72B6;&#x6001;</p>
+ &#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</p>
 <p> <strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
@@ -732,28 +745,103 @@
 </thead>
 <tbody>
 <tr>
-<td>sddDevice</td>
-<td>SDKDevice</td>
+<td>deviceId</td>
+<td>String</td>
 <td>&#x662F;</td>
-<td>SDKDevice</td>
+<td>&#x8BBE;&#x5907;ID</td>
 </tr>
 </tbody>
 </table>
 <p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
-<pre><code class="lang-java">  RokidMobileSDK.device.pingDevice(sddDevice, <span class="hljs-keyword">new</span> IPingDeviceCallback() {
-
+<pre><code class="lang-java"> String deviceId = <span class="hljs-string">&quot;XXXXXX&quot;</span>;
+ RokidMobileSDK.device.getNightMode(deviceId, <span class="hljs-keyword">new</span> IGetDeviceNightMode() {
             <span class="hljs-meta">@Override</span>
-            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(String deviceId, <span class="hljs-keyword">boolean</span> isOnline)</span> </span>{
-                showToast(<span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x6210;&#x529F;,deviceId=&quot;</span> + deviceId + <span class="hljs-string">&quot;,isOnline=&quot;</span> + isOnline);
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetDeviceNightModeSucceed</span><span class="hljs-params">(NightModeBean nightModeBean)</span> </span>{
+                <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6210;&#x529F;</span>
             }
 
             <span class="hljs-meta">@Override</span>
-            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFailed</span><span class="hljs-params">(String deviceId, String errorCode, String errorMsg)</span> </span>{
-                showToast(<span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x5931;&#x8D25;&#xFF0C;deviceId&quot;</span> + deviceId + <span class="hljs-string">&quot;,errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot;errorMsg= &quot;</span> + errorMsg);
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetDeviceNightModeFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
+                <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5931;&#x8D25;</span>
             }
         });
+)
 </code></pre>
 <hr>
+<h2 id="2&#x3001;&#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;">2&#x3001;&#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</h2>
+<p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x591C;&#x95F4;&#x6A21;&#x5F0F;</p>
+<p> <strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deviceId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
+</tr>
+</tbody>
+</table>
+<p>NightModeBean &#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>open: &#x6253;&#x5F00;&#x591C;&#x95F4;&#x6A21;&#x5F0F;&lt;/br&gt;close:</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BBE;&#x5907;ID</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<pre><code class="lang-java"> String deviceId = <span class="hljs-string">&quot;XXXXXX&quot;</span>;
+
+ NightModeBean nightModeBean = <span class="hljs-keyword">new</span> NightModeBean();
+ nightModeBean.setAction(<span class="hljs-string">&quot;open&quot;</span>)
+ nightModeBean.setStartTime(<span class="hljs-string">&quot;23:00&quot;</span>)
+ nightModeBean.setEndTime(<span class="hljs-string">&quot;7:00&quot;</span>)
+
+ RokidMobileSDK.device.updateNightMode(deviceId, nightModeBean, <span class="hljs-keyword">new</span> IUpdateDeviceNightMode() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onUpdateDeviceNightModeSucceed</span><span class="hljs-params">()</span> </span>{
+                callback.onUpdateDeviceNightModeSucceed();
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onUpdateDeviceNightModeFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
+                callback.onUpdateDeviceNightModeFailed(errorCode, errorMsg);
+            }
+        });
+)
+</code></pre>
 
                                 
                                 </section>
@@ -781,7 +869,7 @@
 
             
                 
-                <a href="69_device_nick_prefix.html" class="navigation navigation-prev " aria-label="Previous page: 设备昵称前缀">
+                <a href="6A_device_ping.html" class="navigation navigation-prev " aria-label="Previous page: ping设备状态">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -797,7 +885,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ping设备状态","level":"1.8.10","depth":2,"next":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_alarm.md","ref":"resource/71_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_homebase.md","ref":"resource/73_homebase.md","articles":[]},{"title":"技能商店","level":"1.9.4","depth":2,"path":"resource/74_skill_store.md","ref":"resource/74_skill_store.md","articles":[]}]},"previous":{"title":"设备昵称前缀","level":"1.8.9","depth":2,"path":"resource/69_device_nick_prefix.md","ref":"resource/69_device_nick_prefix.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/601_device_ping.md","mtime":"2018-05-30T06:16:27.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T06:43:44.640Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设备夜间模式","level":"1.8.11","depth":2,"next":{"title":"技能模块 Skill","level":"1.9","depth":1,"path":"resource/70_skill.md","ref":"resource/70_skill.md","articles":[{"title":"闹钟","level":"1.9.1","depth":2,"path":"resource/71_alarm.md","ref":"resource/71_alarm.md","articles":[]},{"title":"提醒","level":"1.9.2","depth":2,"path":"resource/72_remind.md","ref":"resource/72_remind.md","articles":[]},{"title":"智能家居","level":"1.9.3","depth":2,"path":"resource/73_homebase.md","ref":"resource/73_homebase.md","articles":[]},{"title":"技能商店","level":"1.9.4","depth":2,"path":"resource/74_skill_store.md","ref":"resource/74_skill_store.md","articles":[]}]},"previous":{"title":"ping设备状态","level":"1.8.10","depth":2,"path":"resource/6A_device_ping.md","ref":"resource/6A_device_ping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/6B_device_nightmode.md","mtime":"2018-06-06T10:04:28.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T10:04:47.050Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

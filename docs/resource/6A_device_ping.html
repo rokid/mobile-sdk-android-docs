@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>发送配网数据 · GitBook</title>
+        <title>ping设备状态 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="55_bt_release.html" />
+    <link rel="next" href="6B_device_nightmode.html" />
     
     
-    <link rel="prev" href="53_bt_connect.html" />
+    <link rel="prev" href="69_device_nick_prefix.html" />
     
 
     </head>
@@ -265,7 +265,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.4" data-path="54_bt_send_data.html">
+        <li class="chapter " data-level="1.7.4" data-path="54_bt_send_data.html">
             
                 <a href="54_bt_send_data.html">
             
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.10" data-path="6A_device_ping.html">
+        <li class="chapter active" data-level="1.8.10" data-path="6A_device_ping.html">
             
                 <a href="6A_device_ping.html">
             
@@ -714,7 +714,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >发送配网数据</a>
+        <a href=".." >ping设备状态</a>
     </h1>
 </div>
 
@@ -729,11 +729,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x914D;&#x7F51;&#x6A21;&#x5757;-binder">&#x914D;&#x7F51;&#x6A21;&#x5757; Binder</h1>
-<h2 id="&#x8BBE;&#x5907;&#x914D;&#x7F51;">&#x8BBE;&#x5907;&#x914D;&#x7F51;</h2>
-<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong> 
-&#x53D1;&#x9001;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#xFF08;&#x8FD9;&#x91CC;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF09;</p>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+                                <h1 id="&#x8BBE;&#x5907;&#x6A21;&#x5757;-device">&#x8BBE;&#x5907;&#x6A21;&#x5757; Device</h1>
+<h2 id="ping&#x8BBE;&#x5907;">ping&#x8BBE;&#x5907;</h2>
+<p> <strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong>
+ &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x7684;&#x5728;&#x7EBF;&#x72B6;&#x6001;</p>
+<p> <strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
@@ -745,38 +745,26 @@
 </thead>
 <tbody>
 <tr>
-<td>binderData</td>
-<td>DeviceBinderData</td>
+<td>sddDevice</td>
+<td>SDKDevice</td>
 <td>&#x662F;</td>
-<td>&#x84DD;&#x7259;&#x53D1;&#x9001;&#x4FE1;&#x606F;</td>
+<td>SDKDevice</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code class="lang-java"> <span class="hljs-comment">// &#x6784;&#x5EFA;&#x7ED1;&#x5B9A;&#x6570;&#x636E;</span>
- DeviceBinderData binderData = DeviceBinderData.newBuilder()
-                .wifiPwd(<span class="hljs-string">&quot;your wifiPwd&quot;</span>)        <span class="hljs-comment">//wifi&#x5BC6;&#x7801;&#xFF08;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF09;</span>
-                .wifiSsid(<span class="hljs-string">&quot;your wifiSsid&quot;</span>)      <span class="hljs-comment">//wifi&#x540D;&#x5B57;&#xFF08;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF09;</span>
-                .wifiBssid(<span class="hljs-string">&quot;your wifiBssid&quot;</span>)    <span class="hljs-comment">//wifi&#x5730;&#x5740;&#xFF08;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF09;</span>
-                .build();
+<p> <strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong>&#xFF1A;</p>
+<pre><code class="lang-java">  RokidMobileSDK.device.pingDevice(sddDevice, <span class="hljs-keyword">new</span> IPingDeviceCallback() {
 
-<span class="hljs-comment">// &#x53D1;&#x9001;&#x6570;&#x636E;</span>
-RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">new</span> BTSendCallBack() {
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendSuccess</span><span class="hljs-params">(BTDeviceBean btDeviceBean)</span> </span>{    
-        Log.i(<span class="hljs-string">&quot;BTSendCallBack&quot;</span>,<span class="hljs-string">&quot;sendBtData Success name=&quot;</span> + btDeviceBean.getName());
-        Log.i(<span class="hljs-string">&quot;BTSendCallBack&quot;</span>,<span class="hljs-string">&quot;sendBtData Success address=&quot;</span> + btDeviceBean.getAddress());
-        ... <span class="hljs-comment">// doSomeing</span>
-     }
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(String deviceId, <span class="hljs-keyword">boolean</span> isOnline)</span> </span>{
+                showToast(<span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x6210;&#x529F;,deviceId=&quot;</span> + deviceId + <span class="hljs-string">&quot;,isOnline=&quot;</span> + isOnline);
+            }
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendFailed</span><span class="hljs-params">(BTDeviceBean btDeviceBean, BleException bleException)</span> </span>{          
-        Log.e(<span class="hljs-string">&quot;BTSendCallBack&quot;</span>,<span class="hljs-string">&quot;sendBtData failed name=&quot;</span> + btDeviceBean.getName());
-        Log.e(<span class="hljs-string">&quot;BTSendCallBack&quot;</span>,<span class="hljs-string">&quot;sendBtData failed address=&quot;</span> + btDeviceBean.getAddress());
-        Log.e(<span class="hljs-string">&quot;BTSendCallBack&quot;</span>,<span class="hljs-string">&quot; sendBtData failed Exception=&quot;</span> + bleException.toString());
-        ... <span class="hljs-comment">// doSomeing</span>
-    }
-});
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFailed</span><span class="hljs-params">(String deviceId, String errorCode, String errorMsg)</span> </span>{
+                showToast(<span class="hljs-string">&quot;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x5931;&#x8D25;&#xFF0C;deviceId&quot;</span> + deviceId + <span class="hljs-string">&quot;,errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot;errorMsg= &quot;</span> + errorMsg);
+            }
+        });
 </code></pre>
 <hr>
 
@@ -806,12 +794,12 @@ RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">ne
 
             
                 
-                <a href="53_bt_connect.html" class="navigation navigation-prev " aria-label="Previous page: 连接蓝牙">
+                <a href="69_device_nick_prefix.html" class="navigation navigation-prev " aria-label="Previous page: 设备昵称前缀">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="55_bt_release.html" class="navigation navigation-next " aria-label="Next page: 释放蓝牙">
+                <a href="6B_device_nightmode.html" class="navigation navigation-next " aria-label="Next page: 设备夜间模式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -822,7 +810,7 @@ RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">ne
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"发送配网数据","level":"1.7.4","depth":2,"next":{"title":"释放蓝牙","level":"1.7.5","depth":2,"path":"resource/55_bt_release.md","ref":"resource/55_bt_release.md","articles":[]},"previous":{"title":"连接蓝牙","level":"1.7.3","depth":2,"path":"resource/53_bt_connect.md","ref":"resource/53_bt_connect.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/54_bt_send_data.md","mtime":"2018-03-09T06:47:53.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T10:04:47.050Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ping设备状态","level":"1.8.10","depth":2,"next":{"title":"设备夜间模式","level":"1.8.11","depth":2,"path":"resource/6B_device_nightmode.md","ref":"resource/6B_device_nightmode.md","articles":[]},"previous":{"title":"设备昵称前缀","level":"1.8.9","depth":2,"path":"resource/69_device_nick_prefix.md","ref":"resource/69_device_nick_prefix.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/6A_device_ping.md","mtime":"2018-06-06T10:02:57.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-06T10:04:47.050Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
