@@ -1,4 +1,5 @@
 # 设备模块 Device
+
 ## 1、获取系统版本信息
 
 **接口说明**
@@ -13,8 +14,18 @@
 
  **示例代码**：
  
- ```java
- boolean isSuccees = RokidMobileSDK.device.getVersionInfo(deviceId);
+ Kotlin
+ 
+```kotlin
+RokidMobileSDK.device.getVersionInfo(deviceId, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+        // TODO
+    }
+})
  ```
  
  **event名称**
@@ -60,8 +71,18 @@
 
  **示例代码**：
  
- ```java
- boolean sendSuccess= RokidMobileSDK.device.startSystemUpdate(deviceId)
+ Kotlin
+ 
+```kotlin
+ RokidMobileSDK.device.startSystemUpdate(deviceId, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+        // TODO
+    }
+})
  ```
  
  **返回值说明**

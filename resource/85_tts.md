@@ -14,13 +14,33 @@
  Java:
  
 ```java
-boolean sendSuccess = RokidMobileSDK.vui.sendTts(deviceId, tts);
+RokidMobileSDK.vui.sendTts(deviceId, tts, new IChannelPublishCallback() {
+    @Override
+    public void onSucceed() {
+        // TODO
+    }
+
+    @Override
+    public void onFailed() {
+        // TODO
+    }
+
+});
 ```
 
 Kotlin:
 
 ```kotlin
-val sendSuccess = RokidMobileSDK.vui.sendTts(deviceId, tts)
+RokidMobileSDK.vui.sendTts(deviceId, tts, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+     // TODO
+    }
+
+})
 ```
  
 **返回参数说明**

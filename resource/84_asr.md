@@ -14,13 +14,33 @@
 Java:
  
 ```java
-boolean sendSuccess = RokidMobileSDK.vui.sendAsr(deviceId, asr);
+RokidMobileSDK.vui.sendAsr(deviceId, asr, new IChannelPublishCallback() {
+    @Override
+    public void onSucceed() {
+        // TODO
+    }
+
+    @Override
+    public void onFailed() {
+        // TODO
+    }
+
+});
 ```
  
 Kotlin:
  
 ```kotlin
-val sendSuccess = RokidMobileSDK.vui.sendAsr(deviceId, asr)
+RokidMobileSDK.vui.sendAsr(deviceId, asr, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+     // TODO
+    }
+
+})
 ```
  
 **返回参数说明**

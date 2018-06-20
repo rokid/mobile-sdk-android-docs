@@ -59,13 +59,33 @@ SDKRemind 字段说明：
 Java:
 
 ```Java
-RokidMobileSDK.skill.remind().delete(deviceId, remind);
+RokidMobileSDK.skill.remind().delete(deviceId, remind, new IChannelPublishCallback() {
+    @Override
+    public void onSucceed() {
+        // TODO
+    }
+
+    @Override
+    public void onFailed() {
+        // TODO
+    }
+
+});
 ```
 
 Kotlin:
 
 ```kotlin
-RokidMobileSDK.skill.remind().delete(deviceId, remind);
+RokidMobileSDK.skill.remind().delete(deviceId, remind, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+     // TODO
+    }
+
+})
 ```
  
 注：字段说明 请参考上面 1

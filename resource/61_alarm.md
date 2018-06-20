@@ -124,14 +124,34 @@ SDKRepeatType.EVERY_SUNDAY // 每周日
  
 Java:
  
-```Java
-RokidMobileSDK.skill.alarm().delete(deviceId, alarm);
+```java
+RokidMobileSDK.skill.alarm().delete(deviceId, alarm, new IChannelPublishCallback() {
+    @Override
+    public void onSucceed() {
+        // TODO
+    }
+
+    @Override
+    public void onFailed() {
+        // TODO
+    }
+
+});
 ```
 
 Kotlin:
 
 ```kotlin
-RokidMobileSDK.skill.alarm().delete(deviceId, alarm)
+RokidMobileSDK.skill.alarm().delete(deviceId, alarm, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+     // TODO
+    }
+
+})
 ```
  
 注：字段说明 请参考上面 6.1.1
@@ -144,13 +164,33 @@ RokidMobileSDK.skill.alarm().delete(deviceId, alarm)
 Java:
 
 ```Java
-RokidMobileSDK.skill.alarm().update(deviceId, oldAlarm, newAlarm);
+RokidMobileSDK.skill.alarm().update(deviceId, oldAlarm, newAlarm, new IChannelPublishCallback() {
+    @Override
+    public void onSucceed() {
+        // TODO
+    }
+
+    @Override
+    public void onFailed() {
+        // TODO
+    }
+
+});
 ```
  
 Kotlin:
 
 ```kotlin
-RokidMobileSDK.skill.alarm().update(deviceId, oldAlarm, newAlarm)
+RokidMobileSDK.skill.alarm().update(deviceId, oldAlarm, newAlarm, object : IChannelPublishCallback {
+    override fun onSucceed() {
+        // TODO
+    }
+
+    override fun onFailed() {
+     // TODO
+    }
+
+})
 ```
  
 注：字段说明 请参考上面 1 和 2
