@@ -14,6 +14,8 @@ compile 'com.squareup.okhttp3:okhttp:3.9.0'
 compile 'org.greenrobot:eventbus:3.0.0'
 compile 'org.greenrobot:greendao:3.2.0'
 compile 'org.greenrobot:greendao-generator:3.2.0'
+compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 ```
 
 ## 权限依赖
