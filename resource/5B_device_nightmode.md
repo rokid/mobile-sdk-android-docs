@@ -60,7 +60,7 @@ NightModeBean 对象结构如下:
  nightModeBean.setStartTime("23:00")
  nightModeBean.setEndTime("7:00")
  
- RokidMobileSDK.device.updateNightMode(deviceId, nightModeBean, new IUpdateDeviceNightMode() {
+ RokidMobileSDK.device.updateNightMode(deviceId, nightModeBean, new IUpdateCustomInfoCallback() {
             @Override
             public void onUpdateDeviceNightModeSucceed() {
                 callback.onUpdateDeviceNightModeSucceed();

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>技能商店 · GitBook</title>
+        <title>帐号 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="X4_device.html" />
     
-    <link rel="prev" href="63_homebase.html" />
+    
+    <link rel="prev" href="X1_event.html" />
     
 
     </head>
@@ -545,7 +547,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.4" data-path="64_skill_store.html">
+        <li class="chapter " data-level="1.7.4" data-path="64_skill_store.html">
             
                 <a href="64_skill_store.html">
             
@@ -719,7 +721,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="X3_account.html">
+        <li class="chapter active" data-level="1.10.2" data-path="X3_account.html">
             
                 <a href="X3_account.html">
             
@@ -845,7 +847,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >技能商店</a>
+        <a href=".." >帐号</a>
     </h1>
 </div>
 
@@ -860,28 +862,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6280;&#x80FD;&#x6A21;&#x5757;-skill">&#x6280;&#x80FD;&#x6A21;&#x5757; Skill</h1>
-<h2 id="&#x6280;&#x80FD;&#x5546;&#x5E97;-h5">&#x6280;&#x80FD;&#x5546;&#x5E97; H5</h2>
-<h3 id="url">URL</h3>
-<ul>
-<li>release&#x73AF;&#x5883;&#xFF1A; <a href="https://skill.rokid.com/storev2" target="_blank">https://skill.rokid.com/storev2</a></li>
-</ul>
-<h3 id="&#x5FEB;&#x901F;&#x63A5;&#x5165;&#x8BF4;&#x660E;">&#x5FEB;&#x901F;&#x63A5;&#x5165;&#x8BF4;&#x660E;</h3>
-<p>1&#x3001;&#x5FC5;&#x987B; &#x7EE7;&#x627F; SDKWebview</p>
-<p>2&#x3001;&#x5FC5;&#x987B;&#x5B9E;&#x73B0; &#x5982;&#x4E0B; &#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x4F8B;&#x5B50;:</p>
-<p>Kotlin</p>
-<pre><code class="lang-kotlin">    <span class="hljs-comment">// &#x5F53;&#x524D; Webview &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x9875;&#x9762;</span>
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">open</span><span class="hljs-params">(title: <span class="hljs-type">String, url: String</span>)</span> {</span>
-    }
-
-    <span class="hljs-comment">// &#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Activity &#xFF08;webview&#xFF09; &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x9875;&#x9762;</span>
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">openNewWebView</span><span class="hljs-params">(title: <span class="hljs-type">String, url: String</span>)</span> {</span>
-    }
-
-    <span class="hljs-comment">// &#x4F7F;&#x7528; &#x5916;&#x90E8;&#x6D4F;&#x89C8;&#x5668;&#xFF08;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x6D4F;&#x89C8;&#x5668;&#xFF09; &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9875;&#x9762;</span>
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">openExternal</span><span class="hljs-params">(url: <span class="hljs-type">String</span>)</span> {</span>
-    }
+                                <h1 id="&#x5E10;&#x53F7;-&#x6D88;&#x606F;">&#x5E10;&#x53F7; &#x6D88;&#x606F;</h1>
+<h2 id="&#x5E10;&#x53F7;&#x88AB;&#x767B;&#x51FA;">&#x5E10;&#x53F7;&#x88AB;&#x767B;&#x51FA;</h2>
+<p>&#x5F53;&#x524D;&#x7528;&#x6237;&#x767B;&#x5F55;&#x5931;&#x6548;&#x3001;&#x5F02;&#x5730;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x53D1;&#x9001;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x3002;</p>
+<h3 id="event&#x540D;&#x79F0;">event&#x540D;&#x79F0;</h3>
+<p>EventUserLoginInvalid</p>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<p>Kolin</p>
+<pre><code class="lang-kotlin">@Subscribe(threadMode = ThreadMode.MAIN)
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onReceivedUserEvent</span><span class="hljs-params">(eventUserLoginInvalid: <span class="hljs-type">EventUserLoginInvalid</span>)</span>{</span>
+    <span class="hljs-comment">// TODO        </span>
+}
 </code></pre>
 
                                 
@@ -910,10 +901,14 @@
 
             
                 
-                <a href="63_homebase.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 智能家居">
+                <a href="X1_event.html" class="navigation navigation-prev " aria-label="Previous page: Event 介绍">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="X4_device.html" class="navigation navigation-next " aria-label="Next page: 设备信息">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -922,7 +917,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"技能商店","level":"1.7.4","depth":2,"next":{"title":"WebBridge","level":"1.8","depth":1,"ref":"","articles":[{"title":"快速接入","level":"1.8.1","depth":2,"path":"resource/71_use_bridge.md","ref":"resource/71_use_bridge.md","articles":[]}]},"previous":{"title":"智能家居","level":"1.7.3","depth":2,"path":"resource/63_homebase.md","ref":"resource/63_homebase.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/64_skill_store.md","mtime":"2018-06-19T09:33:19.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-05T14:05:09.995Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"帐号","level":"1.10.2","depth":2,"next":{"title":"设备信息","level":"1.10.3","depth":2,"path":"resource/X4_device.md","ref":"resource/X4_device.md","articles":[]},"previous":{"title":"Event 介绍","level":"1.10.1","depth":2,"path":"resource/X1_event.md","ref":"resource/X1_event.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/X3_account.md","mtime":"2018-06-19T09:57:44.779Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-05T14:05:09.995Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
