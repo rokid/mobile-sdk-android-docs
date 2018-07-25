@@ -28,7 +28,7 @@
     * [设备昵称前缀](resource/59_device_nick_prefix.md)
     * [ping设备状态](resource/5A_device_ping.md)
     * [设备夜间模式](resource/5B_device_nightmode.md)
-    * [设备自定义消息](resource/5Z_custom_info.md)
+    * [设备自定义信息](resource/5Z_custom_info.md)
 * 技能模块 Skill
     * [闹钟](resource/61_alarm.md)
     * [提醒](resource/62_remind.md)
