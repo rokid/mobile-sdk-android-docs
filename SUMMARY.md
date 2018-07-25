@@ -28,7 +28,7 @@
     * [设备昵称前缀](resource/59_device_nick_prefix.md)
     * [ping设备状态](resource/5A_device_ping.md)
     * [设备夜间模式](resource/5B_device_nightmode.md)
-    * [设备自定义信息](resource/5Z_custom_info.md)
+    * [设备自定义消息](resource/5Z_custom_info.md)
 * 技能模块 Skill
     * [闹钟](resource/61_alarm.md)
     * [提醒](resource/62_remind.md)
@@ -48,6 +48,7 @@
     * [帐号](resource/X3_account.md)
     * [设备信息](resource/X4_device.md)
     * [内容信息](resource/X5_media.md)
+    * [自定义消息](resource/X6_custom_topic_msg.md)
 * [错误码](resource/Y0_error_code.md)
 * [服务协议](resource/Z0_service_agreement.md)
 * [免责声明](resource/Z1_community_disclaimer.md)
