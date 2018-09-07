@@ -14,8 +14,8 @@
     * [蓝牙状态](resource/41_bt_status.md)
     * [蓝牙扫描](resource/42_bt_scan.md)
     * [连接蓝牙](resource/43_bt_connect.md)
-    * [发送配网数据](resource/44_bt_send_data.md)
-    * [释放蓝牙](resource/45_bt_release.md)
+    * [设备配网](resource/44_bt_send_data.md)
+    * [释放蓝牙](resource/4Z_bt_release.md)
 * 设备模块 Device
     * [设备列表](resource/51_device_list.md)
     * [设备基本信息](resource/52_device_base_info.md)

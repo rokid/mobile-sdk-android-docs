@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>发送配网数据 · GitBook</title>
+        <title>设备配网 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="45_bt_release.html" />
+    <link rel="next" href="4Z_bt_release.html" />
     
     
     <link rel="prev" href="43_bt_connect.html" />
@@ -293,7 +293,7 @@
                 <a href="44_bt_send_data.html">
             
                     
-                    发送配网数据
+                    设备配网
             
                 </a>
             
@@ -301,9 +301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="45_bt_release.html">
+        <li class="chapter " data-level="1.5.5" data-path="4Z_bt_release.html">
             
-                <a href="45_bt_release.html">
+                <a href="4Z_bt_release.html">
             
                     
                     释放蓝牙
@@ -860,7 +860,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >发送配网数据</a>
+        <a href=".." >设备配网</a>
     </h1>
 </div>
 
@@ -878,7 +878,8 @@
                                 <h1 id="&#x914D;&#x7F51;&#x6A21;&#x5757;-binder">&#x914D;&#x7F51;&#x6A21;&#x5757; Binder</h1>
 <h2 id="&#x8BBE;&#x5907;&#x914D;&#x7F51;">&#x8BBE;&#x5907;&#x914D;&#x7F51;</h2>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong> 
-&#x53D1;&#x9001;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#xFF08;&#x8FD9;&#x91CC;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF09;</p>
+&#x53D1;&#x9001;&#x7ED1;&#x5B9A;&#x6570;&#x636E;
+&#x8FD9;&#x91CC;&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;</p>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
@@ -907,7 +908,7 @@
                 .build();
 
 <span class="hljs-comment">// &#x53D1;&#x9001;&#x6570;&#x636E;</span>
-RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">new</span> BTSendCallBack() {
+RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">new</span> IBinderCallBack() {
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendSuccess</span><span class="hljs-params">(BTDeviceBean btDeviceBean)</span> </span>{    
         Log.i(<span class="hljs-string">&quot;BTSendCallBack&quot;</span>,<span class="hljs-string">&quot;sendBtData Success name=&quot;</span> + btDeviceBean.getName());
@@ -925,6 +926,82 @@ RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">ne
 });
 </code></pre>
 <hr>
+<h2 id="&#x914D;&#x7F51;&#x72B6;&#x6001;">&#x914D;&#x7F51;&#x72B6;&#x6001;</h2>
+<p>&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x3002;
+&#x9700;&#x8981; &#x4F7F;&#x7528; EventBus &#x63A5;&#x6536; &#x6D88;&#x606F;&#x3002;</p>
+<h3 id="&#x6D88;&#x606F;&#x4F53;">&#x6D88;&#x606F;&#x4F53;</h3>
+<p>SDKBinderStatusEvent</p>
+<h3 id="&#x72B6;&#x6001;&#x503C;&#x5224;&#x65AD;">&#x72B6;&#x6001;&#x503C;&#x5224;&#x65AD;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x72B6;&#x6001;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>wifi&#x8FDE;&#x63A5;&#x4E2D;</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>wifi&#x8FDE;&#x63A5;&#x6210;&#x529F;</td>
+<td></td>
+</tr>
+<tr>
+<td>-11</td>
+<td>wifi&#x5BC6;&#x7801;&#x9519;&#x8BEF;</td>
+<td></td>
+</tr>
+<tr>
+<td>-12</td>
+<td>wifi&#x8FDE;&#x63A5;&#x8D85;&#x65F6;</td>
+<td></td>
+</tr>
+<tr>
+<td>-13</td>
+<td>&#x6CA1;&#x627E;&#x5230;&#x5F53;&#x524D;wifi</td>
+<td></td>
+</tr>
+<tr>
+<td>-14</td>
+<td>wifi&#x5BC6;&#x7801;&#x957F;&#x5EA6;&#x4E0D;&#x6B63;&#x786E;</td>
+<td></td>
+</tr>
+<tr>
+<td>100</td>
+<td>&#x767B;&#x5F55;&#x4E2D;</td>
+<td></td>
+</tr>
+<tr>
+<td>101</td>
+<td>&#x767B;&#x5F55;&#x6210;&#x529F;</td>
+<td></td>
+</tr>
+<tr>
+<td>-101</td>
+<td>&#x767B;&#x5F55;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>200</td>
+<td>&#x7ED1;&#x5B9A;&#x4E2D;</td>
+<td></td>
+</tr>
+<tr>
+<td>201</td>
+<td>&#x7ED1;&#x5B9A;&#x6210;&#x529F;</td>
+<td></td>
+</tr>
+<tr>
+<td>-201</td>
+<td>&#x7ED1;&#x5B9A;&#x5931;&#x8D25;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -957,7 +1034,7 @@ RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">ne
                 </a>
                 
                 
-                <a href="45_bt_release.html" class="navigation navigation-next " aria-label="Next page: 释放蓝牙">
+                <a href="4Z_bt_release.html" class="navigation navigation-next " aria-label="Next page: 释放蓝牙">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -968,7 +1045,7 @@ RokidMobileSDK.binder.sendBTBinderData(binderData, <span class="hljs-keyword">ne
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"发送配网数据","level":"1.5.4","depth":2,"next":{"title":"释放蓝牙","level":"1.5.5","depth":2,"path":"resource/45_bt_release.md","ref":"resource/45_bt_release.md","articles":[]},"previous":{"title":"连接蓝牙","level":"1.5.3","depth":2,"path":"resource/43_bt_connect.md","ref":"resource/43_bt_connect.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/44_bt_send_data.md","mtime":"2018-07-25T04:00:11.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-25T05:41:08.207Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设备配网","level":"1.5.4","depth":2,"next":{"title":"释放蓝牙","level":"1.5.5","depth":2,"path":"resource/4Z_bt_release.md","ref":"resource/4Z_bt_release.md","articles":[]},"previous":{"title":"连接蓝牙","level":"1.5.3","depth":2,"path":"resource/43_bt_connect.md","ref":"resource/43_bt_connect.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/44_bt_send_data.md","mtime":"2018-09-07T13:36:10.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T13:36:40.678Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

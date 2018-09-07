@@ -2,8 +2,8 @@
 ## 1、RokidMobileSDK 初始化
 
 * 接口说明：RokidMobileSDK初始化。
-* <font color=red size=3>**在工程的Application类的onCreate()方法中初始化RokidMobileSDK.**</font>
-* appKey 和 appSecret 需要在若琪开放平台注册获取
+* <font color=red size=3>**在工程的Application类的onCreate()方法中初始化RokidMobileSDK。**</font>
+* <font color=red size=3>**appKey 和 appSecret 需要向 对接的 Rokid 项目经理 申请。**</font>
 
 **参数说明：**
 

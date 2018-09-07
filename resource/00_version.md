@@ -1,35 +1,33 @@
 #  版本更新信息
 
-* v1.2.1-180710002
+* v1.3.0
+
+    [新增] 蓝牙 2.0 配网协议，配网过程中 设备状态的判断
+
+* v1.2.1
     
     [修复] 断网后，长连接没有正常连接问题。
-
-* v1.2.1-180705001
-
     [新增] SDKChannelMessage 长连接全部消息。 <br>
     [新增] 设备自定义信息存储、获取
 
-* v1.2.0-180620001
+* v1.2.0
     
     [优化] SDK 长连接 稳定性
 
-* v1.0.11-180019021
+* v1.0.11
 
     [新增] SDKMediaEvent 内容播放消息
 
-* v1.0.9-1805150019
+* v1.0.9
 
     [新增] Vui sendMessage接口
 
-* v1.0.8-180315005
+* v1.0.8
 
     [新增] Bridge goBack 接口 <br>
     [优化] Bridge 加载速度，SDKWebClient 改为 SDKWebChromeClient <br>
     [修复] Skill 闹钟 ext 字段丢失 <br>
     [修改] Account token login
-
-* v1.0.8
-
     [新增] Skill-闹钟\提醒 获取列表 回调 <br>
     [优化] Skill-闹钟\提醒 重复模式 解释
     
