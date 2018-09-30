@@ -1,6 +1,8 @@
 # Vui 模块
+
 ## Card 样式说明 
-### 1.chat样式
+
+### chat样式
  
 **消息格式**：
 
@@ -31,7 +33,7 @@
 
 ---
   
-### 2.Brief summary样式  
+### Brief summary样式  
 
 **消息格式** ：
 
@@ -77,7 +79,7 @@
 
 ---
 
-### 2.simple summary样式  
+### simple summary样式  
 
 **消息格式** ：
 
@@ -122,7 +124,7 @@
  
 ---
 
-### 2.image summary样式  
+### image summary样式  
 
 **消息格式** ：
 

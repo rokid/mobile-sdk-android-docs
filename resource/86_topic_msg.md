@@ -1,5 +1,7 @@
 # Vui 模块
+
 ## 发送Topic消息
+
 发送Topic消息，可以指定消息类型，
 
 **参数说明**
@@ -13,9 +15,9 @@
 **示例代码**：
  
 Java:
- 
+
 ```java
-RokidMobileSDK.vui.sendMessage(deviceId,topic, text, new IChannelPublishCallback() {
+RokidMobileSDK.vui.sendMessage(deviceId, topic, text, new IChannelPublishCallback() {
     @Override
     public void onSucceed() {
         // TODO
@@ -30,9 +32,9 @@ RokidMobileSDK.vui.sendMessage(deviceId,topic, text, new IChannelPublishCallback
 ```
  
 Kotlin:
- 
+
 ```kotlin
-RokidMobileSDK.vui..sendMessage(deviceId,topic, text, object : IChannelPublishCallback {
+RokidMobileSDK.vui.sendMessage(deviceId, topic, text, object : IChannelPublishCallback {
     override fun onSucceed() {
         // TODO
     }

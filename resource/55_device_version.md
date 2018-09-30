@@ -1,10 +1,11 @@
 # 设备模块 Device
 
-## 1、获取系统版本信息
+## 获取系统版本信息
 
 **接口说明**
-1、获取当前设备的系统版本信息 返回的消息将以<font color=red size=3>Event</font>的形式向上抛。
-2、返回值 只表示 获取系统版本信息是否已经发送成功。
+
+1. 获取当前设备的系统版本信息 返回的消息将以<font color=red size=3>Event</font>的形式向上抛。
+2. 返回值 只表示 获取系统版本信息是否已经发送成功。
 
  **参数说明**
  
@@ -29,6 +30,7 @@ RokidMobileSDK.device.getVersionInfo(deviceId, object : IChannelPublishCallback 
  ```
  
  **event名称**
+ 
  EventDeviceSysUpdate
  
  **event数据格式** 
@@ -57,11 +59,12 @@ RokidMobileSDK.device.getVersionInfo(deviceId, object : IChannelPublishCallback 
 }
  ```
  
-## 2、开始系统升级
+## 开始系统升级
 
  **接口说明**
- 1、设备开始下载新的镜像 返回的消息和系统版本信息一致
- 2、返回值 只表示 获取系统版本信息是否已经发送成功。
+ 
+ 1. 设备开始下载新的镜像 返回的消息和系统版本信息一致
+ 2. 返回值 只表示 获取系统版本信息是否已经发送成功。
 
  **参数说明**
  

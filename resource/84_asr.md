@@ -1,5 +1,11 @@
 # Vui 模块
+
+## 流程
+
+![](images/vui_asr.png)
+
 ## 发送ASR 
+
 发送 ASR，就是发送 指定，让设备根据指令进行操作。
 
 **参数说明**
@@ -50,7 +56,9 @@ RokidMobileSDK.vui.sendAsr(deviceId, asr, object : IChannelPublishCallback {
 |sendSuccess| boolean|是否发送成功|
 
 ---
+
 ## 创建 ASR 纠错
+
 纠正设备错误识别的 ASR 内容。
 
 **参数说明**
@@ -98,8 +106,11 @@ RokidMobileSDK.vui.asrCorrectCreate(originText,
     }
 ]
  ```
----
+ 
+ ---
+
 ## 查询 ASR 纠错 
+
 查询这条 ASR 是否被纠错过。
 
 **参数说明**
@@ -123,8 +134,11 @@ RokidMobileSDK.vui.asrCorrectFind(originText, new IGetAsrErrorCallback() {
             }
         });
 ```
+
 ---
+
 ## 更新 ASR 纠错 
+
 修改该条 ASR 的纠错内容。
 
 **参数说明**
@@ -153,8 +167,11 @@ RokidMobileSDK.vui.asrCorrectUpdate(asrId,
                     }
                 });
 ```
+
 ---
+
 ## 删除 ASR 纠错 
+
 删除该条 ASR 的纠错内容。
 
 **参数说明**
@@ -179,8 +196,11 @@ RokidMobileSDK.vui.asrCorrectDelete(asrId, new IGetAsrErrorManageCallback() {
         });
         
 ```
+
 ---
+
 ## 获取 ASR 纠错历史列表 
+
 获取该用户全部的 ASR 纠错内容。
 
 **参数说明**
@@ -208,6 +228,7 @@ RokidMobileSDK.vui.asrCorrectHistory(pageNumber,
         });
         
 ```
+
 ---
 
 

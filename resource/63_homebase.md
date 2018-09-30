@@ -1,5 +1,7 @@
 # 技能模块 Skill
+
 ## 智能家居 H5 
+
 ### 介绍
 
 智能家居模块是已 H5 的形式集成到 SDK 中，所以必须实现 SDK webbidge 才能正常打开使用此模块。
@@ -16,6 +18,7 @@
     Rokid Mobile SDK 环境 为 Debug
 
 ### 接入说明
+
 请参照 SDKWebbridge 的快速集成文档集成 Bridge , 并且必须实现 如下 方法。
 
 Kotlin:

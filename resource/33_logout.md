@@ -1,9 +1,10 @@
-# 帐号模块 Account
-## 登出接口
+# 登出账号 Logout
 
-* 接口说明：登出接口，清除 SDK 中的 token、userId 等缓存数据。
+## 登出
 
-**示例代码：**
+接口说明：登出接口，清除 SDK 中的 token、userId 等缓存数据。
+
+**举个大栗子:**
 
 ```java
 RokidMobileSDK.account.logout(new ILogoutResultCallback() {

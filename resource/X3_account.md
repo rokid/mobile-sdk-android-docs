@@ -4,7 +4,7 @@
 
 当前用户登录失效、异地登录时，都会发送这个消息。
 
-### event名称
+### 消息体
 
 EventUserLoginInvalid
  

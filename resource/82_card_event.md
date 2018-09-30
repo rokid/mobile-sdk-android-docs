@@ -1,20 +1,26 @@
-# Vui 模块
-## 接受设备发送的card
+# 接收卡片消息
+
+## 流程
+
+![](images/vui_card.png)
+
+### 接收 Card 消息
+
 监听Card event 消息
 
  **示例代码**：
  
- ```java
- 
- @Subscribe(threadMode = ThreadMode.BACKGROUND)
-    public void onReceivedCard(CardMsgBean cardMessage) {
-        Logger.d("Receiver the Card message event: ", cardMessage.toString());
-        if (TextUtils.isEmpty(cardMessage.getMsgTxt())) {
-            Logger.e("This card message is invalid.");
-            return;
-        }         
+```java
+@Subscribe(threadMode = ThreadMode.BACKGROUND)
+public void onReceivedCard(CardMsgBean cardMessage) {
+    Logger.d("Receiver the Card message event: ", cardMessage.toString());
+    if (TextUtils.isEmpty(cardMessage.getMsgTxt())) {
+        Logger.e("This card message is invalid.");
+        return;
+    }
+    // ......         
 }
- ```
+```
 
 **消息的格式**：
  

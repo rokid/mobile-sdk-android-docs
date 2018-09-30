@@ -1,4 +1,5 @@
 # Vui 反馈 模块
+
 ## 获取Card 列表
 默认一次拉取25条
  
@@ -18,17 +19,16 @@
                 Logger.d("getCardListFromService success ");
                 if (CollectionUtils.isEmpty(cardInfoList) || !hasMore) {
                     Logger.d("getCardListFromService success but card list is empty or hasMore false");
-                    //服务端没有更多数据了
-                    }else{
-                    //拿到cards
+                    // 服务端没有更多数据了
+                    } else {
+                    // 拿到cards
                     }
-                
-            
             }
 
             @Override
             public void onGetCardsFailed(String errorCode, String errorMsg) {
                 Logger.e("getCardListFromService Failed errorCode=" + errorCode + " ;errorMsg=" + errorMsg);
+                // ...
             }
         });
  ```

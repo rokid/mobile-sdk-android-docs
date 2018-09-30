@@ -1,4 +1,5 @@
-# 配网模块 Binder
+# 蓝牙连接
+
 ## 连接蓝牙设备
 
 **接口说明**
@@ -10,7 +11,7 @@
 | ------ | ----- | ----- | ----- |
 | name | String | 是 | 设备名称 |
 
-**示例代码**：
+**举个大栗子**
 
 ``` java
 RokidMobileSDK.binder.connectBT(name, new IBTConnectCallBack() {

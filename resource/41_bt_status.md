@@ -1,10 +1,12 @@
-# 配网模块 Binder
-## 1、获取蓝牙状态
+# 绑定模块 Binder
+
+#### 查询蓝牙状态
  
  **接口说明** 
- 获取蓝牙当前状态
+ 
+ 查询手机蓝牙状态，是否打开。
 
- **示例代码**
+ **举个大栗子:**
  
  ```java
 boolean btStatus = RokidMobileSDK.binder.getBTStatus()
@@ -12,12 +14,13 @@ boolean btStatus = RokidMobileSDK.binder.getBTStatus()
 
 ---
 
-## 2、注册蓝牙状态监听器
+#### 注册蓝牙状态监听器
 
  **接口说明**
- 蓝牙状态发生改变的状态监听
+ 
+ 监听手机蓝牙状态发生改变，手机蓝牙打开 或者 关闭都会调用这个函数。
 
- **示例代码**
+ **举个大栗子:**
 
 ```java
 RokidMobileSDK.binder.registerBTStateChangeListener(new IBTStateChangeListener() {

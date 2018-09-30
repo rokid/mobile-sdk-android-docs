@@ -2,20 +2,24 @@
 
 * [Rokid Mobile SDK](README.md)
 * [修订记录](resource/00_version.md)
-* SDK 使用入门
-    * [SDK 使用方式](resource/10_use_sdk.md)
-    * [Demo 代码](resource/11_demo.md)
-    * [SDK 初始化](resource/12_sdk_init.md)
+* 快速接入
+    * [集成方式](resource/10_use_sdk.md)
+    * [初始化](resource/11_sdk_init.md)
+    * [调试](resource/12_debug.md)
+    * [Demo 代码](resource/1Z_demo.md)
 * 帐号模块 Account
-    * [登录 Login](resource/31_login.md)
-    * [登出 Logout](resource/32_logout.md)
-    * [用户信息 Account Info](resource/33_account_info.md)
-* 配网模块 Binder
-    * [蓝牙状态](resource/41_bt_status.md)
-    * [蓝牙扫描](resource/42_bt_scan.md)
-    * [连接蓝牙](resource/43_bt_connect.md)
+    * [账号模块介绍](resource/30_account.md)
+    * [若琪账号体系](resource/31_rokid_login.md)
+    * [自有账号体系](resource/32_thirdparty_login.md)
+    * [账号登出](resource/33_logout.md)
+    * [用户信息](resource/34_account_info.md)
+* 绑定模块 Binder
+    * [绑定模块介绍](resource/40_binder.md)
+    * [手机蓝牙状态](resource/41_bt_status.md)
+    * [设备蓝牙扫描](resource/42_bt_scan.md)
+    * [连接设备蓝牙](resource/43_bt_connect.md)
     * [设备配网](resource/44_bt_send_data.md)
-    * [释放蓝牙](resource/4Z_bt_release.md)
+    * [释放设备蓝牙](resource/4Z_bt_release.md)
 * 设备模块 Device
     * [设备列表](resource/51_device_list.md)
     * [设备基本信息](resource/52_device_base_info.md)
@@ -45,12 +49,15 @@
     * [发送 Topic消息](resource/86_topic_msg.md)
 * 消息 Event
     * [Event 介绍](resource/X1_event.md)
-    * [帐号](resource/X3_account.md)
-    * [设备信息](resource/X4_device.md)
-    * [内容信息](resource/X5_media.md)
+    * [通用消息](resource/X2_channel_message.md)
+    * [帐号相关消息](resource/X3_account.md)
+    * [设备相关信息](resource/X4_device.md)
+    * [内容相关信息](resource/X5_media.md)
     * [自定义消息](resource/X6_custom_topic_msg.md)
 * [错误码](resource/Y0_error_code.md)
+* [FAQ](https://github.com/Rokid/RokidMobileSDKAndroidDemo/issues)
 * [服务协议](resource/Z0_service_agreement.md)
 * [免责声明](resource/Z1_community_disclaimer.md)
-* [Rokid 讨论区](https://developer-forum.rokid.com)
+* [Rokid 官方讨论区](https://developer-forum.rokid.com)
+
 

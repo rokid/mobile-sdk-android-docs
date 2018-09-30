@@ -2,7 +2,7 @@
 
 ## 当前选择的设备发生变化
 
-### event名称
+### 消息体
 
 EventCurrentDeviceChange
 
@@ -27,7 +27,7 @@ EventCurrentDeviceChange 说明：
 
 ## 当前设备状态发生变化
 
-### event名称
+### 消息体
 
 EventCurrentDeviceStatus 
 
@@ -53,7 +53,7 @@ EventCurrentDeviceStatus 说明：
 
 ## 设备状态发生变化
 
-### event名称
+### 消息体
 
 EventDeviceStatus
 
@@ -79,7 +79,7 @@ EventDeviceStatus 说明：
 
 ## 设备解绑
 
-### event名称
+### 消息体
 
 EventUnbind
 
@@ -104,7 +104,7 @@ EventUnbind 说明：
 
 ## 音量发生变化
 
-### event名称
+### 消息体
 
 EventVolumeChange 
 
@@ -134,7 +134,7 @@ EventVolumeChange 说明：
  
 ## 系统更新信息
 
-### event名称
+### 消息体
 
 EventDeviceSysUpdate 
 

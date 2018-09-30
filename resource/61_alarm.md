@@ -2,7 +2,11 @@
 
 ## 闹钟 Alarm
 
-### 1、获取闹钟列表
+### 流程
+
+![](images/skill_alarm.png)
+
+### 获取闹钟列表
 
 请求获取设备上的闹钟列表：
 
@@ -68,7 +72,7 @@ SDKAlarm 字段说明：
 
 ---
 
-### 2、添加闹钟
+### 添加闹钟
 添加一个闹钟。
 
 Java:
@@ -119,7 +123,7 @@ SDKRepeatType.EVERY_SUNDAY // 每周日
 
 ---
 
-### 3、删除一个闹钟
+### 删除一个闹钟
 删除一个闹钟：
  
 Java:
@@ -158,7 +162,7 @@ RokidMobileSDK.skill.alarm().delete(deviceId, alarm, object : IChannelPublishCal
  
 ---
 
-### 4、更新闹钟
+### 更新闹钟
 更新一个闹钟：
 
 Java:

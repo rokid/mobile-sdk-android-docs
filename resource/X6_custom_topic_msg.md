@@ -4,7 +4,7 @@
 
 此消息 用来接收 用户自定义TOPIC消息 发送过来的事件。
 
-## event名称
+## 消息体
 
 ChannelMessageBean
 
@@ -33,7 +33,7 @@ ChannelDeviceBean 说明：
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
 | accountId | String| 账号Id|
-| deviceId|String | 设备Id | |
+| deviceId|String | 设备Id |
 | deviceTypeId| String | 设备类型 |
 
 

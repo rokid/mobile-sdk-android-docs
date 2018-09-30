@@ -1,8 +1,34 @@
-# Rokid Mobile SDK Android版 使用方式 
-## SDK 导入方式
+# Mobile SDK 集成方式
+ 
+## 导入Mobile SDK
 
-<font color=red size=3>**目前只支持手动添加, 后续会添加 Maven**</font>
+#### 手动导入
 
+1. [下载 Mobile SDK](https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK)
+
+2. 将 com.rokid.mobile.sdk-XXXXXX.aar 包放入工程的libs目录下，如下图
+
+![](images/sdkLib.png)
+
+3. 在工程的 App Module 的 build.gradle下手动添加依赖，如下代码所示：
+
+```
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+    
+dependencies {
+    ......
+    compile(name: 'com.rokid.mobile.sdk-1.3.0-180901002', ext: "aar")
+    ......
+}
+```
+
+#### Gradle 集成
+
+<font color=red size=2>**目前不支持，请敬请期待**</font>
 
 ## 第三方库依赖
 
@@ -32,5 +58,13 @@ compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ``` 
+
+## 添加混淆规则
+
+在工程的 proguard-project.txt 里添加以下相关规则：
+
+```
+-keep class com.rokid.mobile.** { *; }
+```
 
 

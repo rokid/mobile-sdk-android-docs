@@ -1,6 +1,16 @@
-# 帐号 Account 模块
-## Token登录接口
-* 接口说明：SDK接入方用户Id，ILoginResultCallback为获取登陆结果回调监听
+# 自有帐号体系
+
+注意：
+
+使用 自有账号体系时，开发者必须拥有自己的账号体系，如果没有请直接使用 若琪账号体系，谢谢。
+
+## 登录流程
+
+1、流程
+
+![](images/rokid_login.png)
+
+2、接口
 
 **参数说明:**
 
@@ -9,12 +19,12 @@
 | userId  | String | 是 | SDK接入方用户Id |
 | token   | String | 否 | SDK接入方用户token |
 
-**示例代码：**
+**举个大栗子:**
 
 Java:
 
 ```java
-RokidMobileSDK.account.tokenLogin(userId, token, new ILoginResultCallback() {
+RokidMobileSDK.account.thirdpartyLogin(userId, token, new ILoginResultCallback() {
     @Override
     public void onLoginSucceed() {
         Logger.d("onLoginSuccess is called.");
