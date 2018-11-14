@@ -27,14 +27,14 @@
 // 发送数据
 RokidMobileSDK.binder.sendBTBinderData(binderData, new IBinderCallBack() {
     @Override
-    public void sendSuccess(BTDeviceBean btDeviceBean) {    
+    public void onSendSucceed(BTDeviceBean btDeviceBean) {    
         Log.i("BTSendCallBack","sendBtData Success name=" + btDeviceBean.getName());
         Log.i("BTSendCallBack","sendBtData Success address=" + btDeviceBean.getAddress());
         ... // doSomeing
      }
 
     @Override
-    public void sendFailed(BTDeviceBean btDeviceBean, BleException bleException) {          
+    public void onSendFailed(BTDeviceBean btDeviceBean, BleException bleException) {          
         Log.e("BTSendCallBack","sendBtData failed name=" + btDeviceBean.getName());
         Log.e("BTSendCallBack","sendBtData failed address=" + btDeviceBean.getAddress());
         Log.e("BTSendCallBack"," sendBtData failed Exception=" + bleException.toString());
