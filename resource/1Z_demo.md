@@ -1,4 +1,4 @@
-# Mobile SDK Demo 代码
+# Mobile SDK Demo 工程
 
 ## 介绍
 

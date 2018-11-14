@@ -22,7 +22,7 @@
 **示例代码：**
 
 ```Java
-RokidMobileSDK.init(context, appKey, appSecret, accessKey, new InitCompletedCallback) {
+RokidMobileSDK.init(context, appKey, appSecret, accessKey, new SDKInitCompletedCallback) {
     @Override
     public void onInitSuccess() {
         Logger.d("onInitSuccess is called.");

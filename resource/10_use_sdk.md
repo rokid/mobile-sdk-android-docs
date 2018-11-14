@@ -6,7 +6,7 @@
 
 1. [下载 Mobile SDK](https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK)
 
-2. 将 com.rokid.mobile.sdk-XXXXXX.aar 包放入工程的libs目录下，如下图
+2. 将 com.rokid.mobile.sdk-XXX-XXX.aar 包放入工程的libs目录下，如下图
 
 ![](images/sdkLib.png)
 
@@ -21,7 +21,7 @@ repositories {
     
 dependencies {
     ......
-    compile(name: 'com.rokid.mobile.sdk-1.3.0-180901002', ext: "aar")
+    compile(name: 'com.rokid.mobile.sdk-XXX-XXX', ext: "aar")
     ......
 }
 ```
