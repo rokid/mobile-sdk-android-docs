@@ -68,7 +68,6 @@ implementation 'org.greenrobot:greendao-generator:3.2.0'
 implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
 implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 implementation 'com.aliyun.openservices:aliyun-log-android-sdk:2.0.0'
-implementation 'com.google.protobuf:protobuf-java:3.5.1'
 ```
 
 ## 权限依赖

@@ -9,10 +9,13 @@
     * [Demo 代码](resource/1Z_demo.md)
 * 帐号模块 Account
     * [账号模块介绍](resource/30_account.md)
-    * [若琪账号体系](resource/31_rokid_login.md)
-    * [自有账号体系](resource/32_thirdparty_login.md)
-    * [账号登出](resource/33_logout.md)
-    * [用户信息](resource/34_account_info.md)
+    * [若琪账号体系 - 注册](resource/31_rokid_register.md)
+    * [若琪账号体系 - 登录](resource/32_rokid_login.md)
+    * [若琪账号体系 - 修改密码](resource/33_rokid_change_pwd.md)
+    * [若琪账号体系 - 重置密码](resource/34_rokid_reset_pwd.md)
+    * [自有账号体系](resource/35_thirdparty_login.md)
+    * [账号登出](resource/36_logout.md)
+    * [用户信息](resource/37_account_info.md)
 * 绑定模块 Binder
     * [绑定模块介绍](resource/40_binder.md)
     * [手机蓝牙状态](resource/41_bt_status.md)
@@ -32,6 +35,7 @@
     * [设备昵称前缀](resource/59_device_nick_prefix.md)
     * [ping设备状态](resource/5A_device_ping.md)
     * [设备夜间模式](resource/5B_device_nightmode.md)
+    * [设备音量](resource/5C_device_volume.md)
     * [设备自定义信息](resource/5Z_custom_info.md)
 * 技能模块 Skill
     * [闹钟](resource/61_alarm.md)
@@ -47,6 +51,11 @@
     * [发送 ASR](resource/84_asr.md)
     * [发送 TTS](resource/85_tts.md)
     * [发送 Topic消息](resource/86_topic_msg.md)
+* 媒体模块
+    * [授权媒体技能](resource/91_media_skilllist.md)
+    * [媒体技能页面](resource/92_media_display.md)
+    * [媒体技能播控](resource/93_media_control.md)
+    * [第三方授权](resource/94_media_thridauth.md)
 * 消息 Event
     * [Event 介绍](resource/X1_event.md)
     * [通用消息](resource/X2_channel_message.md)
