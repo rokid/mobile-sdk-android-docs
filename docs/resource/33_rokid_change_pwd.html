@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Demo 代码 · GitBook</title>
+        <title>若琪账号体系 - 修改密码 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="34_rokid_reset_pwd.html" />
     
-    <link rel="prev" href="12_debug.html" />
+    
+    <link rel="prev" href="32_rokid_login.html" />
     
 
     </head>
@@ -170,7 +172,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="1Z_demo.html">
+        <li class="chapter " data-level="1.3.4" data-path="1Z_demo.html">
             
                 <a href="1Z_demo.html">
             
@@ -241,7 +243,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="33_rokid_change_pwd.html">
+        <li class="chapter active" data-level="1.4.4" data-path="33_rokid_change_pwd.html">
             
                 <a href="33_rokid_change_pwd.html">
             
@@ -1059,7 +1061,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Demo 代码</a>
+        <a href=".." >若琪账号体系 - 修改密码</a>
     </h1>
 </div>
 
@@ -1074,11 +1076,61 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mobile-sdk-demo-&#x5DE5;&#x7A0B;">Mobile SDK Demo &#x5DE5;&#x7A0B;</h1>
-<h2 id="&#x4ECB;&#x7ECD;">&#x4ECB;&#x7ECD;</h2>
-<p>Mobile SDK Demo &#x4E3B;&#x8981;&#x63D0;&#x4F9B; Mobile SDK API &#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x3002;</p>
-<h2 id="github-&#x5730;&#x5740;&#xFF1A;">GitHub &#x5730;&#x5740;&#xFF1A;</h2>
-<p><a href="https://github.com/Rokid/RokidMobileSDKAndroidDemo" target="_blank">https://github.com/Rokid/RokidMobileSDKAndroidDemo</a></p>
+                                <h1 id="&#x82E5;&#x742A;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;">&#x82E5;&#x742A;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;</h1>
+<h2 id="&#x4FEE;&#x6539;&#x5BC6;&#x7801;">&#x4FEE;&#x6539;&#x5BC6;&#x7801;</h2>
+<p>&#x63A5;&#x53E3;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldPasswd</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x65E7;&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td>newPassword</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x65B0;&#x5BC6;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4E3E;&#x4E2A;&#x5927;&#x6817;&#x5B50;&#xFF1A;</strong></p>
+<p>Kotlin</p>
+<pre><code class="lang-kotlin">RokidMobileSDK.account.changePasswd(<span class="hljs-string">&quot;oldPasswd&quot;</span>, <span class="hljs-string">&quot;newPassword&quot;</span>,
+    <span class="hljs-keyword">object</span> : IChangePasswordResultCallback {
+        <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onChangePasswordSucceed</span><span class="hljs-params">()</span> {</span>
+                <span class="hljs-comment">// ....</span>
+         }
+
+         <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onChangePasswordFailed</span><span class="hljs-params">(errorCode: <span class="hljs-type">String?, errorMessage: String?</span>)</span> {</span>
+                <span class="hljs-comment">// ...</span>
+         }
+})
+</code></pre>
+<p>Java:</p>
+<pre><code class="lang-Java">RokidMobileSDK.account.changePasswd(<span class="hljs-string">&quot;oldPasswd&quot;</span>, <span class="hljs-string">&quot;newPassword&quot;</span>,
+    <span class="hljs-keyword">new</span>  IChangePasswordResultCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChangePasswordSucceed</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ....</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChangePasswordFailed</span><span class="hljs-params">(String: errorCode,  String: errorMessage)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+});
+</code></pre>
 
                                 
                                 </section>
@@ -1106,10 +1158,14 @@
 
             
                 
-                <a href="12_debug.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 调试">
+                <a href="32_rokid_login.html" class="navigation navigation-prev " aria-label="Previous page: 若琪账号体系 - 登录">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="34_rokid_reset_pwd.html" class="navigation navigation-next " aria-label="Next page: 若琪账号体系 - 重置密码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1118,7 +1174,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Demo 代码","level":"1.3.4","depth":2,"next":{"title":"帐号模块 Account","level":"1.4","depth":1,"ref":"","articles":[{"title":"账号模块介绍","level":"1.4.1","depth":2,"path":"resource/30_account.md","ref":"resource/30_account.md","articles":[]},{"title":"若琪账号体系 - 注册","level":"1.4.2","depth":2,"path":"resource/31_rokid_register.md","ref":"resource/31_rokid_register.md","articles":[]},{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"resource/32_rokid_login.md","ref":"resource/32_rokid_login.md","articles":[]},{"title":"若琪账号体系 - 修改密码","level":"1.4.4","depth":2,"path":"resource/33_rokid_change_pwd.md","ref":"resource/33_rokid_change_pwd.md","articles":[]},{"title":"若琪账号体系 - 重置密码","level":"1.4.5","depth":2,"path":"resource/34_rokid_reset_pwd.md","ref":"resource/34_rokid_reset_pwd.md","articles":[]},{"title":"自有账号体系","level":"1.4.6","depth":2,"path":"resource/35_thirdparty_login.md","ref":"resource/35_thirdparty_login.md","articles":[]},{"title":"账号登出","level":"1.4.7","depth":2,"path":"resource/36_logout.md","ref":"resource/36_logout.md","articles":[]},{"title":"用户信息","level":"1.4.8","depth":2,"path":"resource/37_account_info.md","ref":"resource/37_account_info.md","articles":[]}]},"previous":{"title":"调试","level":"1.3.3","depth":2,"path":"resource/12_debug.md","ref":"resource/12_debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/1Z_demo.md","mtime":"2018-11-14T03:27:28.139Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T14:00:49.423Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"若琪账号体系 - 修改密码","level":"1.4.4","depth":2,"next":{"title":"若琪账号体系 - 重置密码","level":"1.4.5","depth":2,"path":"resource/34_rokid_reset_pwd.md","ref":"resource/34_rokid_reset_pwd.md","articles":[]},"previous":{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"resource/32_rokid_login.md","ref":"resource/32_rokid_login.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/33_rokid_change_pwd.md","mtime":"2018-12-04T13:57:38.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T14:00:49.423Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

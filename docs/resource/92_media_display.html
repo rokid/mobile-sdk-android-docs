@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Demo 代码 · GitBook</title>
+        <title>媒体技能页面 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="93_media_control.html" />
     
-    <link rel="prev" href="12_debug.html" />
+    
+    <link rel="prev" href="91_media_skilllist.html" />
     
 
     </head>
@@ -170,7 +172,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="1Z_demo.html">
+        <li class="chapter " data-level="1.3.4" data-path="1Z_demo.html">
             
                 <a href="1Z_demo.html">
             
@@ -823,7 +825,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="92_media_display.html">
+        <li class="chapter active" data-level="1.10.2" data-path="92_media_display.html">
             
                 <a href="92_media_display.html">
             
@@ -1059,7 +1061,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Demo 代码</a>
+        <a href=".." >媒体技能页面</a>
     </h1>
 </div>
 
@@ -1074,12 +1076,332 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mobile-sdk-demo-&#x5DE5;&#x7A0B;">Mobile SDK Demo &#x5DE5;&#x7A0B;</h1>
-<h2 id="&#x4ECB;&#x7ECD;">&#x4ECB;&#x7ECD;</h2>
-<p>Mobile SDK Demo &#x4E3B;&#x8981;&#x63D0;&#x4F9B; Mobile SDK API &#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x3002;</p>
-<h2 id="github-&#x5730;&#x5740;&#xFF1A;">GitHub &#x5730;&#x5740;&#xFF1A;</h2>
-<p><a href="https://github.com/Rokid/RokidMobileSDKAndroidDemo" target="_blank">https://github.com/Rokid/RokidMobileSDKAndroidDemo</a></p>
+                                <h1 id="&#x5A92;&#x4F53;&#x6A21;&#x5757;">&#x5A92;&#x4F53;&#x6A21;&#x5757;</h1>
+<h2 id="skill&#x9996;&#x9875;">Skill&#x9996;&#x9875;</h2>
+<p> &#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skillId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5F53;&#x524D;&#x6280;&#x80FD;ID</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Callback</td>
+<td>&#x662F;</td>
+<td>&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"> <span class="hljs-function"><span class="hljs-keyword">private</span> fun <span class="hljs-title">requestSkillHomeIntent</span><span class="hljs-params">()</span> </span>{
+        RokidMobileSDK.media().requestSkillHomeIntent(skillId, object : IGetMediaHomeDataCallBack {
+            <span class="hljs-function">override fun <span class="hljs-title">onSucceed</span><span class="hljs-params">(data: MediaHomeV3Data?)</span> </span>{
 
+            }
+
+            <span class="hljs-function">override fun <span class="hljs-title">onFailed</span><span class="hljs-params">(errorCode: String?, errorMsg: String?)</span> </span>{
+
+            }
+
+        })
+    }
+</code></pre>
+<p>MediaHomeV3Data&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&#x683C;&#x5F0F;&#xFF1A;
+{
+  ....
+  &quot;version&quot;: &quot;3.0.0&quot;, // &#x5FC5;&#x987B;
+  &quot;data&quot;: {
+    &quot;title&quot;: &quot;&#x6545;&#x4E8B;&quot;,
+    &quot;components&quot;: [
+      {
+        &quot;type&quot;: &quot;search/banner/row/category/copyright&quot;,
+        &quot;style&quot;: &quot;default/planA/planB&quot;,
+        &quot;seq&quot;: 0,
+        &quot;template&quot;: &quot;Template String&quot;
+      }
+    ],
+    &quot;auth&quot;:{
+        &quot;style&quot;:&quot;default/planA/planB&quot;
+        &quot;imageUrl&quot;:&quot;xxxx.png&quot;,
+        &quot;title&quot;:&quot;&#x7ED1;&#x5B9A;&#x8D26;&#x53F7;&#x83B7;&#x53D6;QQ&#x97F3;&#x4E50;&#x670D;&#x52A1;&quot;,
+        &quot;content&quot;:&quot;&#x7ED1;&#x5B9A;&#x8D26;&#x53F7;&#x5373;&#x53EF;&#x4EAB;&#x6709;QQ&#x97F3;&#x4E50;&#x5185;&#x5BB9;&quot;,
+        &quot;button&quot;:{
+            &quot;text&quot;:&quot;&#x53BB;&#x7ED1;&#x5B9A;&quot;,
+            &quot;linkUrl&quot;:&quot;xxxx&quot;
+        }
+    }
+  }
+}
+&#x4F8B;&#x5B50;:
+{
+  ....
+  &quot;version&quot;: &quot;3.0.0&quot;, // &#x5FC5;&#x987B;
+  &quot;data&quot;: {
+    &quot;title&quot;: &quot;&#x6545;&#x4E8B;&quot;,
+    &quot;components&quot;: [
+      {
+        &quot;type&quot;: &quot;search&quot;,
+        &quot;style&quot;: &quot;default&quot;,
+        &quot;template&quot;: &quot;{\&quot;search\&quot;: {\&quot;hint\&quot;:\&quot;&#x641C;&#x7D22;&#x6B4C;&#x66F2;&#x6216;&#x8005;&#x6B4C;&#x624B;\&quot;,\&quot;preview\&quot;: {\&quot;title\&quot;: \&quot;&#x201C;&#x4F60;&#x53EF;&#x4EE5;&#x5BF9;&#x6211;&#x8BF4;&#x201D;\&quot;,\&quot;tips\&quot;: [\&quot;&#x201C;&#x82E5;&#x742A;&#xFF0C;&#x6211;&#x60F3;&#x542C;&#x9648;&#x5955;&#x8FC5;&#x7684;&#x5341;&#x5E74;&#x201D;\&quot;,\&quot;&#x201C;&#x82E5;&#x742A;&#xFF0C;&#x6536;&#x85CF;&#x8FD9;&#x9996;&#x6B4C;&#x201D;\&quot;,\&quot;&#x201C;&#x82E5;&#x742A;&#xFF0C;&#x64AD;&#x653E;&#x6211;&#x6536;&#x85CF;&#x7684;&#x6B4C;&#x201D;\&quot;,\&quot;&#x201C;&#x82E5;&#x742A;&#xFF0C;&#x6211;&#x8981;&#x542C;&#x5468;&#x6770;&#x4F26;&#x7684;&#x6B4C;&#x201D;\&quot;,\&quot;&#x201C;&#x82E5;&#x742A;&#xFF0C;&#x653E;&#x82F1;&#x6587;&#x6B4C;&#x201D;\&quot;]}},\&quot;buttons\&quot;: [{\&quot;imageUrl\&quot;: \&quot;https:\/\/s.rokidcdn.com\/history.png\&quot;,\&quot;linkUrl\&quot;: \&quot;rokid:\/\/media\/v3\/history?style=default&amp;appId=XXX&amp;dataType=XXX&amp;title=XXX\&quot;},{\&quot;imageUrl\&quot;: \&quot;https:\/\/s.rokidcdn.com/favorite.png\&quot;,\&quot;linkUrl\&quot;:\&quot;rokid:\/\/media/v3/favorite?style=default&amp;appId=XXX&amp;dataType=XXX&amp;title=XXX\&quot;}]}&quot;
+      },
+      {
+        &quot;type&quot;: &quot;banner&quot;,
+        &quot;style&quot;: &quot;default&quot;,
+        &quot;template&quot;: &quot;[{\&quot;imageUrl\&quot;: \&quot;https:\/\/s.rokidcdn.com\/aaaa.png\&quot;,\&quot;linkUrl\&quot;: \&quot;rokid:\/\/media/v3/search\&quot;},{\&quot;imageUrl\&quot;: \&quot;https:\/\/s.rokidcdn.com\/aaaa.png\&quot;,\&quot;linkUrl\&quot;: \&quot;rokid:\/\/media/v3/search\&quot;},{\&quot;imageUrl\&quot;: \&quot;https:\/\/s.rokidcdn.com\/aaaa.png\&quot;,\&quot;linkUrl\&quot;: \&quot;rokid:\/\/media/v3/search\&quot;},]&quot;
+      }
+      ...
+    ]
+  }
+}
+</code></pre><hr>
+<h2 id="&#x4E13;&#x8F91;&#x5217;&#x8868;&#x9875;">&#x4E13;&#x8F91;&#x5217;&#x8868;&#x9875;</h2>
+<p> &#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skillId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5F53;&#x524D;&#x6280;&#x80FD;ID</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5F53;&#x524D;&#x4E13;&#x8F91;ID</td>
+</tr>
+<tr>
+<td>startIndex</td>
+<td>int</td>
+<td>&#x5426;</td>
+<td>&#x5206;&#x9875;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>endIndex</td>
+<td>int</td>
+<td>&#x5426;</td>
+<td>&#x5206;&#x9875;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>extend</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x62D3;&#x5C55;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Callback</td>
+<td>&#x662F;</td>
+<td>&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"> <span class="hljs-function"><span class="hljs-keyword">private</span> fun <span class="hljs-title">requestListIntent</span><span class="hljs-params">()</span> </span>{
+        RokidMobileSDK.media().requestListIntent(skillId,
+        groupId,
+        startIndex,
+        endIndex,
+        extend,
+        object : IGetMediaListDataCallBack {
+            <span class="hljs-function">override fun <span class="hljs-title">onSucceed</span><span class="hljs-params">(data: MediaListV3Data?)</span> </span>{
+
+            }
+
+            <span class="hljs-function">override fun <span class="hljs-title">onFailed</span><span class="hljs-params">(errorCode: String?, errorMsg: String?)</span> </span>{
+
+            }
+
+        })
+    }
+</code></pre>
+<p>MediaListV3Data&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  ...
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;3.0.0&quot;</span>,
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;title&quot;</span>: title,
+    <span class="hljs-string">&quot;pageEnd&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;items&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e32d9e56bb5340dc8d1d178cffaadcf3&quot;</span>,
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;link&quot;</span>,
+        <span class="hljs-string">&quot;imageUrl&quot;</span>: <span class="hljs-string">&quot;rokid://s.rokidcdn.com/sss.png&quot;</span>,
+        <span class="hljs-string">&quot;imageType&quot;</span>: <span class="hljs-string">&quot;circle&quot;</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x7A3B;&#x9999;&quot;</span>,
+        <span class="hljs-string">&quot;subtitle&quot;</span>: <span class="hljs-string">&quot;&#x5468;&#x6770;&#x4F26;&quot;</span>,
+        <span class="hljs-string">&quot;enable&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;linkUrl&quot;</span>: <span class="hljs-string">&quot;rokid://media/v3/detail?appId=XXX&amp;dataType=XXX&amp;categoryId=XXX&quot;</span>,
+        <span class="hljs-string">&quot;infos&quot;</span>: [
+            {
+             <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;xxx&quot;</span>,
+             <span class="hljs-string">&quot;iconUrl&quot;</span>: <span class="hljs-string">&quot;xxxx&quot;</span>
+            }
+          ],
+        <span class="hljs-string">&quot;extend&quot;</span>: <span class="hljs-string">&quot;{\&quot;name1\&quot; : \&quot;value1\&quot;, \&quot;name2\&quot; : \&quot;value2\&quot;}&quot;</span>
+      },
+      ...
+    ]
+  }
+}
+</code></pre>
+<hr>
+<h2 id="&#x4E13;&#x8F91;&#x8BE6;&#x60C5;&#x9875;">&#x4E13;&#x8F91;&#x8BE6;&#x60C5;&#x9875;</h2>
+<p> &#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skillId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5F53;&#x524D;&#x6280;&#x80FD;ID</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5F53;&#x524D;&#x4E13;&#x8F91;ID</td>
+</tr>
+<tr>
+<td>startIndex</td>
+<td>int</td>
+<td>&#x5426;</td>
+<td>&#x5206;&#x9875;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>endIndex</td>
+<td>int</td>
+<td>&#x5426;</td>
+<td>&#x5206;&#x9875;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>order</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x6B63;&#x9006;&#x5E8F;&#xFF0C;asc/desc&#xFF0C;&#x76EE;&#x524D;&#x9650;&#x559C;&#x9A6C;&#x62C9;&#x96C5;</td>
+</tr>
+<tr>
+<td>extend</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x62D3;&#x5C55;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Callback</td>
+<td>&#x662F;</td>
+<td>&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"> <span class="hljs-function"><span class="hljs-keyword">private</span> fun <span class="hljs-title">requestDetailIntent</span><span class="hljs-params">()</span> </span>{
+        RokidMobileSDK.media().requestDetailIntent(skillId,
+        groupId,
+        startIndex,
+        endIndex,
+        order,
+        extend,
+        object : IGetMediaWareDetailDataCallBack {
+            <span class="hljs-function">override fun <span class="hljs-title">onSucceed</span><span class="hljs-params">(data: MediaDetailV3Data?)</span> </span>{
+
+            }
+
+            <span class="hljs-function">override fun <span class="hljs-title">onFailed</span><span class="hljs-params">(errorCode: String?, errorMsg: String?)</span> </span>{
+
+            }
+
+        })
+    }
+</code></pre>
+<p>MediaDetailV3Data&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>{
+  ...
+  &quot;version&quot;: &quot;3.0.0&quot;,
+  &quot;data&quot;: {
+    &quot;info&quot;: {
+      &quot;style&quot;: &quot;default&quot;,
+      &quot;backgroundUrl&quot;: &quot;https://s.rokidcdn.com/sss.png&quot;,
+      &quot;imageUrl&quot;: &quot;https://s.rokidcdn.com/sss.png&quot;,
+      &quot;imageType&quot;: &quot;circle&quot;,
+      &quot;title&quot;: &quot;&#x8FEA;&#x58EB;&#x5C3C;&#x7ECF;&#x5178;&quot;,
+      &quot;subtitle&quot;: &quot;&quot;,
+      &quot;controls&quot;: [
+        {
+          &quot;type&quot;: &quot;like/buy&quot;,
+          &quot;intent&quot;: &quot;like_album/have_bought/buy/cancel_ablum&quot;,
+          &quot;state&quot;: false,
+          &quot;title&quot;: &quot;&#x8BA2;&#x9605;/&#x8D2D;&#x4E70;(&#xA5;19.88)/&#x5DF2;&#x8D2D;&#x4E70;&quot;
+        }
+      ],
+     &quot;copyright:&quot; {
+        &quot;summary&quot;: &quot;&#x8D44;&#x6E90;&#x7531;XXXX&#x63D0;&#x4F9B;&quot;,
+        &quot;iconUrl&quot;: &quot;&quot; // &#x4FDD;&#x7559;&#x5B57;&#x6BB5;
+    },
+    &quot;list&quot;: {
+      &quot;style&quot;: &quot;default/planA&quot;,
+      &quot;pageEnd&quot;: false,
+      &quot;itemStyle&quot;:&quot;default/planA&quot;,
+      &quot;title&quot;: &quot;&#x6545;&#x4E8B;&#x5217;&#x8868;&#xFF08;8&#xFF09;&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;id&quot;: &quot;e32d9e56bb5340dc8d1d178cffaadcf3&quot;,
+          &quot;type&quot;: &quot;play&quot;,
+          &quot;title&quot;: &quot;&#x963F;&#x62C9;&#x4E01;&quot;,
+          &quot;subtitle&quot;: &quot;&quot;,
+          &quot;enable&quot;: true,
+          &quot;linkUrl&quot;: &quot;&quot;,
+          &quot;infos&quot;: [
+            {
+             &quot;title&quot;: &quot;12&quot;,
+             &quot;iconUrl&quot;: &quot;xxxx&quot;
+            }
+          ],
+          &quot;extend&quot;: &quot;{\&quot;name1\&quot; : \&quot;value1\&quot;, \&quot;name2\&quot; : \&quot;value2\&quot;}&quot;
+        }
+      ],
+      &quot;more&quot;: {
+        &quot;tip&quot;: &quot;&#x8BED;&#x97F3;&#x4E00;&#x53E5;&#x8BDD;&#x6536;&#x85CF;&#xFF1A;&#x201C;&#x82E5;&#x742A;&#xFF0C;&#x6536;&#x85CF;&#x201D;&quot;,
+        &quot;controls&quot;: [
+          {
+            &quot;type&quot;: &quot;like&quot;,
+            &quot;title&quot;: &quot;&#x6536;&#x85CF;&#x6545;&#x4E8B;&quot;
+          }
+        ]
+      }
+    },
+    &quot;extend&quot;: &quot;{\&quot;name1\&quot; : \&quot;value1\&quot;, \&quot;name2\&quot; : \&quot;value2\&quot;}&quot;,
+  }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1106,10 +1428,14 @@
 
             
                 
-                <a href="12_debug.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 调试">
+                <a href="91_media_skilllist.html" class="navigation navigation-prev " aria-label="Previous page: 授权媒体技能">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="93_media_control.html" class="navigation navigation-next " aria-label="Next page: 媒体技能播控">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1118,7 +1444,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Demo 代码","level":"1.3.4","depth":2,"next":{"title":"帐号模块 Account","level":"1.4","depth":1,"ref":"","articles":[{"title":"账号模块介绍","level":"1.4.1","depth":2,"path":"resource/30_account.md","ref":"resource/30_account.md","articles":[]},{"title":"若琪账号体系 - 注册","level":"1.4.2","depth":2,"path":"resource/31_rokid_register.md","ref":"resource/31_rokid_register.md","articles":[]},{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"resource/32_rokid_login.md","ref":"resource/32_rokid_login.md","articles":[]},{"title":"若琪账号体系 - 修改密码","level":"1.4.4","depth":2,"path":"resource/33_rokid_change_pwd.md","ref":"resource/33_rokid_change_pwd.md","articles":[]},{"title":"若琪账号体系 - 重置密码","level":"1.4.5","depth":2,"path":"resource/34_rokid_reset_pwd.md","ref":"resource/34_rokid_reset_pwd.md","articles":[]},{"title":"自有账号体系","level":"1.4.6","depth":2,"path":"resource/35_thirdparty_login.md","ref":"resource/35_thirdparty_login.md","articles":[]},{"title":"账号登出","level":"1.4.7","depth":2,"path":"resource/36_logout.md","ref":"resource/36_logout.md","articles":[]},{"title":"用户信息","level":"1.4.8","depth":2,"path":"resource/37_account_info.md","ref":"resource/37_account_info.md","articles":[]}]},"previous":{"title":"调试","level":"1.3.3","depth":2,"path":"resource/12_debug.md","ref":"resource/12_debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/1Z_demo.md","mtime":"2018-11-14T03:27:28.139Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T14:00:49.423Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"媒体技能页面","level":"1.10.2","depth":2,"next":{"title":"媒体技能播控","level":"1.10.3","depth":2,"path":"resource/93_media_control.md","ref":"resource/93_media_control.md","articles":[]},"previous":{"title":"授权媒体技能","level":"1.10.1","depth":2,"path":"resource/91_media_skilllist.md","ref":"resource/91_media_skilllist.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive"],"pluginsConfig":{"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resource/92_media_display.md","mtime":"2018-12-04T13:57:38.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T14:00:49.423Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
