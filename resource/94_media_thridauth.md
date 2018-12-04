@@ -2,17 +2,57 @@
 
 ## 授权流程
 
-### 流程说明
+### 说明
 
 时序图：
-![](images/media_thirdauth.jpg)
-
+![](media/15439311563408.jpg)
 
 ### 三方授权 SDK 文档
 
 QQ SDK 文档： [点击查看](http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5)
+
 微信SDK 文档：[点击查看](https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317851&token=d0068cccc332e748ea5a18522d8348e872953c88&lang=zh_CN)
+
 喜马拉雅 文档：[点击查看](http://open.ximalaya.com/doc/sdk-access)
+
+---
+
+### 获取
+
+参数说明：
+
+| 字段    | 类型   | 必须？| 说明 |
+| ------ | ----- | ----- | ----- |
+| type | ThirdAuth | 是 | 获取第三方授权信息标识。<br>如：ThirdAuth.QQ、ThirdAuth.WX、ThirdAuth.XMLY  |
+| deviceTypeId | String | 是 | 设备类型 | 
+| deviceId  | String | 是 | 设备SN | 
+
+ThirdOauthToken 说明
+
+| 字段    | 类型   | 必须？| 说明 |
+| ------ | ----- | ----- | ----- |
+| access_token | String | 是 | 授权 Token | 
+| expires_in | String | 是 | 有效期 | 
+| refresh_token | String | 是 | 刷新所需 Token | 
+| type | String | 是 | 获取第三方授权信息标识 | 
+
+举个大栗子
+
+Kotlin
+
+```Kotlin
+RokidMobileSDK.media.thirdAuth().getThirdOauthToken(ThirdAuth.QQ, device.device_type_id, device.deviceId, object : IGetThirdOauthTokenCallback {
+
+    override fun onGetThirdOauthTokenSucceed(thirdOauthToken: ThirdOauthToken?) {
+        Logger.d("onSucceed - ${thirdOauthToken.toString()}")
+    }
+
+    override fun onGetThirdOauthTokenFailed(errorCode: String?, errorMsg: String?) {
+        Logger.e("onFailed - errorCode: ${errorCode}; errorMessage: ${errorMsg}")
+    }
+
+})
+```
 
 ---
 
