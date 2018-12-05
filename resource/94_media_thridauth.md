@@ -17,7 +17,7 @@ QQ SDK 文档： [点击查看](http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5)
 
 ---
 
-### 获取
+### 获取已授权信息
 
 参数说明：
 

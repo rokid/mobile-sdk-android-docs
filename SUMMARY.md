@@ -25,7 +25,7 @@
     * [释放设备蓝牙](resource/4Z_bt_release.md)
 * 设备模块 Device
     * [设备列表](resource/51_device_list.md)
-    * [设备基本信息](resource/52_device_base_info.md)
+    * [设备信息](resource/52_device_base_info.md)
     * [设备地理位置](resource/53_device_location.md)
     * [设备昵称](resource/54_device_nick.md)
     * [设备系统版本](resource/55_device_version.md)
