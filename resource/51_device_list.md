@@ -14,7 +14,7 @@
  **示例代码**
  
  ```java
- RokidMobileSDK.device.getDeviceList(new IGetDeviceCallback() {
+ RokidMobileSDK.device.getDeviceList(new SDKGetDeviceListCallback() {
         @Override
         public void onGetDeviceListSucceed(List<SDKDevice> deviceList) {
             if(CollectionUtils.isEmpty(devices)) {
