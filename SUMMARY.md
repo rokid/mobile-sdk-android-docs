@@ -63,8 +63,7 @@
     * [设备相关信息](res/X4_device.md)
     * [内容相关信息](res/X5_media.md)
     * [自定义消息](res/X6_custom_topic_msg.md)
-* 历史版本
-    * [v1.3.1](res/history/1_3_1.md) 
+* [历史版本](res/history/version.md) 
 * [错误码](res/Y0_error_code.md)
 * [FAQ](https://github.com/Rokid/RokidMobileSDKAndroidDemo/issues)
 * [服务协议](res/Z0_service_agreement.md)
