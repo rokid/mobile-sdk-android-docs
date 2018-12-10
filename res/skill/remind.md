@@ -4,7 +4,7 @@
 
 ### 流程
 
-![](images/skill_remind.png)
+![](media/remind.png)
 
 ### 提醒列表
 

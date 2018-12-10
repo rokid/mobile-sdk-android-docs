@@ -12,7 +12,6 @@
     * [若琪账号体系 - 注册](res/31_rokid_register.md)
     * [若琪账号体系 - 登录](res/32_rokid_login.md)
     * [若琪账号体系 - 修改密码](res/33_rokid_change_pwd.md)
-    * [若琪账号体系 - 重置密码](res/34_rokid_reset_pwd.md)
     * [自有账号体系](res/35_thirdparty_login.md)
     * [账号登出](res/36_logout.md)
     * [用户信息](res/37_account_info.md)
@@ -38,10 +37,12 @@
     * [设备音量](res/5C_device_volume.md)
     * [设备自定义信息](res/5Z_custom_info.md)
 * 技能模块 Skill
-    * [闹钟](res/61_alarm.md)
-    * [提醒](res/62_remind.md)
-    * [智能家居](res/63_homebase.md)
-    * [技能商店](res/64_skill_store.md)
+    * [闹钟](res/skill/alarm.md)
+    * [云闹钟](res/skill/cloud_alarm.md)
+    * [提醒](res/skill/remind.md)
+    * [云提醒](res/skill/cloud_remind.md)
+    * [智能家居](res/skill/homebase.md)
+    * [技能商店](res/skill/skill_store.md)
 * WebBridge
     * [快速接入](res/71_use_bridge.md)
 * Vui 反馈 模块

@@ -4,7 +4,7 @@
 
 ### 流程
 
-![](images/skill_alarm.png)
+![](media/alarm.png)
 
 ### 获取闹钟列表
 
