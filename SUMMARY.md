@@ -43,7 +43,7 @@
     * [云提醒](res/skill/cloud_remind.md)
     * [智能家居](res/skill/homebase.md)
     * [技能商店](res/skill/skill_store.md)
-* 媒体模块
+* 媒体模块 Media
     * [授权媒体技能](res/skill/media_skilllist.md)
     * [媒体技能页面](res/skill/media_display.md)
     * [媒体技能播控](res/skill/media_control.md)
