@@ -6,7 +6,7 @@ Mobile SDK 发送的一些 Event 消息，根据业务需求 接收 并实现具
 
 ## 流程
 
-![](images/event.png)
+![](media/event.png)
 
 ## 支持库
 

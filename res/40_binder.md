@@ -8,7 +8,7 @@
 
 #### 配网流程
 
-![](images/binder.png)
+![](media/binder.png)
 
 
 

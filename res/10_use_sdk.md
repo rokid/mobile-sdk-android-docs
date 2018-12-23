@@ -8,7 +8,7 @@
 
 2. 将 com.rokid.mobile.sdk-XXX-XXX.aar 包放入工程的libs目录下，如下图
 
-![](images/sdkLib.png)
+![](media/sdkLib.png)
 
 3. 在工程的 App Module 的 build.gradle下手动添加依赖，如下代码所示：
 

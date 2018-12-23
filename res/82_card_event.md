@@ -2,7 +2,7 @@
 
 ## 流程
 
-![](images/vui_card.png)
+![](media/vui_card.png)
 
 ### 接收 Card 消息
 

@@ -8,7 +8,7 @@
 
 1、流程
 
-![](images/rokid_login.png)
+![](media/rokid_login.png)
 
 2、接口
 

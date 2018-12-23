@@ -29,7 +29,7 @@
  
  
  **图示**：
- ![chat](images/chat-1.png)
+ ![chat](media/chat-1.png)
 
 ---
   
@@ -75,7 +75,7 @@
  
  
  **图示**：
- ![briefSummary](images/briefSummary.png)
+ ![briefSummary](media/briefSummary.png)
 
 ---
 
@@ -119,7 +119,7 @@
  ```
  **图示**：
  
- ![simpleSummary](images/simpleSummary-1.png)
+ ![simpleSummary](media/simpleSummary-1.png)
 
  
 ---
@@ -164,7 +164,7 @@
  ```
  **图示**：
 
-![imageSummary](images/imageSummary.png)
+![imageSummary](media/imageSummary.png)
 
 
 

@@ -9,7 +9,7 @@
 底层会默认给用户选择一个当前设备，逻辑图如下：
 ```
  
- ![](images/currentDevice.png)
+ ![](media/currentDevice.png)
  
  **示例代码**
  

@@ -2,7 +2,7 @@
 
 ## 流程
 
-![](images/vui_tts.png)
+![](media/vui_tts.png)
 
 ## 发送TTS 
 

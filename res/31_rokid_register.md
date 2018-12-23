@@ -4,7 +4,7 @@
 
 **1、流程**
 
-![](images/rokid_register.png)
+![](media/rokid_register.png)
 
 **2、接口**
 
