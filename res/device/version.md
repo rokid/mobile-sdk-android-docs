@@ -1,4 +1,4 @@
-# 设备模块 Device
+# 设备系统
 
 ## 获取系统版本信息
 
@@ -7,33 +7,53 @@
 1. 获取当前设备的系统版本信息 返回的消息将以<font color=red size=3>Event</font>的形式向上抛。
 2. 返回值 只表示 获取系统版本信息是否已经发送成功。
 
- **参数说明**
+**参数说明**
  
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | deviceId | String | 是 | 设备ID |
 
- **示例代码**：
+**示例代码**：
  
- Kotlin
+Kotlin
  
 ```kotlin
 RokidMobileSDK.device.getVersionInfo(deviceId, object : IChannelPublishCallback {
-    override fun onSucceed() {
-        // TODO
-    }
+override fun onSucceed() {
+    // TODO
+}
 
-    override fun onFailed() {
-        // TODO
-    }
+override fun onFailed() {
+    // TODO
+}
 })
- ```
+```
  
- **event名称**
+Event名称
  
- EventDeviceSysUpdate
+EventDeviceSysUpdate
  
- **event数据格式** 
+举个大栗子：
+ 
+Kotlin
+
+```kotlin
+@Subscribe(threadMode = ThreadMode.BACKGROUND)
+public fun onReceived(eventDeviceSysUpdate: EventDeviceSysUpdate){
+// TODO
+}
+```
+ 
+| 参数 | 类型 | 说明 |
+| --- | --- | --- |
+| from | String | 消息来源设备Id |
+| to | String | 用户Id |
+||||
+| versionInfo.getCheckCode | int | 0:表示没有更新 ,1:表示有更新 |
+| versionInfo.currentVersion | String | 当前版本 |
+| versionInfo.changelog | String | 版本更新信息 |
+ 
+**event数据格式** 
   
  ```json
 {
