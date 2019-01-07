@@ -7,9 +7,10 @@ SDKDevice 字段说明
 | 字段 | 类型  | 备注 |
 | --- | ---  | --- |
 | deviceId | String | 设备Id  | 
-| deviceNick | String | 设备昵称  | 
+| deviceNick | String | 设备昵称| 
 | region | String | 设备地区 | 
 | sn | String | 设备Id  | 
+| ssid | String | 设备当前连接    Wifi  | 
 | ota | String | 系统版本号  | 
 | mac | String | mac地址  | 
 | ip | String | 设备 IP  | 
@@ -22,9 +23,12 @@ SDKDevice 字段说明
         "deviceNick": "xxx",   
         // 设备Id          
         "deviceId": "0011111111111111",   
-         // 设备地区             
+        // 设备地区             
         "region": "CN",
+        // 设备 sn 号
         "sn": "02010217020001ED",
+        // 设备当前连接 WiFi
+        "ssid": "xxx",
         // 系统版本号
         "ota": "2.2.2-20171027.091126",
         // mac地址

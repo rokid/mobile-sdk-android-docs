@@ -14,20 +14,7 @@
  **示例代码**
  
  ```java
- RokidMobileSDK.device.getLocation(deviceId, new IGetLocationCallback() {
-    @Override
-    public void onGetLocationSucceed(RKDeviceLocation location) {
-        // location从来没有设置过 里面的所有字段都为空
-        Logger.i("getLocationByDeviceId", "getLocationSuccess location="+location.toString());
-        ... // doSomeing
-    }
-
-    @Override
-    public void onGetLocationFailed(String errorCode, String errorMsg) {
-        Logger.e("getLocationByDeviceId","getLocationFailed errorCode=" + errorCode + " errorMsg=" + errorMsg);
-        ... // doSomeing
-    }
- });
+RKDeviceLocation location = RokidMobileSDK.device.getLocation(deviceId);
  ```
  
  **RKDeviceLoaction数据格式**：
@@ -91,13 +78,13 @@ RokidMobileSDK.device.updateLocation(deviceId, location, new IUpdateLocationCall
     @Override
     public void onUpdateLocationSucceed(Location location) {
         Logger.i("onUpdateLocationSuccess location="+location.toString());
-        ... // doSomeing
+        ... // doSomething
     }
 
     @Override
     public void onUpdateLocationFailed(String errorCode, String errorMsg) {
         Logger.e("onUpdateLocationFailed errorCode=" + errorCode + " errorMsg=" + errorMsg);
-        ... // doSomeing
+        ... // doSomething
     }
 });
  ```
