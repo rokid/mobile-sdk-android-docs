@@ -1,5 +1,56 @@
 # 设备模块 Device
 
+## 获取设备在线状态
+
+接口说明
+ 
+通过服务端获取设备当前的在线状态
+ 
+参数说明
+ 
+| 字段    | 类型   | 必须？| 说明 |
+| ------ | ----- | ----- | ----- |
+|sdkDeviceList | List | 是 | List`<SDKDevice>`sdkDeviceList|
+
+
+举个大栗子：
+ 
+ ```java
+  RokidMobileSDK.device.requestDeviceStatus(sdkDeviceList, new SDKGetDeviceStatusCallback() {
+
+            @Override
+            public void onGetDeviceStatusSucceed(List<ClientInfo> deviceStatusList) {
+                //requestDeviceStatus is succeed, doSomething
+            }
+
+            @Override
+            public void onGetDeviceStatusFailed(String errorCode, String errorMsg) {
+                //requestDeviceStatus is failed, doSomething
+
+            }
+        });
+
+ ```
+ ---
+ 
+ **ClientInfo数据格式**：
+ 
+ ```json
+ {
+    //设备是否在线
+    "isOnline": true/false,
+    //账户名称
+    "username": "xxx",
+    //deviceTypeId
+    "deviceTypeId": "xxx",
+    //账户id
+    "accountId": "xxx",
+    //设备id
+    "deviceId": "xxx",
+}
+ 
+ ```
+<font color="red">如果返回的状态列表某些设备的状态clientInfo值为null，表示该设备类型暂不支持通过该接口获取在线状态，还需通过ping-pong设备来获取在线状态。</font>
 ## ping设备
 
 接口说明
@@ -10,13 +61,13 @@
  
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
-|sddDevice |SDKDevice | 是 | SDKDevice|
+|sdkDevice |SDKDevice | 是 | SDKDevice|
 
 
 举个大栗子：
  
  ```java
-  RokidMobileSDK.device.pingDevice(sddDevice, new IPingDeviceCallback() {
+  RokidMobileSDK.device.pingDevice(sdkDevice, new IPingDeviceCallback() {
 
             @Override
             public void onSuccess(String deviceId, boolean isOnline) {
