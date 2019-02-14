@@ -1,5 +1,11 @@
 {
   "plugins" : [
-    "expandable-chapters-interactive"
-  ]
+    "expandable-chapters-interactive",
+    "github-issue-feedback"
+  ],
+  "pluginsConfig": {
+      "github-issue-feedback": {
+          "repo": "Rokid/mobile-sdk-android-docs"
+      }
+  }
 }
