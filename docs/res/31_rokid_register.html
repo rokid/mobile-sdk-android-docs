@@ -1195,7 +1195,7 @@
 <tr>
 <td>scode</td>
 <td>String</td>
-<td>&#x5426;</td>
+<td>&#x662F;</td>
 <td>&#x9A8C;&#x8BC1;&#x7801;</td>
 </tr>
 </tbody>
@@ -1236,31 +1236,48 @@
 <tr>
 <td>passwd</td>
 <td>String</td>
-<td>&#x5426;</td>
+<td>&#x662F;</td>
 <td>&#x5BC6;&#x7801;</td>
 </tr>
 <tr>
 <td>scode</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x9A8C;&#x8BC1;&#x9A8C;&#x8BC1;&#x7801;&#x540E; &#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x65B0;Code</td>
+<td>&#x662F;</td>
+<td>&#x624B;&#x673A;&#x53D1;&#x9001;&#x7684;&#x77ED;&#x4FE1;&#x9A8C;&#x8BC1;&#x7801;</td>
+</tr>
+<tr>
+<td>areaCode</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x624B;&#x673A;&#x53F7;&#x7801;&#x6240;&#x5C5E;&#x533A;&#x57DF;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x201C;+86&#x201D;</td>
+</tr>
+<tr>
+<td>accessKey</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5728;&#x82E5;&#x742A;&#x5B98;&#x65B9;&#x5E73;&#x53F0;&#x6CE8;&#x518C;&#x751F;&#x6210;&#x7684;AccessKey</td>
 </tr>
 </tbody>
 </table>
 <p>&#x4E3E;&#x4E2A;&#x5927;&#x6817;&#x5B50;:</p>
-<pre><code class="lang-java">RokidMobileSDK.account.register(phoneNum, passwd, scode, <span class="hljs-keyword">new</span> IRegisterResultCallback() {
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRegisterSucceed</span><span class="hljs-params">()</span> </span>{
-        Logger.d(<span class="hljs-string">&quot;onRegisterSucceed is called.&quot;</span>);
-        ... <span class="hljs-comment">// do something</span>
-    }
+<pre><code class="lang-java">RokidMobileSDK.account.register(phoneNum, 
+                passwd, 
+                scode, 
+                areaCode, 
+                accessKey, 
+                <span class="hljs-keyword">new</span> IRegisterResultCallback() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRegisterSucceed</span><span class="hljs-params">()</span> </span>{
+                Logger.d(<span class="hljs-string">&quot;onRegisterSucceed is called.&quot;</span>);
+                ... <span class="hljs-comment">// do something</span>
+            }
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRegisterFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
-        Logger.e(<span class="hljs-string">&quot;onRegisterFailed errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot; errorMsg=&quot;</span> + errorMsg);
-        ... <span class="hljs-comment">// do something</span>
-    }
-});
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onRegisterFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
+                Logger.e(<span class="hljs-string">&quot;onRegisterFailed errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot; errorMsg=&quot;</span> + errorMsg);
+                ... <span class="hljs-comment">// do something</span>
+            }
+        });
 </code></pre>
 
                                 
@@ -1305,7 +1322,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"若琪账号体系 - 注册","level":"1.4.2","depth":2,"next":{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"res/32_rokid_login.md","ref":"res/32_rokid_login.md","articles":[]},"previous":{"title":"账号模块介绍","level":"1.4.1","depth":2,"path":"res/30_account.md","ref":"res/30_account.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/31_rokid_register.md","mtime":"2018-12-23T20:27:13.813Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T08:16:41.550Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"若琪账号体系 - 注册","level":"1.4.2","depth":2,"next":{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"res/32_rokid_login.md","ref":"res/32_rokid_login.md","articles":[]},"previous":{"title":"账号模块介绍","level":"1.4.1","depth":2,"path":"res/30_account.md","ref":"res/30_account.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/31_rokid_register.md","mtime":"2019-03-06T03:53:08.856Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T03:53:29.550Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

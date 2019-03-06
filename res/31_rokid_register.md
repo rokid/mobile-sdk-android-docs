@@ -42,7 +42,7 @@ RokidMobileSDK.account.getScode(phoneNum, new IGetScodeResultCallback() {
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | phoneNum  | String | 是 | 手机号 |
-| scode   | String | 否 | 验证码 |
+| scode   | String | 是 | 验证码 |
 
 举个大栗子:
 
@@ -69,25 +69,33 @@ RokidMobileSDK.account.checkScode(scode, phoneNum, new ICheckScodeResultCallback
 | 字段    | 类型   | 必须？| 说明 |
 | ------ | ----- | ----- | ----- |
 | phoneNum  | String | 是 | 手机号 |
-| passwd   | String | 否 | 密码 |
-| scode   | String | 否 | 验证验证码后 接口返回的新Code |
+| passwd   | String | 是 | 密码 |
+| scode   | String | 是 | 手机发送的短信验证码 |
+| areaCode  | String | 是 | 手机号码所属区域号，比如：“+86” |
+| accessKey   | String | 是 | 在若琪官方平台注册生成的AccessKey |
 
 举个大栗子:
 
 ```java
-RokidMobileSDK.account.register(phoneNum, passwd, scode, new IRegisterResultCallback() {
-    @Override
-    public void onRegisterSucceed() {
-        Logger.d("onRegisterSucceed is called.");
-        ... // do something
-    }
+RokidMobileSDK.account.register(phoneNum, 
+                passwd, 
+                scode, 
+                areaCode, 
+                accessKey, 
+                new IRegisterResultCallback() {
+            @Override
+            public void onRegisterSucceed() {
+                Logger.d("onRegisterSucceed is called.");
+                ... // do something
+            }
 
-    @Override
-    public void onRegisterFailed(String errorCode, String errorMsg) {
-        Logger.e("onRegisterFailed errorCode=" + errorCode + " errorMsg=" + errorMsg);
-        ... // do something
-    }
-});
+            @Override
+            public void onRegisterFailed(String errorCode, String errorMsg) {
+                Logger.e("onRegisterFailed errorCode=" + errorCode + " errorMsg=" + errorMsg);
+                ... // do something
+            }
+        });
+        
 ```
 
 
