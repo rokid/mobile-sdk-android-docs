@@ -10,8 +10,8 @@
 示例：
 
 ```java
- private fun requestSkillHomeIntent() {
-        RokidMobileSDK.media().requestSkillHomeIntent(skillId, object : IGetMediaHomeDataCallBack {
+ private fun requestHomeIntent() {
+        RokidMobileSDK.media().requestHomeIntent(skillId, object : IGetMediaHomeDataCallBack {
             override fun onSucceed(data: MediaHomeV3Data?) {
             
             }
