@@ -51,6 +51,7 @@
     * [三方授权](res/skill/media_thridauth.md)
         * [QQ & 微信](res/skill/media_thrid_qq.md)
         * [喜马拉雅](res/skill/media_thrid_xmly.md)
+        * [酷狗音乐](res/skill/media_third_kugou.md)
 * WebBridge
     * [快速接入](res/71_use_bridge.md)
 * Vui 反馈 模块
