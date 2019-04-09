@@ -2,22 +2,24 @@
 
 ## 注册流程
 
-**1、流程**
+### 1、流程
 
 ![](media/rokid_register.png)
 
-**2、接口**
+### 2、接口
 
-1、获取 验证码
+#### 1、获取验证码（旧接口，推荐使用下面[新接口](#2、获取验证码)）
+
+国际区号默认采用中国国际区号：”+86“
 
 参数说明:
 
-| 字段    | 类型   | 必须？| 说明 |
-| ------ | ----- | ----- | ----- |
-| phoneNum  | String | 是 | 手机号 |
+| 字段        | 类型   | 必须？| 说明                 |
+| ---------- | ----- | ----- | ------------------- |
+| phoneNum   | String | 是 | 手机号                  |
 
 举个大栗子:
-    
+
 ```java
 RokidMobileSDK.account.getScode(phoneNum, new IGetScodeResultCallback() {
     @Override
@@ -34,8 +36,35 @@ RokidMobileSDK.account.getScode(phoneNum, new IGetScodeResultCallback() {
 });
 ```
 
+#### 2、获取验证码
 
-2、验证 验证码
+参数说明:
+
+| 字段        | 类型   | 必须？| 说明                 |
+| ---------- | ----- | ----- | ------------------- |
+| phoneNum   | String | 是 | 手机号                  |
+| regionCode | String | 是 | 国际区号，例如中国为“+86“ |
+
+举个大栗子:
+    
+```java
+RokidMobileSDK.account.getScodeWithRegionCode(phoneNum, regionCode, new IGetScodeResultCallback() {
+    @Override
+    public void onGetScodeSucceed() {
+        Logger.d("onGetScodeSucceed is called.");
+        ... // do something
+    }
+
+    @Override
+    public void onGetScodeFailed(String errorCode, String errorMsg) {
+        Logger.e("onGetScodeFailed errorCode=" + errorCode + " errorMsg=" + errorMsg);
+        ... // do something
+    }
+});
+```
+
+
+#### 3、校验验证码
 
 参数说明:
 
@@ -62,7 +91,7 @@ RokidMobileSDK.account.checkScode(scode, phoneNum, new ICheckScodeResultCallback
 });
 ```
 
-3、注册账号
+#### 4、注册账号
 
 参数说明:
 

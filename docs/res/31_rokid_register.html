@@ -1149,10 +1149,11 @@
                                 
                                 <h1 id="&#x82E5;&#x742A;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;">&#x82E5;&#x742A;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;</h1>
 <h2 id="&#x6CE8;&#x518C;&#x6D41;&#x7A0B;">&#x6CE8;&#x518C;&#x6D41;&#x7A0B;</h2>
-<p><strong>1&#x3001;&#x6D41;&#x7A0B;</strong></p>
+<h3 id="1&#x3001;&#x6D41;&#x7A0B;">1&#x3001;&#x6D41;&#x7A0B;</h3>
 <p><img src="media/rokid_register.png" alt=""></p>
-<p><strong>2&#x3001;&#x63A5;&#x53E3;</strong></p>
-<p>1&#x3001;&#x83B7;&#x53D6; &#x9A8C;&#x8BC1;&#x7801;</p>
+<h3 id="2&#x3001;&#x63A5;&#x53E3;">2&#x3001;&#x63A5;&#x53E3;</h3>
+<h4 id="1&#x3001;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;&#xFF08;&#x65E7;&#x63A5;&#x53E3;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x65B0;&#x63A5;&#x53E3;&#xFF09;">1&#x3001;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;&#xFF08;&#x65E7;&#x63A5;&#x53E3;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x4E0B;&#x9762;<a href="#2&#x3001;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;">&#x65B0;&#x63A5;&#x53E3;</a>&#xFF09;</h4>
+<p>&#x56FD;&#x9645;&#x533A;&#x53F7;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;&#x4E2D;&#x56FD;&#x56FD;&#x9645;&#x533A;&#x53F7;&#xFF1A;&#x201D;+86&#x201C;</p>
 <p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
 <table>
 <thead>
@@ -1187,7 +1188,48 @@
     }
 });
 </code></pre>
-<p>2&#x3001;&#x9A8C;&#x8BC1; &#x9A8C;&#x8BC1;&#x7801;</p>
+<h4 id="2&#x3001;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;">2&#x3001;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;</h4>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;&#xFF1F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>phoneNum</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x624B;&#x673A;&#x53F7;</td>
+</tr>
+<tr>
+<td>regionCode</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x56FD;&#x9645;&#x533A;&#x53F7;&#xFF0C;&#x4F8B;&#x5982;&#x4E2D;&#x56FD;&#x4E3A;&#x201C;+86&#x201C;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E3E;&#x4E2A;&#x5927;&#x6817;&#x5B50;:</p>
+<pre><code class="lang-java">RokidMobileSDK.account.getScodeWithRegionCode(phoneNum, regionCode, <span class="hljs-keyword">new</span> IGetScodeResultCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetScodeSucceed</span><span class="hljs-params">()</span> </span>{
+        Logger.d(<span class="hljs-string">&quot;onGetScodeSucceed is called.&quot;</span>);
+        ... <span class="hljs-comment">// do something</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetScodeFailed</span><span class="hljs-params">(String errorCode, String errorMsg)</span> </span>{
+        Logger.e(<span class="hljs-string">&quot;onGetScodeFailed errorCode=&quot;</span> + errorCode + <span class="hljs-string">&quot; errorMsg=&quot;</span> + errorMsg);
+        ... <span class="hljs-comment">// do something</span>
+    }
+});
+</code></pre>
+<h4 id="3&#x3001;&#x6821;&#x9A8C;&#x9A8C;&#x8BC1;&#x7801;">3&#x3001;&#x6821;&#x9A8C;&#x9A8C;&#x8BC1;&#x7801;</h4>
 <p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
 <table>
 <thead>
@@ -1228,7 +1270,7 @@
     }
 });
 </code></pre>
-<p>3&#x3001;&#x6CE8;&#x518C;&#x8D26;&#x53F7;</p>
+<h4 id="4&#x3001;&#x6CE8;&#x518C;&#x8D26;&#x53F7;">4&#x3001;&#x6CE8;&#x518C;&#x8D26;&#x53F7;</h4>
 <p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
 <table>
 <thead>
@@ -1335,7 +1377,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"若琪账号体系 - 注册","level":"1.4.2","depth":2,"next":{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"res/32_rokid_login.md","ref":"res/32_rokid_login.md","articles":[]},"previous":{"title":"账号模块介绍","level":"1.4.1","depth":2,"path":"res/30_account.md","ref":"res/30_account.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/31_rokid_register.md","mtime":"2019-04-08T03:47:20.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T14:44:48.461Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"若琪账号体系 - 注册","level":"1.4.2","depth":2,"next":{"title":"若琪账号体系 - 登录","level":"1.4.3","depth":2,"path":"res/32_rokid_login.md","ref":"res/32_rokid_login.md","articles":[]},"previous":{"title":"账号模块介绍","level":"1.4.1","depth":2,"path":"res/30_account.md","ref":"res/30_account.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/31_rokid_register.md","mtime":"2019-04-09T02:57:34.183Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-09T03:47:11.184Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
