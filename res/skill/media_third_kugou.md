@@ -4,6 +4,10 @@
 
 本文档适用于第三方厂商使用酷狗音乐技能。用户登录酷狗音乐账号并获取token，使用酷狗音乐账号token将酷狗音乐账号与Rokid账号进行绑定。
 
+### 酷狗音乐SDK及文档
+
+文档地址：<https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/Third/KuGou>
+
 ### 说明
 
 时序图：
