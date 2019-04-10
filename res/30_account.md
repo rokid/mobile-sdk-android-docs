@@ -13,13 +13,14 @@
 
 开发者 可以直接使用 Rokid 账号体系，进行用户账号注册、登录 等操作。
 
-[若琪账号体系 使用说明](/resource/31_rokid_login.html)
+[若琪账号体系 使用说明](/res/31_rokid_register.md)
     
+
 #### 自有账号体系
 
 如开发者已经有自己的账号体系了，可以直接使用。
 
-[自有账号体系 使用说明](/resource//32_thirdparty_login.html)
+[自有账号体系 使用说明](/res/35_thirdparty_login.md)
     
     
 
