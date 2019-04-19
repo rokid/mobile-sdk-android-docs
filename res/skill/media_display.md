@@ -19,7 +19,6 @@
             override fun onFailed(errorCode: String?, errorMsg: String?) {
                
             }
-
         })
     }
 ```
@@ -84,6 +83,7 @@ MediaHomeV3Data具体格式如下：
 | ------ | ----- | ----- | ----- |
 | skillId | String | 是 | 当前技能ID |
 | groupId | String | 是 | 当前专辑ID |
+| linkUrl | String | 否 | linkUrl (由requestHomeIntent()接口返回) |
 | startIndex | int | 否 | 分页使用 |
 | endIndex | int | 否 | 分页使用 |
 | extend | String | 否 | 拓展字段 |
@@ -94,6 +94,7 @@ MediaHomeV3Data具体格式如下：
  private fun requestListIntent() {
         RokidMobileSDK.media.requestListIntent(skillId,
         groupId,
+        linkUrl,
         startIndex,
         endIndex,
         extend,
@@ -105,7 +106,6 @@ MediaHomeV3Data具体格式如下：
             override fun onFailed(errorCode: String?, errorMsg: String?) {
                
             }
-
         })
     }
 ```
@@ -151,7 +151,6 @@ MediaListV3Data具体格式如下：
 | ------ | ----- | ----- | ----- |
 | skillId | String | 是 | 当前技能ID |
 | groupId | String | 是 | 当前专辑ID |
-| linkUrl | String | 否 | 当前专辑linkUrl |
 | startIndex | int | 否 | 分页使用 |
 | endIndex | int | 否 | 分页使用 |
 | order | String | 否 | 正逆序，asc/desc，目前限喜马拉雅 |
@@ -163,7 +162,6 @@ MediaListV3Data具体格式如下：
  private fun requestDetailIntent() {
         RokidMobileSDK.media.requestDetailIntent(skillId,
         groupId,
-        linkUrl,
         startIndex,
         endIndex,
         order,
