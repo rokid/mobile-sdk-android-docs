@@ -52,6 +52,7 @@
         * [QQ & 微信](res/skill/media_thrid_qq.md)
         * [喜马拉雅](res/skill/media_thrid_xmly.md)
         * [酷狗音乐](res/skill/media_third_kugou.md)
+        * [酷狗音乐（H5）](res/skill/media_third_kugou_web.md)
 * WebBridge
     * [快速接入](res/71_use_bridge.md)
 * Vui 反馈 模块
