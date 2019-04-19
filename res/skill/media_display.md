@@ -11,7 +11,7 @@
 
 ```java
  private fun requestHomeIntent() {
-        RokidMobileSDK.media().requestHomeIntent(skillId, object : IGetMediaHomeDataCallBack {
+        RokidMobileSDK.media.requestHomeIntent(skillId, object : IGetMediaHomeDataCallBack {
             override fun onSucceed(data: MediaHomeV3Data?) {
             
             }
@@ -92,7 +92,7 @@ MediaHomeV3Data具体格式如下：
 
 ```java
  private fun requestListIntent() {
-        RokidMobileSDK.media().requestListIntent(skillId,
+        RokidMobileSDK.media.requestListIntent(skillId,
         groupId,
         startIndex,
         endIndex,
@@ -161,7 +161,7 @@ MediaListV3Data具体格式如下：
 
 ```java
  private fun requestDetailIntent() {
-        RokidMobileSDK.media().requestDetailIntent(skillId,
+        RokidMobileSDK.media.requestDetailIntent(skillId,
         groupId,
         linkUrl,
         startIndex,
