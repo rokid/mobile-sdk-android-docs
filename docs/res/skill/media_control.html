@@ -1341,15 +1341,15 @@
     }
 </code></pre><p>&#x4EE5;&#x4E0A;4&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x9700;&#x8981;&#x8BA2;&#x9605;&#x4EE5;&#x4E0B;&#x4E8B;&#x4EF6;&#xFF0C;&#x6536;&#x5230;&#x4E8B;&#x4EF6;&#x540E;&#x624D;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x771F;&#x7684;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF1A;</p>
 <pre><code> @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMediaPlayInfo(MediaEventTemplate mediaEvent) {
+    public void onMediaPlayInfo(SDKMediaEvent sdkMediaEvent) {
 
     }
-</code></pre><p>MediaEventTemplate&#x7684;&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+</code></pre><p>SDKMediaEvent&#x7684;&#x5177;&#x4F53;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>{
-  ...
+  &quot;appId&quot;: &quot;xxx&quot;,
+  &quot;event&quot;: &quot;xxx&quot;,
   &quot;version&quot;: &quot;3.0.0&quot;, // &#x5FC5;&#x987B;
-  &quot;data&quot;: {
-    &quot;appId&quot;:&quot;your skill appId or native appId&quot;,
+  &quot;template&quot;: {
     &quot;style&quot;: &quot;default/planA&quot;,
     &quot;titleButtons&quot;: [
       {
@@ -1419,7 +1419,7 @@
 </code></pre>
 <p>&#x8BE5;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x8BA2;&#x9605;&#x4EE5;&#x4E0B;&#x4E8B;&#x4EF6;&#xFF1A;</p>
 <pre><code> @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMediaPlayInfo(MediaEventTemplate mediaEvent) {
+    public void onMediaPlayInfo(SDKMediaEvent sdkMediaEvent) {
 
     }
 </code></pre>
@@ -1465,7 +1465,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"媒体技能播控","level":"1.8.3","depth":2,"next":{"title":"三方授权","level":"1.8.4","depth":2,"path":"res/skill/media_thridauth.md","ref":"res/skill/media_thridauth.md","articles":[{"title":"QQ & 微信","level":"1.8.4.1","depth":3,"path":"res/skill/media_thrid_qq.md","ref":"res/skill/media_thrid_qq.md","articles":[]},{"title":"喜马拉雅","level":"1.8.4.2","depth":3,"path":"res/skill/media_thrid_xmly.md","ref":"res/skill/media_thrid_xmly.md","articles":[]},{"title":"酷狗音乐","level":"1.8.4.3","depth":3,"path":"res/skill/media_third_kugou.md","ref":"res/skill/media_third_kugou.md","articles":[]},{"title":"酷狗音乐（H5）","level":"1.8.4.4","depth":3,"path":"res/skill/media_third_kugou_web.md","ref":"res/skill/media_third_kugou_web.md","articles":[]}]},"previous":{"title":"媒体技能页面","level":"1.8.2","depth":2,"path":"res/skill/media_display.md","ref":"res/skill/media_display.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/skill/media_control.md","mtime":"2019-04-08T03:47:20.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-19T13:24:58.289Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"媒体技能播控","level":"1.8.3","depth":2,"next":{"title":"三方授权","level":"1.8.4","depth":2,"path":"res/skill/media_thridauth.md","ref":"res/skill/media_thridauth.md","articles":[{"title":"QQ & 微信","level":"1.8.4.1","depth":3,"path":"res/skill/media_thrid_qq.md","ref":"res/skill/media_thrid_qq.md","articles":[]},{"title":"喜马拉雅","level":"1.8.4.2","depth":3,"path":"res/skill/media_thrid_xmly.md","ref":"res/skill/media_thrid_xmly.md","articles":[]},{"title":"酷狗音乐","level":"1.8.4.3","depth":3,"path":"res/skill/media_third_kugou.md","ref":"res/skill/media_third_kugou.md","articles":[]},{"title":"酷狗音乐（H5）","level":"1.8.4.4","depth":3,"path":"res/skill/media_third_kugou_web.md","ref":"res/skill/media_third_kugou_web.md","articles":[]}]},"previous":{"title":"媒体技能页面","level":"1.8.2","depth":2,"path":"res/skill/media_display.md","ref":"res/skill/media_display.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/skill/media_control.md","mtime":"2019-06-18T09:11:30.487Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T09:13:24.730Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
