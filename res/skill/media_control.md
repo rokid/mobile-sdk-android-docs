@@ -124,18 +124,18 @@ private fun requestNextIntent() {
 
 ```
  @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMediaPlayInfo(MediaEventTemplate mediaEvent) {
+    public void onMediaPlayInfo(SDKMediaEvent sdkMediaEvent) {
     
     }
 ```
-MediaEventTemplate的具体格式如下：
+SDKMediaEvent的具体格式如下：
 
 ```
 {
-  ...
+  "appId": "xxx",
+  "event": "xxx",
   "version": "3.0.0", // 必须
-  "data": {
-    "appId":"your skill appId or native appId",
+  "template": {
     "style": "default/planA",
     "titleButtons": [
       {
@@ -195,7 +195,7 @@ private fun requestPlayInfoIntent() {
 
 ```
  @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMediaPlayInfo(MediaEventTemplate mediaEvent) {
+    public void onMediaPlayInfo(SDKMediaEvent sdkMediaEvent) {
     
     }
 ```
