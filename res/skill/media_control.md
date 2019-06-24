@@ -67,6 +67,33 @@ private fun requestPauseIntent() {
 
 ---
 
+## 继续播放
+
+ 请求参数：
+ 
+| 字段    | 类型   | 必须？| 说明 |
+| ------ | ----- | ----- | ----- |
+| skillId | String | 是 | 当前技能ID |
+| callback | Callback | 是 | 请求结果回调，可为null |
+示例：
+
+```java
+private fun requestResumeIntent() {
+        RokidMobileSDK.media().requestResumeIntent(skillId,
+                object : IMediaWareControlCallback {
+                    override fun onSucceed(data: MediaWareControlData?) {
+                
+                    }
+
+                    override fun onFailed(errorCode: String?, errorMsg: String?) {
+                    
+                    }
+                })
+    }
+```
+
+---
+
 ## 上一首
 
  请求参数：
