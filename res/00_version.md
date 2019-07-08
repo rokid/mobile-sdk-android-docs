@@ -1,5 +1,9 @@
 #  版本更新信息
 
+* v1.10.0
+
+     [新增] 账户模块 - 增加用户信息获取和更新接口<br>
+     
 * v1.9.0
 
      [修改] 媒体模块 - `RokidMobileSDK.media.requestListIntent`接口增加`linkUrl`参数<br>
