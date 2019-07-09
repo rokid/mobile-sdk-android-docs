@@ -101,7 +101,6 @@ RokidMobileSDK.account.checkScode(scode, phoneNum, new ICheckScodeResultCallback
 | passwd   | String | 是 | 密码 |
 | scode   | String | 是 | 手机发送的短信验证码 |
 | areaCode  | String | 是 | 手机号码所属区域号，比如：“+86” |
-| accessKey   | String | 是 | 在若琪官方平台注册生成的AccessKey |
 
 举个大栗子:
 
@@ -110,7 +109,6 @@ RokidMobileSDK.account.register(phoneNum,
                 passwd, 
                 scode, 
                 areaCode, 
-                accessKey, 
                 new IRegisterResultCallback() {
             @Override
             public void onRegisterSucceed() {

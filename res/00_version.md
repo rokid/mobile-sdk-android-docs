@@ -4,6 +4,8 @@
 
      [新增] 账户模块 - 增加用户信息获取和更新接口<br>
      
+     [修改] 账户模块 - 注册接口取消 `accessKey` 入参
+     
 * v1.9.0
 
      [修改] 媒体模块 - `RokidMobileSDK.media.requestListIntent`接口增加`linkUrl`参数<br>
