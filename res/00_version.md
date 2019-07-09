@@ -6,6 +6,8 @@
      
      [修改] 账户模块 - 注册接口取消 `accessKey` 入参
      
+     [修改] 基础模块 - 日志优化
+     
 * v1.9.0
 
      [修改] 媒体模块 - `RokidMobileSDK.media.requestListIntent`接口增加`linkUrl`参数<br>
