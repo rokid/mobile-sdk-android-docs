@@ -22,7 +22,8 @@ allprojects {
 
 #### 1.1.2 依赖最新的 SDK 包
 
-在 Module 的 <font color=red>build.gradle </font> 中找到 `dependencies` 节点，并在该节点加入 SDK 依赖 `implementation 'com.rokid.mobile:sdk:1.x.x'`，如下所示：
+在 Module 的 <font color=red>build.gradle </font> 中找到 `dependencies` 节点，并在该节点加入 SDK 依赖 `implementation 'com.rokid.mobile:sdk:1.x.x'`，当前 SDK 最新版本为：[ ![](https://api.bintray.com/packages/rokid/maven/MobileSDK/images/download.svg) ](https://bintray.com/rokid/maven/MobileSDK/_latestVersion)
+具体如下所示：
 
 ```
 dependencies {
