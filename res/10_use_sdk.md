@@ -33,7 +33,9 @@ dependencies {
 }
 ```
 
-### 1.2 手动导入
+### ~~1.2 手动导入 (不推荐使用)~~
+
+<font color=red>该引用方式即将废除，请使用 maven 导入的方式。 </font>
 
 1、[下载 Mobile SDK](https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK)
 
