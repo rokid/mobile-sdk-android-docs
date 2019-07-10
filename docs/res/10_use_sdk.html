@@ -1159,46 +1159,71 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="mobile-sdk-&#x96C6;&#x6210;&#x65B9;&#x5F0F;">Mobile SDK &#x96C6;&#x6210;&#x65B9;&#x5F0F;</h1>
-<h2 id="&#x5BFC;&#x5165;mobile-sdk">&#x5BFC;&#x5165;Mobile SDK</h2>
-<h3 id="&#x624B;&#x52A8;&#x5BFC;&#x5165;">&#x624B;&#x52A8;&#x5BFC;&#x5165;</h3>
-<ol>
-<li><p><a href="https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK" target="_blank">&#x4E0B;&#x8F7D; Mobile SDK</a></p>
-</li>
-<li><p>&#x5C06; com.rokid.mobile.sdk-XXX-XXX.aar &#x5305;&#x653E;&#x5165;&#x5DE5;&#x7A0B;&#x7684;libs&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;</p>
-</li>
-</ol>
+<h2 id="&#x4E00;&#x3001;&#x5BFC;&#x5165;mobile-sdk">&#x4E00;&#x3001;&#x5BFC;&#x5165;Mobile SDK</h2>
+<h3 id="11-maven&#x5BFC;&#x5165;&#xFF08;&#x63A8;&#x8350;&#x65B9;&#x5F0F;&#xFF09;">1.1 maven&#x5BFC;&#x5165;&#xFF08;&#x63A8;&#x8350;&#x65B9;&#x5F0F;&#xFF09;</h3>
+<h4 id="111-&#x5F15;&#x5165;-maven-&#x4ED3;&#x5E93;&#x5730;&#x5740;">1.1.1 &#x5F15;&#x5165; maven &#x4ED3;&#x5E93;&#x5730;&#x5740;</h4>
+<p>&#x5728;&#x5DE5;&#x7A0B;&#x6839;&#x76EE;&#x5F55;&#x7684; <font color="red">build.gradle </font> &#x627E;&#x5230;&#xFF08;&#x6216;&#x589E;&#x52A0;&#xFF09; <code>allprojects -&gt; repositories</code> &#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8BE5;&#x8282;&#x70B9;&#x52A0;&#x5165; maven &#x4ED3;&#x5E93;&#x5730;&#x5740; <code>https://dl.bintray.com/rokid/maven/</code>&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>allprojects {
+    repositories {
+        google()
+        jcenter()
+        ...
+        maven { url &quot;https://dl.bintray.com/rokid/maven/&quot; }
+        ...
+    }
+}
+</code></pre><h4 id="112-&#x4F9D;&#x8D56;&#x6700;&#x65B0;&#x7684;-sdk-&#x5305;">1.1.2 &#x4F9D;&#x8D56;&#x6700;&#x65B0;&#x7684; SDK &#x5305;</h4>
+<p>&#x5728; Module &#x7684; <font color="red">build.gradle </font> &#x4E2D;&#x627E;&#x5230; <code>dependencies</code> &#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x5728;&#x8BE5;&#x8282;&#x70B9;&#x52A0;&#x5165; SDK &#x4F9D;&#x8D56; <code>implementation &apos;com.rokid.mobile:sdk:1.x.x&apos;</code>&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>dependencies {
+    ...
+    // sdk
+    implementation &apos;com.rokid.mobile:sdk:1.x.x&apos;
+    ...
+}
+</code></pre><h3 id="12-&#x624B;&#x52A8;&#x5BFC;&#x5165;">1.2 &#x624B;&#x52A8;&#x5BFC;&#x5165;</h3>
+<p>1&#x3001;<a href="https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK" target="_blank">&#x4E0B;&#x8F7D; Mobile SDK</a></p>
+<p>2&#x3001;&#x5C06; com.rokid.mobile.sdk-XXX-XXX.aar &#x5305;&#x653E;&#x5165;&#x5DE5;&#x7A0B;&#x7684;libs&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;</p>
 <p><img src="media/sdkLib.png" alt=""></p>
-<ol>
-<li>&#x5728;&#x5DE5;&#x7A0B;&#x7684; App Module &#x7684; build.gradle&#x4E0B;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;&#xFF0C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x6240;&#x793A;&#xFF1A;</li>
-</ol>
+<p>3&#x3001;&#x5728;&#x5DE5;&#x7A0B;&#x6839;&#x76EE;&#x5F55;&#x7684; <font color="red">build.gradle </font> &#x4E2D;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;&#xFF0C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x6240;&#x793A;&#xFF1A;</p>
 <pre><code>repositories {
     flatDir {
         dirs &apos;libs&apos;
     }
 }
-
-dependencies {
+</code></pre><p>4&#x3001;&#x5728; Module &#x76EE;&#x5F55;&#x4E0B; <font color="red"> build.gradle </font> &#x4E2D;&#x6DFB;&#x52A0;&#x672C;&#x5730; SDK aar &#x5305;&#x4F9D;&#x8D56;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>dependencies {
     ......
     implementation(name: &apos;com.rokid.mobile.sdk-XXX-XXX&apos;, ext: &quot;aar&quot;)
     ......
 }
-</code></pre><h2 id="&#x589E;&#x52A0;-kotlin-&#x652F;&#x6301;">&#x589E;&#x52A0; Kotlin &#x652F;&#x6301;</h2>
-<h5 id="1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684;-buildgradle-&#x4E2D;&#x6DFB;&#x52A0;">1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684; <font color="red">build.gradle </font>&#x4E2D;&#x6DFB;&#x52A0;</h5>
+</code></pre><h2 id="&#x4E8C;&#x3001;&#x6DFB;&#x52A0;-kotlin-&#x4F9D;&#x8D56;">&#x4E8C;&#x3001;&#x6DFB;&#x52A0; Kotlin &#x4F9D;&#x8D56;</h2>
+<ul>
+<li>&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684; <font color="red">build.gradle </font>&#x4E2D;&#x6DFB;&#x52A0;</li>
+</ul>
 <pre><code>buildscript {
     ...
     dependencies {
-        classpath &quot;org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.10&quot;
         ...
-    }
+        classpath &apos;org.jetbrains.kotlin:kotlin-gradle-plugin:x.x.x&apos;
+        ...
+    ...
 }
-</code></pre><h5 id="2&#x3001;&#x5728;-module-&#x76EE;&#x5F55;&#x4E0B;--buildgradle--&#x4E2D;&#x589E;&#x52A0;">2&#x3001;&#x5728; Module &#x76EE;&#x5F55;&#x4E0B; <font color="red"> build.gradle </font> &#x4E2D;&#x589E;&#x52A0;</h5>
-<pre><code>&#x6DFB;&#x52A0; Kotlin &#x63D2;&#x4EF6;&#x652F;&#x6301;
-</code></pre><pre><code>apply plugin: &apos;kotlin-android&apos;
+</code></pre><ul>
+<li>&#x5728; Module &#x76EE;&#x5F55;&#x4E0B; <font color="red"> build.gradle </font> &#x4E2D;&#x6DFB;&#x52A0; Kotlin &#x63D2;&#x4EF6;&#x652F;&#x6301;</li>
+</ul>
+<pre><code>apply plugin: &apos;kotlin-android&apos;
 apply plugin: &apos;kotlin-android-extensions&apos;
-</code></pre><pre><code>&#x5BFC;&#x5165; kotlin &#x652F;&#x6301;&#x5E93;
-</code></pre><pre><code>mplementation &apos;org.jetbrains.kotlin:kotlin-stdlib:1.3.10&apos;
-</code></pre><h2 id="&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x4F9D;&#x8D56;">&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x4F9D;&#x8D56;</h2>
-<p>Rokid Mobile SDK &#x76EE;&#x524D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4EE5;&#x4E0B; &#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x6E90;&#x5E93;&#xFF0C;&#x8BF7;&#x6DFB;&#x52A0;&#x5230;&#x81EA;&#x5DF1;&#x5DE5;&#x7A0B;&#x4E2D;&#xFF1A;</p>
+</code></pre><ul>
+<li>&#x5728; Module &#x76EE;&#x5F55;&#x4E0B; <font color="red"> build.gradle </font> &#x4E2D;&#x5BFC;&#x5165; Kotlin &#x652F;&#x6301;&#x5E93;</li>
+</ul>
+<pre><code>dependencies {
+        ...
+        implementation &apos;org.jetbrains.kotlin:kotlin-stdlib:x.x.x&apos;
+        ...
+    ...
+</code></pre><h2 id="&#x4E09;&#x3001;&#x6DFB;&#x52A0;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x4F9D;&#x8D56;">&#x4E09;&#x3001;&#x6DFB;&#x52A0;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x4F9D;&#x8D56;</h2>
+<p>&#x5982;&#x679C;&#x914D;&#x7F6E;&#x5B8C;&#x524D;&#x9762;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#x540E;&#xFF0C;&#x5DE5;&#x7A0B;&#x7F16;&#x8BD1;&#x63D0;&#x793A;&#x67D0;&#x4E9B;&#x4E09;&#x65B9;&#x5F00;&#x6E90;&#x5E93;&#x672A;&#x627E;&#x5230;&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x60A8;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x4F9D;&#x8D56;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x51FA;&#x9519;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;&#x8FD9;&#x4E00;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>Rokid Mobile SDK &#x76EE;&#x524D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4EE5;&#x4E0B;&#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x6E90;&#x5E93;&#xFF0C;&#x8BF7;&#x6DFB;&#x52A0;&#x5230;&#x81EA;&#x5DF1;&#x5DE5;&#x7A0B;&#x4E2D;&#xFF1A;</p>
 <pre><code>implementation &apos;com.google.code.gson:gson:2.8.0&apos;
 implementation &apos;com.squareup.okhttp3:okhttp:3.9.0&apos;
 implementation &apos;org.greenrobot:eventbus:3.0.0&apos;
@@ -1206,18 +1231,7 @@ implementation &apos;org.greenrobot:greendao:3.2.0&apos;
 implementation &apos;org.greenrobot:greendao-generator:3.2.0&apos;
 implementation &apos;org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0&apos;
 implementation &apos;org.eclipse.paho:org.eclipse.paho.android.service:1.1.1&apos;
-</code></pre><h2 id="&#x6743;&#x9650;&#x4F9D;&#x8D56;">&#x6743;&#x9650;&#x4F9D;&#x8D56;</h2>
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.CHANGE_WIFI_STATE&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot;/&gt;
-&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;
-</code></pre><h2 id="&#x6DFB;&#x52A0;&#x6DF7;&#x6DC6;&#x89C4;&#x5219;">&#x6DFB;&#x52A0;&#x6DF7;&#x6DC6;&#x89C4;&#x5219;</h2>
+</code></pre><h2 id="&#x56DB;&#x3001;&#x6DFB;&#x52A0;&#x6DF7;&#x6DC6;&#x89C4;&#x5219;">&#x56DB;&#x3001;&#x6DFB;&#x52A0;&#x6DF7;&#x6DC6;&#x89C4;&#x5219;</h2>
 <p>&#x5728;&#x5DE5;&#x7A0B;&#x7684; proguard-project.txt &#x91CC;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x76F8;&#x5173;&#x89C4;&#x5219;&#xFF1A;</p>
 <pre><code>-keep class com.rokid.mobile.** { *; }
 </code></pre>
@@ -1259,7 +1273,7 @@ implementation &apos;org.eclipse.paho:org.eclipse.paho.android.service:1.1.1&apo
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"集成方式","level":"1.3.1","depth":2,"next":{"title":"初始化","level":"1.3.2","depth":2,"path":"res/11_sdk_init.md","ref":"res/11_sdk_init.md","articles":[]},"previous":{"title":"快速接入","level":"1.3","depth":1,"ref":"","articles":[{"title":"集成方式","level":"1.3.1","depth":2,"path":"res/10_use_sdk.md","ref":"res/10_use_sdk.md","articles":[]},{"title":"初始化","level":"1.3.2","depth":2,"path":"res/11_sdk_init.md","ref":"res/11_sdk_init.md","articles":[]},{"title":"调试","level":"1.3.3","depth":2,"path":"res/12_debug.md","ref":"res/12_debug.md","articles":[]},{"title":"Demo 代码","level":"1.3.4","depth":2,"path":"res/1Z_demo.md","ref":"res/1Z_demo.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/10_use_sdk.md","mtime":"2019-07-09T07:00:35.433Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-09T07:22:42.612Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"集成方式","level":"1.3.1","depth":2,"next":{"title":"初始化","level":"1.3.2","depth":2,"path":"res/11_sdk_init.md","ref":"res/11_sdk_init.md","articles":[]},"previous":{"title":"快速接入","level":"1.3","depth":1,"ref":"","articles":[{"title":"集成方式","level":"1.3.1","depth":2,"path":"res/10_use_sdk.md","ref":"res/10_use_sdk.md","articles":[]},{"title":"初始化","level":"1.3.2","depth":2,"path":"res/11_sdk_init.md","ref":"res/11_sdk_init.md","articles":[]},{"title":"调试","level":"1.3.3","depth":2,"path":"res/12_debug.md","ref":"res/12_debug.md","articles":[]},{"title":"Demo 代码","level":"1.3.4","depth":2,"path":"res/1Z_demo.md","ref":"res/1Z_demo.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-interactive","github-issue-feedback"],"pluginsConfig":{"github-issue-feedback":{"repo":"Rokid/mobile-sdk-android-docs"},"expandable-chapters-interactive":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"res/10_use_sdk.md","mtime":"2019-07-10T09:06:36.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-10T09:14:06.624Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
