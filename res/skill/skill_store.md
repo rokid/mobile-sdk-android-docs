@@ -2,7 +2,14 @@
 
 ### URL
 
-* release环境： https://skill.rokid.com/storev2
+* release环境： https://skill.rokid.com/storev2/#/?header=0&newview=1
+
+#### 参数说明：
+
+| 参数 | 说明 |
+| --- | ---|
+| header | 0:隐藏标题栏；1:显示标题栏 |
+| newview | 0:在当前页面打开链接；1:使用新的页面打开链接 |
 
 ### 快速接入说明
 
