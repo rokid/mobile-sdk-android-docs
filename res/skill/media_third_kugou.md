@@ -6,7 +6,7 @@
 
 ### 酷狗音乐SDK及文档
 
-文档地址：<https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/Third/KuGou>
+请联系商务获取
 
 ### 说明
 

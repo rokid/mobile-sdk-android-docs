@@ -21,7 +21,7 @@
 
 2. 集成酷狗音乐SDK
 
-  酷狗音乐SDK和文档地址：<https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/Third/KuGou>。这里只需要将酷狗SDK的jar包导入工程即可
+  酷狗音乐SDK和文档地址：请联系商务获取
 
 3. WebBridge接入
 
