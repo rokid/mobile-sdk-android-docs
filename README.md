@@ -18,7 +18,7 @@ Rokid Mobile SDK 提供了整套的移动开发支持，能让开发者的移动
 
 #### 1、申请开发者
 
-需先在[开放平台](https://developer.rokid.com)注册一个帐号，并联系 对接的项目经理 申请 AppKey、AppSecrect 和 accessKey。
+需先在[开放平台](https://developer.rokid.com)注册一个帐号，并在 https://account.rokid.com/#/setting/prove 中申请 线上环境的 AppKey、AppSecrect 和 accessKey。
 
 #### 2、集成 Mobile SDK
 
