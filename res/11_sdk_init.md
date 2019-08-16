@@ -9,7 +9,7 @@
 1. **<font color=red size=3>在工程的Application类的onCreate()方法中初始化RokidMobileSDK。</font>**
 2. **<font color=red size=3>appKey、appSecret、accessKey 请按照真实填写，否则会初始化失败。</font>**
 3. **<font color=red size=3>appKey、appSecret、accessKey 请到 https://account.rokid.com/#/setting/prove 中申请。</font>**
-3. **<font color=red size=3>appKey、appSecret、accessKey 线上、测服 是不一样的，如果需要使用 测服环境，请找 对接的项目经理 申请</font>**
+4. **<font color=red size=3>appKey、appSecret、accessKey 线上、测服 是不一样的，如果需要使用 测服环境，请找 对接的项目经理 申请</font>**
 
 **参数说明：**
 
