@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - uses: taixw2/deploy-aliyun-oss@1
+      - uses: taixw2/deploy-aliyun-oss@v1
         with:
           # the bucket data region location
           region: hagnzhou
