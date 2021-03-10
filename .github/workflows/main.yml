@@ -37,6 +37,4 @@ jobs:
           entry: docs/**/* # glob pattern
           remote-dir: /docs/test/
           path-rewrite: ^docs/
-          # entry
-          milliseconds: 10000
 
