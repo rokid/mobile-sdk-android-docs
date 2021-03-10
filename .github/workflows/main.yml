@@ -22,13 +22,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: tvrcgo/upload-to-oss@v0.1.1
+      - uses: manyuanrong/setup-ossutil@v2.0
         with:
           # the bucket data region location
-          region: oss-cn-hangzhou
-          key-id: ${{ secrets.OSS_KEY }}
-          key-secret: ${{ secrets.OSS_SECRET }}
-          bucket: rokid-platform
-          asset-path: ./docs
-          target-path: /docs/test/
+          endpoint: oss-cn-hangzhou.aliyuncs.com
+          access-key-id: ${{ secrets.OSS_KEY }}
+          access-key-secret: ${{ secrets.OSS_SECRET }}
+      - run: ossutil cp -rf docs oss://rokid-platform/docs/test/
 
