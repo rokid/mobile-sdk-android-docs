@@ -17,14 +17,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    environment: ci
-    env:
-      OSS_KEY: ${{ secrets.KEY }}
-      OSS_SECRET: ${{ secrets.SECRET }}
-      
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -34,9 +27,9 @@ jobs:
           # the bucket data region location
           region: hagnzhou
           # access key
-          access-key-id: ${{ OSS_KEY }}
+          access-key-id: ${{ secrets.OSS_KEY }}
           # access secret
-          access-key-secret: ${{ OSS_SECRET }}
+          access-key-secret: ${{ secrets.OSS_SECRET }}
           # bucket
           bucket: rokid-platform
           # access secret
