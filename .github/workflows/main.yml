@@ -25,7 +25,7 @@ jobs:
       - uses: tvrcgo/upload-to-oss@v0.1.1
         with:
           # the bucket data region location
-          region: oss-cn-hagnzhou
+          region: oss-cn-hangzhou
           key-id: ${{ secrets.OSS_KEY }}
           key-secret: ${{ secrets.OSS_SECRET }}
           bucket: rokid-platform
