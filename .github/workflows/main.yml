@@ -18,34 +18,32 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    environment: ci
+    env:
+      OSS_KEY: ${{ secrets.KEY }}
+      OSS_SECRET: ${{ secrets.SECRET }}
+      
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
       - uses: taixw2/deploy-aliyun-oss@master
         with:
           # the bucket data region location
           region: hagnzhou
           # access key
-          access-key-id: abc
+          access-key-id: ${{ OSS_KEY }}
           # access secret
-          access-key-secret: abc
+          access-key-secret: ${{ OSS_SECRET }}
           # bucket
-          bucket: rokid-docs
+          bucket: rokid-platform
           # access secret
           secure: true
+          entry: docs/**/* # glob pattern
+          remote-dir: /docs/test/
+          path-rewrite: ^docs/
           # entry
           entry: docs/**/*
           # remote-dir
