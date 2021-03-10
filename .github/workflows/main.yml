@@ -38,11 +38,5 @@ jobs:
           remote-dir: /docs/test/
           path-rewrite: ^docs/
           # entry
-          entry: docs/**/*
-          # remote-dir
-          remote-dir: /mobile-sdk-android-docs
-          # path-rewrite
-          path-rewrite: ^docs/
-          
           milliseconds: 10000
 
