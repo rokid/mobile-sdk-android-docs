@@ -22,19 +22,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: taixw2/deploy-aliyun-oss@master
+      - uses: tvrcgo/upload-to-oss@v0.1.1
         with:
           # the bucket data region location
-          region: hagnzhou
-          # access key
-          access-key-id: ${{ secrets.OSS_KEY }}
-          # access secret
-          access-key-secret: ${{ secrets.OSS_SECRET }}
-          # bucket
+          region: oss-cn-hagnzhou
+          key-id: ${{ secrets.OSS_KEY }}
+          key-secret: ${{ secrets.OSS_SECRET }}
           bucket: rokid-platform
-          # access secret
-          secure: true
-          entry: docs/**/* # glob pattern
-          remote-dir: /docs/test/
-          path-rewrite: ^docs/
+          asset-path: ./docs
+          target-path: /docs/test/
 
